@@ -1,15 +1,20 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic');
+//@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 @import '~@fortawesome/fontawesome-free/css/all.css';
 // OverlayScrollbars
 @import '~overlayscrollbars/css/OverlayScrollbars.css';
 // iCheck
 @import '~icheck-bootstrap/icheck-bootstrap.css';
 // AdminLTE
-@import '../../vendor/almasaeed2010/adminlte/dist/css/adminlte.css';
+//@import '../../vendor/almasaeed2010/adminlte/dist/css/adminlte.css';
+@import '../../public/vendor/adminlte/dist/css/adminlte.css';
 // Bootstrap
 // Already imported by AdminLTE
 //@import '~bootstrap/scss/bootstrap';
+
+// App.css
+@import '../css/app.css';
 
 // Variables
 @import 'variables';

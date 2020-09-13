@@ -25,7 +25,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.14.0",
-        "icheck-bootstrap": "^3.0.1",
+        "icheck-bootstrap": "^4.0.0",
         "overlayscrollbars": "^1.13.0"
     }
 }

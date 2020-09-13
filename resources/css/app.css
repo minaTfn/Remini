@@ -1,0 +1,19 @@
+.font-size-xs{
+    font-size: 10px;
+}
+
+.font-size-sm{
+    font-size: 13px;
+}
+
+.font-size-md{
+    font-size: 17px;
+}
+
+.font-size-lg{
+    font-size: 20px;
+}
+
+.bg-white{
+    background: #fff !important;
+}

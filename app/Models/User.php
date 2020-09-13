@@ -37,4 +37,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+    * Get the title of the role.
+    *
+    * @return string
+    */
+    public function getRoleName(){
+        return $this->role ? 'Admin' : 'User';
+    }
+
+    /**
+    * change the user status from active to inactive.
+    *
+    */
+    public function active() {
+        $this->update(['status' => 1]);
+    }
+
+    /**
+     * change the user status from inactive to active.
+     *
+     */
+    public function inactive() {
+        $this->update(['status' => 0]);
+    }
 }

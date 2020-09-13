@@ -36,14 +36,18 @@
         <div class="content-wrapper {{ config('adminlte.classes_content_wrapper') ?? '' }}">
 
             {{-- Content Header --}}
-            <div class="content-header">
+            <div class="content-header bg-white border border-bottom">
                 <div class="{{ config('adminlte.classes_content_header') ?: $def_container_class }}">
-                    @yield('content_header')
+                    <div class="d-flex flex-column">
+                        <span class="text-green">@yield('content_header')</span>
+                        @yield('breadcrumbs')
+                    </div>
                 </div>
             </div>
 
             {{-- Main Content --}}
-            <div class="content">
+            <div class="content pl-5 pt-5">
+                @include('partials.messages')
                 <div class="{{ config('adminlte.classes_content') ?: $def_container_class }}">
                     @yield('content')
                 </div>
