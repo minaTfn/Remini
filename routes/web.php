@@ -12,10 +12,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('admin')->middleware(['auth.admin','verified'])->group(function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::resource('/users', App\Http\Controllers\UsersController::class);
-    Route::get('/users/status/{user}', [App\Http\Controllers\UsersController::class , 'updateStatus'])->name('users.updatestatus');
+Route::prefix('admin')->middleware(['auth','verified'])->group(function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
+        ->name('home');
+    Route::resource('/users', App\Http\Controllers\UsersController::class)
+        ->middleware('can:manage,App\Models\User');
+    Route::get('/users/status/{user}', [App\Http\Controllers\UsersController::class , 'updateStatus'])
+        ->name('users.updatestatus')
+        ->middleware('can:manage,App\Models\User');
 });
 
 Auth::routes();

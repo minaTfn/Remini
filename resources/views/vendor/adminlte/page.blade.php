@@ -38,8 +38,8 @@
             {{-- Content Header --}}
             <div class="content-header bg-white border border-bottom">
                 <div class="{{ config('adminlte.classes_content_header') ?: $def_container_class }}">
-                    <div class="d-flex flex-column">
-                        <span class="text-green">@yield('content_header')</span>
+                    <div class="d-flex">
+                        <span class="text-teal font-size-md">@yield('content_header')</span>
                         @yield('breadcrumbs')
                     </div>
                 </div>
@@ -47,9 +47,11 @@
 
             {{-- Main Content --}}
             <div class="content pl-5 pt-5">
-                @include('partials.messages')
                 <div class="{{ config('adminlte.classes_content') ?: $def_container_class }}">
-                    @yield('content')
+                    <div class="col-md-8">
+                        @include('partials.messages')
+                        @yield('content')
+                    </div>
                 </div>
             </div>
 

@@ -11,6 +11,12 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    const ADMIN = 1;
+    const USER = 2;
+
+    const ACTIVE = 1;
+    const INACTIVE = 0;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -44,7 +50,7 @@ class User extends Authenticatable
     * @return string
     */
     public function getRoleName(){
-        return $this->role ? 'Admin' : 'User';
+        return $this->role == User::ADMIN ? 'Admin' : 'User';
     }
 
     /**

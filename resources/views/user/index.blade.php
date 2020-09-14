@@ -4,9 +4,6 @@
 @section('content_header')
     <h1>Users</h1>
 @stop
-@section('breadcrumbs')
-    {{ Breadcrumbs::render('users') }}
-@stop
 
 @section('content')
     <div class="card">
@@ -27,7 +24,7 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td><label
-                                class="badge @if($user->role == 1) badge-primary @endif">{{ $user->getRoleName() }}</label>
+                                class="badge @if($user->role == $user::ADMIN) badge-success @endif">{{ $user->getRoleName() }}</label>
                         </td>
                         <td>
                             <a href="{{route('users.updatestatus',$user->id)}}">
@@ -37,17 +34,18 @@
                                 </label>
                             </a>
                         </td>
-                        <td class="d-flex">
-                            <form action="{{route('users.update',$user)}}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button class="btn btn-link" type="submit"><i class="fas fa-user-edit"></i></button>
-                            </form>
-                            <form action="{{route('users.destroy',$user)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-link" onclick="return confirm('Are you sure?')" type="submit"><i class="fas fa-trash-alt"></i></button>
-                            </form>
+                        <td>
+                            <div class="d-flex">
+                                <a class="btn btn-link" href="{{route('users.edit',$user)}}">
+                                    <i class="fas fa-user-edit"></i>
+                                </a>
+                                <form action="{{route('users.destroy',$user)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-link" onclick="return confirm('Are you sure?')"
+                                            type="submit"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

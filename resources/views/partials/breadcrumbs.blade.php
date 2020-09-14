@@ -1,6 +1,6 @@
 @if (count($breadcrumbs))
 
-    <nav aria-label="breadcrumb" class="pl-3 pt-2">
+    <nav aria-label="breadcrumb" class="pl-3">
         <ol class="breadcrumb">
         @foreach ($breadcrumbs as $breadcrumb)
 

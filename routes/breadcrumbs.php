@@ -4,11 +4,23 @@ Breadcrumbs::for('home', function ($trail) {
     $trail->push('Home', route('home'));
 });
 
-// Home > Users
 Breadcrumbs::for('users', function ($trail) {
-    $trail->parent('home');
     $trail->push('Users', route('users.index'));
 });
+
+// Users > Create
+Breadcrumbs::for('users.create', function ($trail) {
+    $trail->parent('users');
+    $trail->push('Create', route('users.create'));
+});
+
+// Users > Edit
+Breadcrumbs::for('users.edit', function ($trail, $user) {
+    $trail->parent('users');
+    $trail->push($user->name, route('users.edit', $user));
+});
+
+
 
 //// Home > Blog > [Category]
 //Breadcrumbs::for('category', function ($trail, $category) {

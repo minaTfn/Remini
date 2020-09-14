@@ -19968,7 +19968,7 @@ body.text-sm .control-sidebar {
 }
 
 label:not(.form-check-label):not(.custom-file-label) {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .warning-feedback {
@@ -37246,8 +37246,8 @@ a.text-muted:hover {
     font-size: 13px;
 }
 
-.font-size-md{
-    font-size: 17px;
+.font-size-md *{
+    font-size: 1.25rem !important;
 }
 
 .font-size-lg{
