@@ -17,4 +17,8 @@ class UserPolicy
     public function manage(User $user) {
         return $user->role == User::ADMIN;
     }
+
+    public function deleteItself(User $user, User $userItself) {
+        return $user->isNot($userItself);
+    }
 }

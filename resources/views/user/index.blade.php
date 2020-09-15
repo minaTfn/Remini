@@ -23,15 +23,13 @@
                     <tr>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td><label
-                                class="badge @if($user->role == $user::ADMIN) badge-success @endif">{{ $user->getRoleName() }}</label>
+                        <td>
+                                {{ $user->getRoleName() }}
                         </td>
                         <td>
-                            <a href="{{route('users.updatestatus',$user->id)}}">
-                                <label
-                                    class="badge @if($user->status  == 1) badge-success @else badge-danger @endif">
-                                    {{$user->status == 1 ? "Active" : "Inactive"}}
-                                </label>
+                            <a class="p-2 badge @if($user->status  == 1) badge-success @else badge-danger @endif"
+                               href="{{route('users.updatestatus',$user->id)}}">
+                                {{$user->status == 1 ? "Active" : "Inactive"}}
                             </a>
                         </td>
                         <td>

@@ -17,13 +17,15 @@ class User extends Authenticatable
     const ACTIVE = 1;
     const INACTIVE = 0;
 
+    protected $guarded = [];
+
     /**
-     * The attributes that are mass assignable.
+     * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
+    protected $casts = [
+        'email_verified_at' => 'datetime',
     ];
 
     /**
@@ -35,14 +37,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+
 
     /**
     * Get the title of the role.
@@ -57,7 +52,7 @@ class User extends Authenticatable
     * change the user status from active to inactive.
     *
     */
-    public function active() {
+    public function setAsActive() {
         $this->update(['status' => 1]);
     }
 
@@ -65,7 +60,7 @@ class User extends Authenticatable
      * change the user status from inactive to active.
      *
      */
-    public function inactive() {
+    public function setAsInactive() {
         $this->update(['status' => 0]);
     }
 }

@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Remini</b> Travel',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -356,8 +356,8 @@ return [
                 ],
             ],
         ],
-        'Select2' => [
-            'active' => true,
+            'Select2' => [
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',
@@ -382,7 +382,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',

@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ManageUsersRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Validator;
 
 class UsersController extends Controller {
     /**
@@ -14,7 +15,7 @@ class UsersController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $users = User::orderBy('id', 'DESC')->paginate(10);
+        $users = User::where('id','<>',auth()->id())->orderBy('id')->paginate(10);
         return view('user.index', compact('users'));
     }
 
@@ -24,7 +25,7 @@ class UsersController extends Controller {
      * @return
      */
     public function updateStatus(User $user) {
-        $user->status == 0 ? $user->active() : $user->inactive();
+        $user->status == 0 ? $user->setAsActive() : $user->setAsInactive();
         $message = "User status changed successfully";
         return redirect(route('users.index'))->with('success', $message);
     }
@@ -46,7 +47,7 @@ class UsersController extends Controller {
      */
     public function store(Request $request) {
         User::create($this->validateRequest($request));
-        return redirect('users.index');
+        return redirect(route('users.index'));
     }
 
     /**
@@ -67,7 +68,7 @@ class UsersController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user) {
-        $user->update($this->validateRequest($request));
+        $user->update($this->validateRequest($request, $user));
 
         return redirect(route('users.index'));
     }
@@ -79,21 +80,40 @@ class UsersController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user) {
+        $this->authorize('deleteItself', $user);
         $user->delete();
         return redirect(route('users.index'));
     }
 
     /**
      * @param Request $request
+     * @param User $user
      * @return array
      */
-    public function validateRequest(Request $request): array {
-        return $request->validateWithBag('form',[
-            'name' => 'required|max:100',
-            'email' => 'bail|required|email|unique:users|max:255',
+    public function validateRequest(Request $request, User $user = null): array {
+        $email = [
+            'required',
+            'email',
+            'max:250',
+            $user ? Rule::unique('users', 'email')->ignore($user->id) : Rule::unique('users', 'email')
+        ];
+
+        return Validator::make($request->all(), [
+            'name' => 'required|max:250',
             'status' => 'boolean',
             'role' => 'digits_between:1,2',
-        ]);
+            'email' => $email,
+            'password' => [
+                'sometimes',
+                'required',
+                'string',
+                'min:6',
+                'regex:/[a-z]/',      // must contain at least one  lowercase letter
+                'regex:/[A-Z]/',      // must contain at least one uppercase letter
+                'regex:/[0-9]/',      // must contain at least one digit
+            ]
+        ],['password.regex'=>'The password is weak; use digit, lowercase and uppercase letter'])->validateWithBag('form');
+
     }
 
 }

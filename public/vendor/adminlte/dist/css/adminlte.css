@@ -133,9 +133,8 @@ blockquote {
     margin: 0 0 1rem;
 }
 
-b,
-strong {
-    font-weight: bolder;
+b, strong {
+    font-weight: 500;
 }
 
 small {
