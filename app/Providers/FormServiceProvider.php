@@ -22,13 +22,13 @@ class FormServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        Form::component('bsText', 'components.form.text', ['name', 'value', 'attributes']);
-        Form::component('bsTextarea', 'components.form.textarea', ['name', 'value', 'attributes']);
-        Form::component('bsPassword', 'components.form.password', ['name', 'value', 'attributes']);
-        Form::component('bsNumber', 'components.form.number', ['name', 'value', 'attributes']);
-        Form::component('bsCheckbox', 'components.form.checkbox', ['name', 'value', 'attributes']);
-        Form::component('bsDate', 'components.form.date', ['name', 'value', 'attributes']);
-        Form::component('bsRadio', 'components.form.radio', ['name', 'value', 'attributes']);
-        Form::component('bsSelect', 'components.form.select', ['name', 'data', 'value', 'attributes']);
+        Form::component('bsText', 'components.form.text', ['name', 'value', 'attributes','label']);
+        Form::component('bsTextarea', 'components.form.textarea', ['name', 'value', 'attributes','label']);
+        Form::component('bsPassword', 'components.form.password', ['name', 'value', 'attributes','label']);
+        Form::component('bsNumber', 'components.form.number', ['name', 'value', 'attributes','label']);
+        Form::component('bsCheckbox', 'components.form.checkbox', ['name', 'value', 'attributes','label']);
+        Form::component('bsDate', 'components.form.date', ['name', 'value', 'attributes','label']);
+        Form::component('bsRadio', 'components.form.radio', ['name', 'value', 'attributes','label']);
+        Form::component('bsSelect', 'components.form.select', ['name', 'data', 'value', 'attributes','label']);
     }
 }

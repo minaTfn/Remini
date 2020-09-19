@@ -33,7 +33,11 @@
                     <span class="fas fa-envelope {{ config('adminlte.classes_auth_icon', '') }}"></span>
                 </div>
             </div>
-            @if($errors->has('email'))
+            @if($errors and $errors->has('email') and $errors->first('email') == 'notVerified')
+                <div class="invalid-feedback">
+                    <strong>Please verify your email address by clicking the link in the email we sent.<br>If you did not receive an email, <a href="/email/verify">click here to resend</a></strong>
+                </div>
+            @elseif($errors->has('email'))
                 <div class="invalid-feedback">
                     <strong>{{ $errors->first('email') }}</strong>
                 </div>

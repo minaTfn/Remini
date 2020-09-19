@@ -13,6 +13,13 @@
     @yield('css')
 @stop
 
+@section('usermenu_header')
+    <li class="text-center p-3 border border-bottom">
+
+        <a href="{{ route('changePassword.index') }}"><i class="fa fa-fw fa-lock"></i> Change Password</a>
+    </li>
+@stop
+
 @section('classes_body', $layoutHelper->makeBodyClasses())
 
 @section('body_data', $layoutHelper->makeBodyData())
@@ -36,19 +43,26 @@
         <div class="content-wrapper {{ config('adminlte.classes_content_wrapper') ?? '' }}">
 
             {{-- Content Header --}}
-            <div class="content-header bg-white border border-bottom">
-                <div class="{{ config('adminlte.classes_content_header') ?: $def_container_class }}">
-                    <div class="d-flex">
-                        <span class="text-teal font-size-md">@yield('content_header')</span>
-                        @yield('breadcrumbs')
-                    </div>
-                </div>
-            </div>
+
 
             {{-- Main Content --}}
-            <div class="content pl-5 pt-5">
+            <div class="content pl-5 pt-3">
                 <div class="{{ config('adminlte.classes_content') ?: $def_container_class }}">
                     <div class="col-md-8">
+                        <div class="content-header mb-2">
+                            <div class="{{ config('adminlte.classes_content_header') ?: $def_container_class }}">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <span class="text-teal font-size-md">@yield('content_header')</span>
+                                        @yield('breadcrumbs')
+                                    </div>
+                                    <div class="d-flex align-items-end">
+                                        @yield('actions')
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                         @include('partials.messages')
                         @yield('content')
                     </div>

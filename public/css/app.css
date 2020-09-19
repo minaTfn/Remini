@@ -10290,7 +10290,7 @@ input[type="button"].btn-block {
     background-color: #ffffff;
     background-clip: border-box;
     border: 0 solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
+    border-radius: 0.45rem;
 }
 
 .card > hr {
@@ -10445,7 +10445,7 @@ input[type="button"].btn-block {
         border-bottom-right-radius: 0;
     }
 
-    .card-group > .card:not(:last-child) .card-img-top,
+        .card-group > .card:not(:last-child) .card-img-top,
     .card-group > .card:not(:last-child) .card-header {
         border-top-right-radius: 0;
     }
@@ -23831,7 +23831,7 @@ textarea.form-control.is-warning {
 }
 
 .card {
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.075), 0 0px 0px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
 }
 
@@ -35433,6 +35433,10 @@ blockquote.quote-gray-dark h6 {
 
 a.text-muted:hover {
     color: #007bff !important;
+}
+
+a.hover-teal:hover{
+    color: #20c997 !important;
 }
 
 .link-muted {

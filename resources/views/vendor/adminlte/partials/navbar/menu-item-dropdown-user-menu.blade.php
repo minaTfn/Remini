@@ -33,7 +33,7 @@
         {{-- User menu header --}}
         @if(!View::hasSection('usermenu_header') && config('adminlte.usermenu_header'))
             <li class="user-header {{ config('adminlte.usermenu_header_class', 'bg-primary') }}
-                @if(!config('adminlte.usermenu_image')) h-auto @endif">
+            @if(!config('adminlte.usermenu_image')) h-auto @endif">
                 @if(config('adminlte.usermenu_image'))
                     <img src="{{ Auth::user()->adminlte_image() }}"
                          class="img-circle elevation-2"
@@ -48,6 +48,7 @@
             </li>
         @else
             @yield('usermenu_header')
+
         @endif
 
         {{-- Configured user menu links --}}
@@ -68,6 +69,7 @@
                     {{ __('adminlte::menu.profile') }}
                 </a>
             @endif
+
             <a class="btn btn-default btn-flat float-right @if(!$profile_url) btn-block @endif"
                href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="fa fa-fw fa-power-off"></i>

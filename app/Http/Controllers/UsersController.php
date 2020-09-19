@@ -59,7 +59,6 @@ class UsersController extends Controller {
     public function edit(User $user) {
         return view('user.edit', compact('user'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -107,6 +106,7 @@ class UsersController extends Controller {
                 'sometimes',
                 'required',
                 'string',
+                'confirmed',
                 'min:6',
                 'regex:/[a-z]/',      // must contain at least one  lowercase letter
                 'regex:/[A-Z]/',      // must contain at least one uppercase letter

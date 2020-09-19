@@ -29,7 +29,7 @@ class UsersTableSeeder extends Seeder {
         }
 
         User::factory()->times(50)->create([
-//            'name'=>'John Doe' // overwrite the parameter with default value
+            'role'=> User::USER // overwrite the parameter with default value
         ]);
 
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable;
 
@@ -16,6 +16,7 @@ class User extends Authenticatable
 
     const ACTIVE = 1;
     const INACTIVE = 0;
+
 
     protected $guarded = [];
 
@@ -36,8 +37,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-
 
     /**
     * Get the title of the role.

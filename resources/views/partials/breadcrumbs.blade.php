@@ -5,7 +5,7 @@
         @foreach ($breadcrumbs as $breadcrumb)
 
             @if ($breadcrumb->url && !$loop->last)
-                <li class="breadcrumb-item"><a class="text-muted font-size-sm" href="{{ $breadcrumb->url }}">{{ $breadcrumb->title }}</a></li>
+                <li class="breadcrumb-item"><a class="text-muted hover-teal font-size-sm" href="{{ $breadcrumb->url }}">{{ $breadcrumb->title }}</a></li>
             @else
                 <li class="breadcrumb-item text-muted active font-size-sm" aria-current="page">{{ $breadcrumb->title }}</li>
             @endif

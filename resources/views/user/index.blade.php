@@ -5,8 +5,12 @@
     <h1>Users</h1>
 @stop
 
+@section('actions')
+    <a href="{{ route('users.create') }}" class="btn bg-teal btn-sm p-2"><i class="mr-1 fa fa-user-plus"></i>Create User</a>
+@stop
+
 @section('content')
-    <div class="card">
+    <div class="card shadow-none">
         <div class="card-body">
             <table class="table table-hover">
                 <thead>
@@ -24,11 +28,11 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>
-                                {{ $user->getRoleName() }}
+                            {{ $user->getRoleName() }}
                         </td>
                         <td>
-                            <a class="p-2 badge @if($user->status  == 1) badge-success @else badge-danger @endif"
-                               href="{{route('users.updatestatus',$user->id)}}">
+                            <a class="p-2 badge @if($user->status  == 1) bg-teal @else badge-danger @endif"
+                               href="{{route('users.updateStatus',$user->id)}}">
                                 {{$user->status == 1 ? "Active" : "Inactive"}}
                             </a>
                         </td>

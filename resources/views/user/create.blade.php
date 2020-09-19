@@ -7,7 +7,6 @@
 @section('breadcrumbs')
     {{ Breadcrumbs::render('users.create') }}
 @stop
-@section('plugins.Select2', true)
 @section('content')
     <div class="card">
         <div class="card-body">
@@ -21,12 +20,4 @@
             {!! Form::close() !!}
         </div>
     </div>
-@stop
-
-@section('js')
-    <script>
-        $(document).ready(function() {
-            $('#status').select2();
-        });
-    </script>
 @stop
