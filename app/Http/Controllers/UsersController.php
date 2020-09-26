@@ -20,6 +20,16 @@ class UsersController extends Controller {
     }
 
     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\User $user
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(User $user) {
+        return view('user.edit', compact('user'));
+    }
+
+    /**
      * update the status of user from Active to Passive and visa versa.
      *
      * @return
@@ -48,16 +58,6 @@ class UsersController extends Controller {
     public function store(Request $request) {
         User::create($this->validateRequest($request));
         return redirect(route('users.index'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\User $user
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(User $user) {
-        return view('user.edit', compact('user'));
     }
     /**
      * Update the specified resource in storage.
@@ -112,7 +112,7 @@ class UsersController extends Controller {
                 'regex:/[A-Z]/',      // must contain at least one uppercase letter
                 'regex:/[0-9]/',      // must contain at least one digit
             ]
-        ],['password.regex'=>'The password is weak; use digit, lowercase and uppercase letter'])->validateWithBag('form');
+        ],['password.regex'=>'The password is weak; use digit, lowercase and uppercase letter','password.confirmed'=>'not confirmed'])->validateWithBag('form');
 
     }
 

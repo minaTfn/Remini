@@ -27,6 +27,7 @@ class LoginController extends Controller {
         return ['email' => $request->email, 'password' => $request->password, 'status' => 1];
     }
 
+
     protected function authenticated(Request $request, $user) {
         $user->last_login = Carbon::now()->toDateTimeString();
         $user->save();

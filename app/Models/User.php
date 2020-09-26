@@ -6,18 +6,38 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements JWTSubject,MustVerifyEmail
 {
     use HasFactory, Notifiable;
 
+    /**
+     * user type Admin
+     */
     const ADMIN = 1;
+    /**
+     * user type Normal
+     */
     const USER = 2;
 
+    /**
+     * user is active and can login
+     */
     const ACTIVE = 1;
+    /**
+     * user is inactive and cannot login
+     */
     const INACTIVE = 0;
 
+    /**
+     * @var
+     */
+    public $password_confirmation;
 
+    /**
+     * @var array
+     */
     protected $guarded = [];
 
     /**
@@ -27,6 +47,14 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+    ];
+
+
+    /**
+     * @var array
+     */
+    protected $visible = [
+        'name','email','role',
     ];
 
     /**
@@ -61,5 +89,24 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     public function setAsInactive() {
         $this->update(['status' => 0]);
+    }
+
+
+    /**
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return mixed
+     */
+    public function getJWTIdentifier() {
+        return $this->getKey();
+    }
+
+    /**
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
+     */
+    public function getJWTCustomClaims() {
+        return [];
     }
 }

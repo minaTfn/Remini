@@ -15,6 +15,7 @@ class UserManagementTest extends TestCase {
     public function an_admin_user_can_create_new_user() {
         $this->signIn();
         $newUser = User::factory()->raw();
+        $newUser['password_confirmation'] = $newUser['password'];
         $this->post(route('users.store'), $newUser)->assertRedirect(route('users.index'));
     }
 
