@@ -11,7 +11,7 @@
             <div>
                 {{ Form::token() }}
                 {{ Form::bsText('email',auth()->user()->email, ['disabled' => 'disabled']) }}
-                {{ Form::bsPassword('old-password','','','Current Password') }}
+                {{ Form::bsPassword('old_password','','','Current Password') }}
                 {{ Form::bsPassword('password','','','New Password') }}
                 {{ Form::bsPassword('password_confirmation','','','New Password Confirmation') }}
                 <div class="d-flex align-items-end mt-5">

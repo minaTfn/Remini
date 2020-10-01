@@ -39,6 +39,13 @@ class UserManagementTest extends TestCase {
     }
 
     /** @test */
+    public function users_with_role_site_cannot_login_to_the_admin_panel(){
+        $user = User::factory()->create(['role' => User::SiteUSER]);
+        $this->post('/login', $user->toArray())->assertSessionHasErrors();
+        $this->get(route('users.index'))->assertRedirect(route('login'));
+    }
+
+    /** @test */
     public function an_admin_user_cannot_delete_their_own_user() {
         $admin = User::factory()->create();
         $this->signIn($admin);
@@ -109,5 +116,7 @@ class UserManagementTest extends TestCase {
         $this->get(route('home'))->assertRedirect(route('verification.notice'));
         $this->get(route('users.index'))->assertRedirect(route('verification.notice'));
     }
+
+
 
 }

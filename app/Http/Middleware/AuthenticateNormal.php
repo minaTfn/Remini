@@ -6,7 +6,7 @@ use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
 
-class AuthenticateAdmin
+class AuthenticateNormal
 {
     /**
      * Handle an incoming request.
@@ -17,9 +17,9 @@ class AuthenticateAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check() && auth()->user()->role === User::ADMIN){
+        if(auth()->check() && auth()->user()->role === User::Normal){
             return $next($request);
         }
-        return redirect(route('login'));
+        return redirect('login');
     }
 }

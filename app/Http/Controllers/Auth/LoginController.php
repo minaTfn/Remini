@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -24,7 +25,9 @@ class LoginController extends Controller {
     use AuthenticatesUsers;
 
     protected function credentials(Request $request) {
-        return ['email' => $request->email, 'password' => $request->password, 'status' => 1];
+
+        return ['email' => $request->email, 'password' => $request->password, 'status' => 1, 'role' => [User::ADMIN, User::USER]];
+
     }
 
 

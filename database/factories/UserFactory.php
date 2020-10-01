@@ -23,14 +23,13 @@ class UserFactory extends Factory {
      * @return array
      */
     public function definition() {
-        $password = Hash::make('Hyt@#1234');
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
             'role' => User::ADMIN,
             'status' => User::ACTIVE,
-            'password' => $password,
+            'password' => Hash::make('Hyt@#1234'),
             'remember_token' => Str::random(10),
         ];
     }

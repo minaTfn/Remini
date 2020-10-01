@@ -13,13 +13,21 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Auth::routes(['verify' => true]);
 
-Route::group(['middleware' => 'api', 'prefix' => 'auth'], function () {
-    Route::post('login', [App\Http\Controllers\Api\AuthController::class, 'login']);
-    Route::post('register', [App\Http\Controllers\Api\AuthController::class, 'register']);
-    Route::post('logout', [App\Http\Controllers\Api\AuthController::class, 'logout']);
-    Route::post('refresh', [App\Http\Controllers\Api\AuthController::class, 'refresh']);
-    Route::get('user-profile', [App\Http\Controllers\Api\AuthController::class, 'userProfile']);
+Route::prefix('auth')->middleware(['api'])->group(function () {
+
+    Route::post('login', [App\Http\Controllers\Api\AuthController::class, 'login'])->name('api.login');
+    Route::post('register', [App\Http\Controllers\Api\AuthController::class, 'register'])->name('api.register');
     Route::get('email/verify/{id}', [App\Http\Controllers\Api\VerificationController::class, 'verify'])->name('verification.verify');
-    Route::get('email/resend', [App\Http\Controllers\Api\VerificationController::class, 'resend'])->name('verification.resend');
+    Route::get('email/verifyEmail/{id}', [App\Http\Controllers\Api\VerificationController::class, 'verifyEmail'])->name('verification.verifyEmail');
+
+    Route::middleware(['auth:api'])->group(function () {
+        Route::post('logout', [App\Http\Controllers\Api\AuthController::class, 'logout'])->name('api.logout');
+        Route::post('refresh', [App\Http\Controllers\Api\AuthController::class, 'refresh'])->name('api.refresh');
+        Route::get('user-profile', [App\Http\Controllers\Api\AuthController::class, 'userProfile'])->name('api.user.profile');
+        Route::put('edit-profile', [App\Http\Controllers\Api\AuthController::class, 'editProfile'])->name('api.edit.profile');
+        Route::post('change-password', [App\Http\Controllers\Api\AuthController::class, 'changePassword'])->name('change.password');
+        Route::get('email/resend', [App\Http\Controllers\Api\VerificationController::class, 'resend'])->name('verification.resend');
+    });
 });

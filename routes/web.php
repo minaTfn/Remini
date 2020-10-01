@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::prefix('admin')->middleware(['auth','verified'])->group(function () {
+Auth::routes(['verify' => true]);
+Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::get('change-password', [App\Http\Controllers\ChangePasswordController::class, 'index'])->name('changePassword.index');
     Route::post('change-password', [App\Http\Controllers\ChangePasswordController::class, 'store'])->name('changePassword.store');
 
@@ -20,11 +21,11 @@ Route::prefix('admin')->middleware(['auth','verified'])->group(function () {
         ->name('home');
     Route::resource('/users', App\Http\Controllers\UsersController::class)
         ->middleware('can:manage,App\Models\User');
-    Route::get('/users/status/{user}', [App\Http\Controllers\UsersController::class , 'updateStatus'])
+    Route::get('/users/status/{user}', [App\Http\Controllers\UsersController::class, 'updateStatus'])
         ->name('users.updateStatus')
         ->middleware('can:manage,App\Models\User');
 });
 
-Auth::routes(['verify' => true]);
+
 
 

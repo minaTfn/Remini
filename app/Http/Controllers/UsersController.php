@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ManageUsersRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\UserRequest;
 
 class UsersController extends Controller {
     /**
@@ -32,7 +29,8 @@ class UsersController extends Controller {
     /**
      * update the status of user from Active to Passive and visa versa.
      *
-     * @return
+     * @param User $user
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function updateStatus(User $user) {
         $user->status == 0 ? $user->setAsActive() : $user->setAsInactive();
@@ -52,22 +50,23 @@ class UsersController extends Controller {
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param UserRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
-        User::create($this->validateRequest($request));
+    public function store(UserRequest $request) {
+        User::create($request->all());
         return redirect(route('users.index'));
     }
+
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param UserRequest $request
      * @param  \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user) {
-        $user->update($this->validateRequest($request, $user));
+    public function update(UserRequest $request, User $user) {
+        $user->update($request->all());
 
         return redirect(route('users.index'));
     }
@@ -77,43 +76,12 @@ class UsersController extends Controller {
      *
      * @param  \App\Models\User $user
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function destroy(User $user) {
         $this->authorize('deleteItself', $user);
         $user->delete();
         return redirect(route('users.index'));
-    }
-
-    /**
-     * @param Request $request
-     * @param User $user
-     * @return array
-     */
-    public function validateRequest(Request $request, User $user = null): array {
-        $email = [
-            'required',
-            'email',
-            'max:250',
-            $user ? Rule::unique('users', 'email')->ignore($user->id) : Rule::unique('users', 'email')
-        ];
-
-        return Validator::make($request->all(), [
-            'name' => 'required|max:250',
-            'status' => 'boolean',
-            'role' => 'digits_between:1,2',
-            'email' => $email,
-            'password' => [
-                'sometimes',
-                'required',
-                'string',
-                'confirmed',
-                'min:6',
-                'regex:/[a-z]/',      // must contain at least one  lowercase letter
-                'regex:/[A-Z]/',      // must contain at least one uppercase letter
-                'regex:/[0-9]/',      // must contain at least one digit
-            ]
-        ],['password.regex'=>'The password is weak; use digit, lowercase and uppercase letter','password.confirmed'=>'not confirmed'])->validateWithBag('form');
-
     }
 
 }

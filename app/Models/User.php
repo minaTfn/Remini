@@ -16,10 +16,16 @@ class User extends Authenticatable implements JWTSubject,MustVerifyEmail
      * user type Admin
      */
     const ADMIN = 1;
+
     /**
      * user type Normal
      */
     const USER = 2;
+
+    /**
+     * user type Site User
+     */
+    const SiteUSER = 3;
 
     /**
      * user is active and can login
@@ -34,11 +40,12 @@ class User extends Authenticatable implements JWTSubject,MustVerifyEmail
      * @var
      */
     public $password_confirmation;
+    public $old_password;
 
     /**
      * @var array
      */
-    protected $guarded = [];
+    protected $guarded = ['password_confirmation','old_password'];
 
     /**
      * The attributes that should be cast to native types.
@@ -72,7 +79,7 @@ class User extends Authenticatable implements JWTSubject,MustVerifyEmail
     * @return string
     */
     public function getRoleName(){
-        return $this->role == User::ADMIN ? 'Admin' : 'User';
+        return $this->role == User::ADMIN ? 'Admin' : ($this->role == User::USER ? 'User' : 'Site User');
     }
 
     /**

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Resources\User as UserResource;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
+use Illuminate\Support\Facades\Hash;
 use Validator;
 use App\Models\User;
 
@@ -16,13 +18,14 @@ class AuthController extends Controller {
      * @return void
      */
     public function __construct() {
-        $this->middleware('auth:api', ['except' => ['login', 'register']]);
+//        $this->middleware(['auth:api','auth.site'], ['except' => ['login', 'register']]);
         $this->guard = "api";
     }
 
     /**
      * Get a JWT via given credentials.
      *
+     * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function login(Request $request) {
@@ -32,49 +35,44 @@ class AuthController extends Controller {
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return response()->json(['error' => $validator->errors()], 422);
         }
 
         if (!$token = auth($this->guard)->attempt($validator->validated())) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+            return response()->json(['error' => ' These credentials do not match our records.'], 401);
         }
 
         return $this->createNewToken($token);
     }
 
     /**
-     * Register a User.
-     *
+     * @param UserRequest $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function register(Request $request) {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|between:2,100',
-            'email' => 'required|string|email|max:100|unique:users',
-            'password' => [
-                'sometimes',
-                'required',
-                'string',
-                'confirmed',
-                'min:6',
-                'regex:/[a-z]/',      // must contain at least one  lowercase letter
-                'regex:/[A-Z]/',      // must contain at least one uppercase letter
-                'regex:/[0-9]/',      // must contain at least one digit
-            ],
-        ]);
+    public function changePassword(UserRequest $request) {
 
-        if ($validator->fails()) {
-            return response()->json($validator->errors()->toJson(), 422);
-        }
+        User::find(auth()->user()->id)->update(['password' => Hash::make($request->password)]);
+
+        return response()->json(['message' => 'Password changed successfully'], 200);
+
+    }
+
+    /**
+     * Register a User.
+     *
+     * @param UserRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function register(UserRequest $request) {
 
         $user = User::create(array_merge(
-            $validator->validated(),
+            $request->all(),
             ['password' => bcrypt($request->password)]
-        ));
+        ))->sendEmailVerificationNotification();
 
         return response()->json([
-            'message' => 'User successfully registered',
-            'user' => $user
+            'message' => 'User successfully registered and verify email sent',
+            'data' => ['user' => $user]
         ], 201);
     }
 
@@ -85,6 +83,7 @@ class AuthController extends Controller {
      * @return \Illuminate\Http\JsonResponse
      */
     public function logout() {
+
         auth($this->guard)->logout();
 
         return response()->json(['message' => 'User successfully signed out']);
@@ -100,14 +99,24 @@ class AuthController extends Controller {
     }
 
     /**
+     * @param UserRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function editProfile(UserRequest $request) {
+
+        User::find(auth()->user()->id)->update(['name' => $request->name]);
+
+        return response()->json(['message' => 'Your profile updated successfully'], 200);
+    }
+
+    /**
      * Get the authenticated User.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return UserResource
      */
     public function userProfile() {
 
         return new UserResource(auth($this->guard)->user());
-//        return response()->json(auth($this->guard)->user());
     }
 
     /**
