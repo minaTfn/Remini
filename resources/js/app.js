@@ -26,7 +26,29 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
 const app = new Vue({
-    el: '#app',
+
+    el: '#events',
+
+    data: { country:'', CountrySelected: false, cities: {id:'', name:''} },
+
+    methods: {
+
+        WhenCountryHasBeenSelected: function(event) {
+            this.getCities();
+            this.CountrySelected= true;
+        },
+
+        getCities: function(){
+            this.$http.get('api/cities/'+this.country).then(function (response) {
+                this.cities = response.data;
+            });
+
+        }
+    },
+
 });
+
+// const app = new Vue({
+//     el: '#app',
+// });

@@ -37241,22 +37241,22 @@ a.hover-teal:hover{
 [class*="accent-"] a.btn-dark {
     color: #ffffff;
 }
-.font-size-xs{
+
+.fa-w-25{
+    min-width: 25px;
+}
+.font-size-xs *:not([class^="font-size-"]), .font-size-xs{
     font-size: 10px;
 }
-
-.font-size-sm{
+.font-size-sm *:not([class^="font-size-"]), .font-size-sm{
     font-size: 13px;
 }
-
-.font-size-md *{
-    font-size: 1.25rem !important;
-}
-
-.font-size-lg{
+.font-size-lg *:not([class^="font-size-"]), .font-size-lg{
     font-size: 20px;
 }
-
+.font-size-md *:not([class^="font-size-"]), .font-size-md{
+    font-size: 1.25rem !important;
+}
 .bg-white{
     background: #fff !important;
 }

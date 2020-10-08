@@ -9,9 +9,11 @@ class UserPolicy
 {
     use HandlesAuthorization;
 
+
     /**
      * manage all the actions in user CRUD.
      *
+     * @param User $user
      * @return boolean
      */
     public function manage(User $user) {

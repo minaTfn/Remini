@@ -90,6 +90,23 @@ class User extends Authenticatable implements JWTSubject,MustVerifyEmail
         $this->update(['status' => 1]);
     }
 
+
+    /**
+     * @param $delivery
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function addDelivery($delivery) {
+        return $this->deliveries()->create($delivery);
+    }
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function deliveries() {
+        return $this->hasMany(Delivery::class)->latest();
+    }
+
     /**
      * change the user status from inactive to active.
      *

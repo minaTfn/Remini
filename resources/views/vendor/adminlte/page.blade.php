@@ -46,14 +46,14 @@
 
 
             {{-- Main Content --}}
-            <div class="content pl-5 pt-3">
+            <div class="content pl-5 pt-3 pb-5">
                 <div class="{{ config('adminlte.classes_content') ?: $def_container_class }}">
                     <div class="col-md-8">
                         <div class="content-header mb-2">
                             <div class="{{ config('adminlte.classes_content_header') ?: $def_container_class }}">
                                 <div class="d-flex justify-content-between">
                                     <div class="d-flex flex-column">
-                                        <span class="text-teal font-size-md">@yield('content_header')</span>
+                                        <span class="text-teal font-size-md d-flex align-items-end">@yield('content_header')</span>
                                         @yield('breadcrumbs')
                                     </div>
                                     <div class="d-flex align-items-end">

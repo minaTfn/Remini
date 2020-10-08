@@ -56411,8 +56411,29 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
-});
+  el: '#events',
+  data: {
+    country: '',
+    CountrySelected: false,
+    cities: {
+      id: '',
+      name: ''
+    }
+  },
+  methods: {
+    WhenCountryHasBeenSelected: function WhenCountryHasBeenSelected(event) {
+      this.getCities();
+      this.CountrySelected = true;
+    },
+    getCities: function getCities() {
+      this.$http.get('api/cities/' + this.country).then(function (response) {
+        this.cities = response.data;
+      });
+    }
+  }
+}); // const app = new Vue({
+//     el: '#app',
+// });
 
 /***/ }),
 

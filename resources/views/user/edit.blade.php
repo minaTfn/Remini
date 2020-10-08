@@ -14,7 +14,7 @@
             {!! Form::model($user, ['route' => ['users.update', $user], 'method'=>'PATCH']) !!}
             @include('user/_form',[
                 'user'=> $user ,
-                'buttonText'=>'Edit User'
+                'buttonText'=>'Submit'
             ])
             {!! Form::close() !!}
         </div>

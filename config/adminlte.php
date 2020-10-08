@@ -236,68 +236,57 @@ return [
             'search' => true,
             'topnav' => true,
         ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
         ['header' => 'account_settings'],
         [
             'text' => 'Users',
-            'url'  => 'admin/users',
-            'icon' => 'fas fa-fw fa-user',
+            'url' => 'admin/users',
+            'icon' => 'fas fa-w-25 fa-user',
+            'can' => 'manage-user'
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Accounts',
+            'url' => 'admin/accounts',
+            'icon' => 'fas fa-w-25 fa-users',
+        ],
+        ['header' => 'manage'],
+        [
+            'text' => 'Delivery',
+            'url' => 'admin/deliveries',
+            'icon' => 'fas fa-w-25 fa-mail-bulk',
+            'label' => 20,
+            'label_color' => 'success',
         ],
         [
-            'text'    => 'Manage',
-            'icon'    => 'fas fa-fw fa-share',
+            'text' => 'Delivery Method',
+            'url' => 'admin/delivery-methods',
+            'icon' => 'fas fa-w-25 fa-shipping-fast',
+        ],
+        [
+            'text' => 'Payment Method',
+            'url' => 'admin/payment-methods',
+            'icon' => 'fas fa-w-25 fa-hand-holding-usd',
+        ],
+        [
+            'text' => 'Contact Method',
+            'url' => 'admin/contact-methods',
+            'icon' => 'fas fa-w-25 fa-phone-volume',
+        ],
+        [
+            'text' => 'Country',
+            'url' => 'admin/countries',
+            'icon' => 'fas fa-w-25 fa-globe-asia',
+        ],
+        ['header' => ''],
+        [
+            'text'    => 'Reports',
+            'icon'    => 'fas fa-w-25 fa-chart-line',
             'submenu' => [
                 [
-                    'text' => 'Users',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Requests',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'Suggestions',
-                    'url'  => '#',
+                    'text' => 'Deliveries',
+                    'url' => 'admin/report/deliveries',
+                    'icon' => 'false',
                 ],
             ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
         ],
     ],
 
@@ -356,7 +345,7 @@ return [
                 ],
             ],
         ],
-            'Select2' => [
+        'Select2' => [
             'active' => false,
             'files' => [
                 [

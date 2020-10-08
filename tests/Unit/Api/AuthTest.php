@@ -4,15 +4,13 @@ namespace Tests\Unit\Api;
 
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Hash;
 use Tests\ApiTestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 class UserTest extends ApiTestCase {
-    use RefreshDatabase, WithFaker;
+
 
     /** @test */
     public function a_guest_can_register_new_account() {

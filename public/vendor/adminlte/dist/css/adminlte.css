@@ -32272,4 +32272,8 @@ a.hover-teal:hover{
     color: #ffffff;
 }
 
+.fa-w-25{
+    min-width: 25px;
+}
+
 /*# sourceMappingURL=adminlte.css.map */
