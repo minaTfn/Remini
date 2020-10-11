@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Tests\ApiTestCase;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
-class UserTest extends ApiTestCase {
+class AuthTest extends ApiTestCase {
 
 
     /** @test */

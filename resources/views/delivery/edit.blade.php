@@ -1,14 +1,13 @@
 @extends('adminlte::page')
 @section('title', 'Users Management')
-
+@section('js')
+    @trixassets
+@stop
 @section('content_header')
     <h1>Edit Delivery</h1>
     <span class="font-size-sm ml-2">
         (Owner : {{ $delivery->owner->name }})
     </span>
-@stop
-@section('breadcrumbs')
-    {{ Breadcrumbs::render('deliveries.edit',$delivery) }}
 @stop
 
 @section('content')

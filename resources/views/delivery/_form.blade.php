@@ -5,42 +5,32 @@
     {{ Form::bsText('title',null,['autofocus'=>'']) }}
 
 
-    <div class="panel-body">
+    <location-component
+        :countries-list='@json($countries)'
+        country-name="origin_country_id"
+        city-name="origin_city_id"
+        country-title="Origin Country"
+        city-title="Origin City"
+        country-value="{{$delivery->origin_country_id}}"
+        city-value="{{$delivery->origin_city_id}}"
+    ></location-component>
+
+    <location-component
+        :countries-list='@json($countries)'
+        country-name="destination_country_id"
+        city-name="destination_city_id"
+        country-title="Destination Country"
+        city-title="Destination City"
+        country-value="{{$delivery->destination_country_id}}"
+        city-value="{{$delivery->destination_city_id}}"
+    ></location-component>
+
+    {{ Form::bsRadioGroup('delivery_method_id',$deliveryMethods,$delivery->delivery_method_id,'','Delivery Method') }}
+    {{ Form::bsRadioGroup('payment_method_id',$paymentMethods,$delivery->payment_method_id,'','Payment Method') }}
 
 
+    {!! $delivery->trix('description') !!}
 
-
-        {!! Form::bsSelect('origin_country_id', $countries, null,  ['v-model'=>'country', '@change'=>'WhenCountryHasBeenSelected' ,'class'=>'form-control']) !!}
-
-        <div v-show="CountrySelected">
-            {!! Form::bsSelect('origin_city_id',$originCities, null) !!}
-
-            {{--Selected @{{ $data | json }}--}}
-
-        </div>
-    </div>
-
-
-
-    {{--<div class="row">--}}
-        {{--<div class="col-md-6">--}}
-            {{--{{ Form::bsSelect('origin_country_id',$countries) }}--}}
-        {{--</div>--}}
-        {{--<div class="col-md-6">--}}
-            {{--{{ Form::bsSelect('origin_city_id',$originCities) }}--}}
-        {{--</div>--}}
-    {{--</div>--}}
-    <div class="row">
-        <div class="col-md-6">
-            {{ Form::bsSelect('destination_country_id',$countries) }}
-        </div>
-        <div class="col-md-6">
-            {{ Form::bsSelect('destination_city_id',$destinationCities) }}
-        </div>
-    </div>
-    {{ Form::bsSelect('delivery_method_id',$deliveryMethods) }}
-    {{ Form::bsSelect('payment_method_id',$paymentMethods) }}
-    {{ Form::bsTextarea('description') }}
     <div class="d-flex align-items-end mt-5">
         {{ Form::submit($buttonText,['class'=>'btn btn-success mr-2']) }}
         {{ link_to_route('deliveries.index', 'Cancel', '', ['class'=>'btn btn-light border border-secondary']) }}

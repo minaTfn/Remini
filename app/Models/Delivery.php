@@ -5,11 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
-
+use Te7aHoudini\LaravelTrix\Traits\HasTrixRichText;
 class Delivery extends Model {
-    use HasFactory;
-    use Sluggable;
-
+    use HasFactory, Sluggable, HasTrixRichText;
     /**
      * @var array
      */

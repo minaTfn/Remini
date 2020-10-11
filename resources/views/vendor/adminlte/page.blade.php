@@ -25,7 +25,7 @@
 @section('body_data', $layoutHelper->makeBodyData())
 
 @section('body')
-    <div class="wrapper">
+    <div class="wrapper" id="app">
 
         {{-- Top Navbar --}}
         @if($layoutHelper->isLayoutTopnavEnabled())
@@ -54,7 +54,7 @@
                                 <div class="d-flex justify-content-between">
                                     <div class="d-flex flex-column">
                                         <span class="text-teal font-size-md d-flex align-items-end">@yield('content_header')</span>
-                                        @yield('breadcrumbs')
+                                        @include('partials.breadcrumbs')
                                     </div>
                                     <div class="d-flex align-items-end">
                                         @yield('actions')

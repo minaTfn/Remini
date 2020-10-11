@@ -27,6 +27,8 @@ class FormServiceProvider extends ServiceProvider {
         Form::component('bsPassword', 'components.form.password', ['name', 'value', 'attributes','label']);
         Form::component('bsNumber', 'components.form.number', ['name', 'value', 'attributes','label']);
         Form::component('bsCheckbox', 'components.form.checkbox', ['name', 'value', 'attributes','label']);
+        Form::component('bsCheckboxGroup', 'components.form.checkboxGroup', ['name', 'data', 'value', 'attributes','label']);
+        Form::component('bsRadioGroup', 'components.form.radioGroup', ['name', 'data', 'value', 'attributes','label']);
         Form::component('bsDate', 'components.form.date', ['name', 'value', 'attributes','label']);
         Form::component('bsRadio', 'components.form.radio', ['name', 'value', 'attributes','label']);
         Form::component('bsSelect', 'components.form.select', ['name', 'data', 'value', 'attributes','label']);

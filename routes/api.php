@@ -33,8 +33,10 @@ Route::prefix('auth')->middleware(['api'])->group(function () {
 });
 
 Route::middleware(['api'])->group(function () {
-    Route::get('/cities/{country}', [App\Http\Controllers\CityController::class, 'index']);
 
-    Route::resource('cities',\App\Http\Controllers\CityController::class);
+    Route::get('getCountries', [App\Http\Controllers\CountryController::class, 'index']);
+    Route::get('getCities', [App\Http\Controllers\CityController::class, 'index']);
+
+    Route::get('/cities/{country}', [App\Http\Controllers\CityController::class, 'index']);
 
 });
