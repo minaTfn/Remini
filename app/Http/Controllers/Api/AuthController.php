@@ -97,6 +97,19 @@ class AuthController extends Controller {
         return response()->json(['message' => 'Your profile updated successfully'], 200);
     }
 
+
+    /**
+     * Log the user out (Invalidate the token).
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function logout() {
+
+        auth($this->guard)->logout();
+
+        return response()->json(['message' => 'User successfully signed out']);
+    }
+
     /**
      * Get the authenticated User.
      *

@@ -21,6 +21,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
         "laravelcollective/html": "^6.2",
+        "stevebauman/purify": "^3.0",
         "tabuna/breadcrumbs": "^2.1",
         "te7a-houdini/laravel-trix": "^2.0",
         "tymon/jwt-auth": "^1.0"

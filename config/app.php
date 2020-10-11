@@ -177,6 +177,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         App\Providers\FormServiceProvider::class,
         App\Providers\BreadcrumbsServiceProvider::class,
+        App\Providers\PurifySetupProvider::class,
     ],
 
     /*
