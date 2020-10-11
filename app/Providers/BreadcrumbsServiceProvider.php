@@ -11,6 +11,8 @@ class BreadcrumbsServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        include_once('routes/breadcrumbs.php');
+
+        require_once(base_path('routes/breadcrumbs.php'));
+
     }
 }

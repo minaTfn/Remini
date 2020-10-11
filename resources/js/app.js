@@ -20,8 +20,11 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 import locationComponent from './components/LocationComponent.vue';
+import FlashComponent from './components/Flash.vue';
 
 Vue.component('location-component', locationComponent);
+
+Vue.component('flash', FlashComponent);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -25,6 +25,7 @@ class CreateDeliveriesTable extends Migration
             $table->unsignedInteger('destination_city_id');
             $table->unsignedInteger('delivery_method_id');
             $table->unsignedInteger('payment_method_id');
+            $table->date('maximum_deadline')->nullable();
             $table->string('thumbnail_image')->nullable();
             $table->unsignedInteger('thumbnail_photo_id')->nullable();
             $table->timestamps();

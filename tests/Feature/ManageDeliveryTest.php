@@ -23,10 +23,10 @@ class ManageDeliveryTest extends TestCase {
         $newTitle = ['title' => 'delivery edit test UPDATED'];
         $delivery = Delivery::factory()->create($oldTitle);
         $this->signIn();
-        $res = $this->patch(route('deliveries.update',$delivery), $newTitle)
-//            ->assertSessionHasErrors('name', '', 'form');
-           ->assertRedirect(route('deliveries.index'));
-//        $this->assertDatabaseMissing('deliveries', $oldTitle);
-//        $this->assertDatabaseHas('deliveries', $newTitle);
+
+        $res = $this->patch(route('deliveries.update', $delivery), $newTitle)
+            ->assertRedirect(route('deliveries.index'));
+        $this->assertDatabaseMissing('deliveries', $oldTitle);
+        $this->assertDatabaseHas('deliveries', $newTitle);
     }
 }

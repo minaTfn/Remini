@@ -1,132 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c912b77-3445-4176-a142-f0c271a1b55e" name="Default Changelist" comment="added delivery migrations and form of edit delivery in admin">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/BreadcrumbsServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/laravel-trix.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/js/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2-bootstrap4-theme/select2-bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2-bootstrap4-theme/select2-bootstrap4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/css/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/css/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/build.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/dsb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/hsb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/hy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/sr-Cyrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/tk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/i18n/zh-TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/select2.full.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/select2.full.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/js/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/sweetalert2-theme-bootstrap-4/bootstrap-4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/sweetalert2-theme-bootstrap-4/bootstrap-4.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/sweetalert2/sweetalert2.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/sweetalert2/sweetalert2.all.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/sweetalert2/sweetalert2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/sweetalert2/sweetalert2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/sweetalert2/sweetalert2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/sweetalert2/sweetalert2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/LocationComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/plugins/select2/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/plugins/select2/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/plugins/trix/trix.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/plugins/trix/trix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/form/checkboxGroup.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/form/radioGroup.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/remini.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/remini.iml" afterDir="false" />
+    <list default="true" id="9c912b77-3445-4176-a142-f0c271a1b55e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_10_072758_create_trix_rich_texts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Flash.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ManageDeliveryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ManageDeliveryRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Delivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Delivery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/FormServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/FormServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/breadcrumbs.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/BreadcrumbsServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BreadcrumbsServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_02_095309_create_deliveries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_02_095309_create_deliveries_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/checkbox.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/checkbox.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/date.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/date.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/number.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/number.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/radio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/radio.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/select.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/select.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/textarea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/textarea.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/delivery/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/delivery/_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/delivery/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/delivery/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/delivery/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/breadcrumbs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/breadcrumbs.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/adminlte/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/adminlte/page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/delivery/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/delivery/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/messages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Api/AuthTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Api/AuthTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/UserManagementTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/UserManagementTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,66 +41,67 @@
           <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="352" />
+          <entry key="css" value="379" />
           <entry key="dummy" value="26" />
           <entry key="env" value="38" />
-          <entry key="js" value="163" />
+          <entry key="js" value="194" />
           <entry key="json" value="21" />
-          <entry key="php" value="20723" />
+          <entry key="php" value="21035" />
           <entry key="scss" value="47" />
           <entry key="txt" value="450" />
-          <entry key="vue" value="476" />
+          <entry key="vue" value="758" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="38" />
-          <entry key="Blade" value="4323" />
-          <entry key="CSS" value="352" />
+          <entry key="Blade" value="4417" />
+          <entry key="CSS" value="379" />
           <entry key="JSON" value="21" />
-          <entry key="JavaScript" value="163" />
-          <entry key="PHP" value="16400" />
+          <entry key="JavaScript" value="194" />
+          <entry key="PHP" value="16618" />
           <entry key="PLAIN_TEXT" value="476" />
           <entry key="SCSS" value="47" />
-          <entry key="Vue.js" value="476" />
+          <entry key="Vue.js" value="758" />
           <entry key="XML" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="config" value="1" />
-          <entry key="css" value="14" />
+          <entry key="css" value="15" />
           <entry key="env" value="9" />
-          <entry key="js" value="15" />
+          <entry key="js" value="18" />
           <entry key="json" value="14" />
-          <entry key="php" value="489" />
+          <entry key="php" value="516" />
           <entry key="scss" value="4" />
-          <entry key="vue" value="2" />
+          <entry key="vue" value="4" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="9" />
-          <entry key="Blade" value="128" />
-          <entry key="CSS" value="14" />
+          <entry key="Blade" value="136" />
+          <entry key="CSS" value="15" />
           <entry key="JSON" value="14" />
-          <entry key="JavaScript" value="15" />
-          <entry key="PHP" value="361" />
+          <entry key="JavaScript" value="18" />
+          <entry key="PHP" value="380" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="4" />
-          <entry key="Vue.js" value="2" />
+          <entry key="Vue.js" value="4" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -222,81 +120,90 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/delivery/_form.blade.php">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="153">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Providers/BreadcrumbsServiceProvider.php">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/UserManagementTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            <state relative-caret-position="313">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/breadcrumbs.php">
+        <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-326">
-              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+            <state relative-caret-position="317">
+              <caret line="31" column="47" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/breadcrumbs.blade.php">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/AuthenticateSite.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="177" column="49" selection-start-line="177" selection-start-column="49" selection-end-line="177" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/components/form/radio.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="91" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Providers/FormServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+            <state relative-caret-position="253">
+              <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
               <folding>
-                <element signature="e#33#72#0#PHP" expanded="true" />
+                <element signature="e#40#84#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/components/form/checkbox.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/ManageDeliveryRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            <state relative-caret-position="292">
+              <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/delivery/edit.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Delivery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="-115">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="83" column="46" selection-start-line="82" selection-start-column="8" selection-end-line="83" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -305,20 +212,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MatchOldPassword</find>
-      <find>request()-&gt;wantsJson()</find>
-      <find>manage-user</find>
-      <find>Gate::define</find>
-      <find>manageDelivery</find>
-      <find>hasErr</find>
-      <find>user</find>
-      <find>User::</find>
-      <find>font-size-sm</find>
-      <find>text-teal</find>
-      <find>content pl-5 pt-3</find>
-      <find>APP_DEBUG</find>
-      <find>destinationCountry</find>
-      <find>class=&quot;wrapper&quot;</find>
       <find>state</find>
       <find>getCities</find>
       <find>select2</find>
@@ -335,6 +228,20 @@
       <find>FormServiceProvider</find>
       <find>Breadcrumbs::render</find>
       <find>'breadcrumbs'</find>
+      <find>whiteListedModules</find>
+      <find>on</find>
+      <find>show</find>
+      <find>data</find>
+      <find>message</find>
+      <find>level</find>
+      <find>logout</find>
+      <find>AuthenticateAdmin</find>
+      <find>login</find>
+      <find>logins</find>
+      <find>mina.taf</find>
+      <find>trix</find>
+      <find>HasTrixRichText</find>
+      <find>origin_country_id</find>
     </findStrings>
     <replaceStrings>
       <replace>Poppins</replace>
@@ -352,46 +259,31 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="changes_Oct_8" />
+        <entry key="$PROJECT_DIR$" value="changes_Oct_1" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2020_10_02_095951_create_payment_methods_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_10_02_095925_create_delivery_methods_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_10_02_095309_create_deliveries_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_10_02_091427_create_cities_table.php" />
-        <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
         <option value="$PROJECT_DIR$/database/factories/CityFactory.php" />
         <option value="$PROJECT_DIR$/resources/lang/vendor/adminlte/en/menu.php" />
         <option value="$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css" />
         <option value="$PROJECT_DIR$/app/Policies/UserPolicy.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Rules/MatchAuthUser.php" />
         <option value="$PROJECT_DIR$/tests/Unit/Api/DeliveryTest.php" />
         <option value="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Policies/DeliveryPolicy.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/UserManagementTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CreateDeliveryRequest.php" />
         <option value="$PROJECT_DIR$/database/factories/DeliveryFactory.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/ManageDeliveryRequest.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" />
         <option value="$PROJECT_DIR$/resources/views/user/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/_form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/delivery/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/css/app.css" />
         <option value="$PROJECT_DIR$/app/Models/Country.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CityController.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/Models/Delivery.php" />
         <option value="$PROJECT_DIR$/resources/views/components/form/textarea.blade.php" />
         <option value="$PROJECT_DIR$/config/adminlte.php" />
         <option value="$PROJECT_DIR$/public/css/all.css" />
@@ -410,6 +302,21 @@
         <option value="$PROJECT_DIR$/resources/views/delivery/edit.blade.php" />
         <option value="$PROJECT_DIR$/routes/breadcrumbs.php" />
         <option value="$PROJECT_DIR$/app/Providers/BreadcrumbsServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/resources/js/bootstrap.js" />
+        <option value="$PROJECT_DIR$/resources/views/partials/messages.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/Flash.vue" />
+        <option value="$PROJECT_DIR$/resources/css/app.css" />
+        <option value="$PROJECT_DIR$/resources/views/delivery/index.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_10_02_095309_create_deliveries_table.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Models/Delivery.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/ManageDeliveryRequest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/UserManagementTest.php" />
       </list>
     </option>
   </component>
@@ -552,6 +459,7 @@
       <path value="$PROJECT_DIR$/vendor/te7a-houdini/laravel-trix" />
       <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
       <path value="$PROJECT_DIR$/vendor/tabuna/breadcrumbs" />
+      <path value="$PROJECT_DIR$/vendor/davejamesmiller/laravel-breadcrumbs" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -559,6 +467,26 @@
     <option name="y" value="27" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>GeneralPHP</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpIncludeInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -568,6 +496,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -578,13 +507,26 @@
             <path>
               <item name="remini" type="b2602c69:ProjectViewProjectNode" />
               <item name="remini" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="remini" type="b2602c69:ProjectViewProjectNode" />
               <item name="remini" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remini" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remini" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remini" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remini" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="remini" type="b2602c69:ProjectViewProjectNode" />
@@ -618,7 +560,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -628,20 +569,20 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\newWamp\www\remini\resources\plugins\select2" />
-      <recent name="C:\newWamp\www\remini\tests\Unit\Api" />
-      <recent name="C:\newWamp\www\remini\app\Http\Controllers\Api" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\newWamp\www\remini\resources\js\components" />
       <recent name="C:\newWamp\www\remini\routes" />
       <recent name="C:\newWamp\www\remini\app\Providers" />
       <recent name="C:\newWamp\www\remini\resources\views\components\form" />
       <recent name="C:\newWamp\www\remini\public\js" />
-      <recent name="C:\newWamp\www\remini\public\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\newWamp\www\remini\resources\plugins\select2" />
+      <recent name="C:\newWamp\www\remini\tests\Unit\Api" />
+      <recent name="C:\newWamp\www\remini\app\Http\Controllers\Api" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -656,17 +597,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ManageDeliveryTest.an_admin_user_can_edit_deliveries">
+  <component name="RunManager" selected="PHPUnit.tests">
     <configuration name="DeliveryTest.guests_cannot_add_deliveries" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\Api\DeliveryTest" file="$PROJECT_DIR$/tests/Unit/Api/DeliveryTest.php" method="guests_cannot_add_deliveries" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="DeliveryTest.it_belongs_to_an_owner" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Api\DeliveryTest" file="$PROJECT_DIR$/tests/Unit/Api/DeliveryTest.php" method="it_belongs_to_an_owner" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="DeliveryTest.just_users_with_role_3_can_add_deliveries" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Api\DeliveryTest" file="$PROJECT_DIR$/tests/Unit/Api/DeliveryTest.php" method="just_users_with_role_3_can_add_deliveries" scope="Method" />
+    <configuration name="ManageDeliveryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ManageDeliveryTest" file="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -677,20 +614,24 @@
       <TestRunner class="Tests\Feature\ManageDeliveryTest" file="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" method="an_admin_user_can_see_the_deliveries_created_by_site_users" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="PHPUnit.DeliveryTest.it_belongs_to_an_owner" />
-      <item itemvalue="PHPUnit.DeliveryTest.just_users_with_role_3_can_add_deliveries" />
       <item itemvalue="PHPUnit.DeliveryTest.guests_cannot_add_deliveries" />
       <item itemvalue="PHPUnit.ManageDeliveryTest.an_admin_user_can_see_the_deliveries_created_by_site_users" />
       <item itemvalue="PHPUnit.ManageDeliveryTest.an_admin_user_can_edit_deliveries" />
+      <item itemvalue="PHPUnit.tests" />
+      <item itemvalue="PHPUnit.ManageDeliveryTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.ManageDeliveryTest" />
         <item itemvalue="PHPUnit.ManageDeliveryTest.an_admin_user_can_edit_deliveries" />
         <item itemvalue="PHPUnit.ManageDeliveryTest.an_admin_user_can_see_the_deliveries_created_by_site_users" />
         <item itemvalue="PHPUnit.DeliveryTest.guests_cannot_add_deliveries" />
-        <item itemvalue="PHPUnit.DeliveryTest.just_users_with_role_3_can_add_deliveries" />
-        <item itemvalue="PHPUnit.DeliveryTest.it_belongs_to_an_owner" />
       </list>
     </recent_temporary>
   </component>
@@ -715,6 +656,8 @@
       <workItem from="1601643726512" duration="38348000" />
       <workItem from="1601973013981" duration="4338000" />
       <workItem from="1602160504333" duration="22569000" />
+      <workItem from="1602403122477" duration="1077000" />
+      <workItem from="1602404350572" duration="2103000" />
     </task>
     <task id="LOCAL-00001" summary="install npm and ui scaffolding vue">
       <created>1599889051819</created>
@@ -776,39 +719,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 02m 34s.xml">
+    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.11 at 12h 16m 14s.xml">
       <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 02m 46s.xml">
+    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.11 at 12h 16m 39s.xml">
       <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 02m 56s.xml">
+    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.11 at 12h 17m 22s.xml">
       <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 03m 02s.xml">
+    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.11 at 12h 17m 28s.xml">
       <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 03m 06s.xml">
+    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.11 at 12h 19m 47s.xml">
       <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 03m 11s.xml">
+    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.11 at 12h 20m 26s.xml">
       <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 03m 16s.xml">
+    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.11 at 12h 21m 24s.xml">
       <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 03m 25s.xml">
+    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.11 at 12h 23m 23s.xml">
       <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 05m 48s.xml">
-      <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageDeliveryTest - 2020.10.11 at 12h 23m 31s.xml">
+      <configuration name="ManageDeliveryTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageDeliveryTest_an_admin_user_can_edit_deliveries - 2020.10.05 at 11h 21m 43s.xml">
-      <configuration name="ManageDeliveryTest.an_admin_user_can_edit_deliveries" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="tests - 2020.10.11 at 12h 23m 42s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275404000" />
+    <option name="totallyTimeSpent" value="283797000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -823,13 +766,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991708" visible="true" weight="0.1607717" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991708" visible="true" weight="0.16505896" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.50082916" side_tool="true" weight="0.24973205" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925472" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30812013" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30812013" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -838,7 +781,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005359" side_tool="true" weight="0.269188" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4994641" visible="true" weight="0.25583982" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4994641" weight="0.26028922" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -864,157 +807,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="added delivery migrations and form of edit delivery in admin" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/Feature/UserManagementTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="36" column="74" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/UserRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateDeliveryRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/DeliveryFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/delivery/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ManageDeliveryRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="67" column="62" selection-start-line="67" selection-start-column="62" selection-end-line="67" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="134" column="11" selection-start-line="129" selection-start-column="8" selection-end-line="134" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#32#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Country.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CountryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-          <folding>
-            <element signature="e#40#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/components/form/select.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -1022,44 +814,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/delivery/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Delivery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="e#30#84#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-          <folding>
-            <element signature="e#40#84#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/delivery/create.blade.php" />
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config/adminlte.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1071,38 +828,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#17861#18232#2" expanded="true" />
-            <element signature="e#18328#18706#2" expanded="true" />
-            <element signature="e#18779#18993#2" expanded="true" />
-            <element signature="e#19064#19817#2" expanded="true" />
-            <element signature="e#19890#20602#2" expanded="true" />
-            <element signature="e#20674#20901#2" expanded="true" />
-            <element signature="e#20977#21212#2" expanded="true" />
-            <element signature="e#21283#21582#2" expanded="true" />
-            <element signature="e#21660#22066#2" expanded="true" />
-            <element signature="e#22144#22455#2" expanded="true" />
-            <element signature="e#22526#22809#2" expanded="true" />
-            <element signature="e#22880#23150#2" expanded="true" />
-            <element signature="e#23239#23513#2" expanded="true" />
-            <element signature="e#23602#23883#2" expanded="true" />
-            <element signature="e#27861#28204#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/all.js" />
+    <entry file="file://$PROJECT_DIR$/public/css/all.css" />
     <entry file="file://$PROJECT_DIR$/resources/views/vendor/adminlte/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1117,44 +844,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/LocationComponent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.mix.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#33#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/components/form/radio.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="91" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/FormServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
-          <folding>
-            <element signature="e#33#72#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1165,31 +858,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/components/form/checkbox.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/components/form/radioGroup.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="96" selection-start-column="96" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="177" column="49" selection-start-line="177" selection-start-column="49" selection-end-line="177" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/delivery/_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1210,20 +882,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/breadcrumbs.php">
+    <entry file="file://$PROJECT_DIR$/config/breadcrumbs.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/vendor/adminlte/page.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="621">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Notifications/VerifyEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/vendor/notifications/email.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="81" column="104" selection-start-line="81" selection-start-column="104" selection-end-line="81" selection-end-column="104" />
+          <folding>
+            <element signature="e#30#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/VerificationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/breadcrumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/partials/breadcrumbs.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vendor/adminlte/page.blade.php">
+    <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="4071">
+          <caret line="177" column="49" selection-start-line="177" selection-start-column="49" selection-end-line="177" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/components/form/radio.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="91" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/FormServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/components/form/checkbox.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/BreadcrumbsServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/delivery/_form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/LocationComponent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/messages.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -1234,17 +1008,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/breadcrumbs.php">
+    <entry file="file://$PROJECT_DIR$/resources/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-326">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        <state relative-caret-position="1265">
+          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/BreadcrumbsServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/delivery/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="230">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+          <folding>
+            <element signature="e#7#35#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/Flash.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/AuthenticateSite.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_10_02_095309_create_deliveries_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeders/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="83" column="46" selection-start-line="82" selection-start-column="8" selection-end-line="83" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_10_10_072758_create_trix_rich_texts_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Delivery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ManageDeliveryRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+          <folding>
+            <element signature="e#40#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/UserManagementTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>

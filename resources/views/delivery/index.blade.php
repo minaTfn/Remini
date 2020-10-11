@@ -5,13 +5,10 @@
     <h1>Deliveries</h1>
 @stop
 
-@section('actions')
-    <a href="{{ route('deliveries.create') }}" class="btn bg-teal btn-sm p-2"><i class="mr-1 fa fa-user-plus"></i>Create Delivery</a>
-@stop
-
 @section('content')
     <div class="card shadow-none">
         <div class="card-body">
+            @if(!$deliveries->isEmpty())
             <table class="table table-hover">
                 <thead>
                 <tr>
@@ -50,6 +47,10 @@
                 @endforeach
                 </tbody>
             </table>
+            @else
+                <p>No Item Is Available</p>
+            @endif
+
         </div>
         <div class="card-footer">
             <div class="row">{{$deliveries->links()}}</div>

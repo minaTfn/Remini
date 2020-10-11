@@ -11,19 +11,9 @@
 @endif
 
 @if (session('success'))
-    <div class="alert bg-gradient-teal alert-dismissible fade show" role="alert">
-        {{session('success')}}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+    <flash message="{{ session('success') }}"></flash>
 @endif
 
 @if (session('warning'))
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        error code: {{session('warning')}}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+    <flash status="warning" message="{{ session('warning') }}"></flash>
 @endif

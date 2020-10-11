@@ -29,13 +29,13 @@ class ManageDeliveryRequest extends FormRequest {
      */
     public function rules() {
         return [
-            'title' => 'required|max:250',
-            'origin_country_id' => 'required',
-            'origin_city_id' => 'required',
-            'destination_country_id' => 'required',
-            'destination_city_id' => 'required',
-            'delivery_method_id' => 'required',
-            'payment_method_id' => 'required',
+            'title' => 'sometimes|required|max:250',
+            'origin_country_id' => 'sometimes|required',
+            'origin_city_id' => 'sometimes|required',
+            'destination_country_id' => 'sometimes|required',
+            'destination_city_id' => 'sometimes|required',
+            'delivery_method_id' => 'sometimes|required',
+            'payment_method_id' => 'sometimes|required',
             'description' => 'nullable',
         ];
     }

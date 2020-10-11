@@ -72,7 +72,6 @@ class DeliveryController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(ManageDeliveryRequest $request, Delivery $delivery) {
-
         $delivery->update($request->all());
 
         return redirect(route('deliveries.index'));
@@ -83,8 +82,12 @@ class DeliveryController extends Controller {
      *
      * @param  \App\Models\Delivery $delivery
      * @return void
+     * @throws \Exception
      */
     public function destroy(Delivery $delivery) {
-        //
+
+        $delivery->delete();
+        return redirect(route('deliveries.index'))->with('success', 'Item Deleted Successfully');
+
     }
 }

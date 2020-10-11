@@ -6,6 +6,8 @@ window._ = require('lodash');
  * code may be modified to fit the specific needs of your application.
  */
 
+window.Vue = require('vue');
+
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
@@ -24,6 +26,12 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+window.events = new Vue();
+
+window.flash = function (message, level = 'success') {
+    window.events.$emit('flash', { message, level });
+};
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

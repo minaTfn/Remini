@@ -35,14 +35,14 @@ class UserManagementTest extends TestCase {
     public function an_inactive_user_cannot_login_to_the_system() {
         $user = User::factory()->create(['status' => User::INACTIVE]);
         $this->post('/login', $user->toArray())->assertSessionHasErrors();
-        $this->get(route('users.index'))->assertRedirect(route('login'));
+        $this->get(route('users.index'))->assertRedirect('/login');
     }
 
     /** @test */
     public function users_with_role_site_cannot_login_to_the_admin_panel(){
         $user = User::factory()->create(['role' => User::SiteUSER]);
         $this->post('/login', $user->toArray())->assertSessionHasErrors();
-        $this->get(route('users.index'))->assertRedirect(route('login'));
+        $this->get(route('users.index'))->assertRedirect('/login');
     }
 
     /** @test */
