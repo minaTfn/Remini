@@ -2,7 +2,7 @@
 
 <div>
     {{ Form::token() }}
-    {{ Form::bsText('title',null,['autofocus'=>'']) }}
+    {{ Form::bsText('title',null,['autofocus'=>'','required']) }}
 
 
     <location-component
@@ -27,9 +27,11 @@
 
     {{ Form::bsRadioGroup('delivery_method_id',$deliveryMethods,$delivery->delivery_method_id,'','Delivery Method') }}
     {{ Form::bsRadioGroup('payment_method_id',$paymentMethods,$delivery->payment_method_id,'','Payment Method') }}
-
-
-    {!! $delivery->trix('description') !!}
+    {{ Form::bsDate('maximum_deadline') }}
+    <div class="form-group">
+        {{ Form::label('description', null, ['class' => 'label']) }}
+        {!! $delivery->trix('description') !!}
+    </div>
 
     <div class="d-flex align-items-end mt-5">
         {{ Form::submit($buttonText,['class'=>'btn btn-success mr-2']) }}
@@ -37,6 +39,5 @@
     </div>
 
 </div>
-
 
 

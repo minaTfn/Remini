@@ -1,3 +1,4 @@
+
 .font-size-xs *:not([class^="font-size-"]), .font-size-xs{
     font-size: 10px;
 }
@@ -57,3 +58,20 @@
     to {bottom: 0; opacity: 0;}
 }
 /* Snack Bar End */
+
+.card-body .table thead{
+    background: rgba(0,0,0,0.1);
+}
+
+.select2-reset{
+    position: absolute;
+    top: 13px;
+    right: 30px;
+    font-size: 10px;
+    cursor: pointer;
+    color: #6c757d;
+    z-index:10;
+}
+.select2-reset.ajax{
+    right: 13px;
+}

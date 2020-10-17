@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ManagePaymentMethodRequest;
 use App\Models\PaymentMethod;
-use Illuminate\Http\Request;
 
 class PaymentMethodController extends Controller
 {
@@ -14,7 +14,8 @@ class PaymentMethodController extends Controller
      */
     public function index()
     {
-        //
+        $paymentMethods = PaymentMethod::all();
+        return view('paymentMethod.index', compact('paymentMethods'));
     }
 
     /**
@@ -24,25 +25,27 @@ class PaymentMethodController extends Controller
      */
     public function create()
     {
-        //
+        $paymentMethod = new PaymentMethod();
+        return view('paymentMethod.create',compact('paymentMethod'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param ManagePaymentMethodRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ManagePaymentMethodRequest $request)
     {
-        //
+        PaymentMethod::create($request->all());
+        return redirect(route('payment-methods.index'))->with('success', 'Item Created Successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\PaymentMethod  $paymentMethod
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\PaymentMethod $paymentMethod
+     * @return void
      */
     public function show(PaymentMethod $paymentMethod)
     {
@@ -57,29 +60,32 @@ class PaymentMethodController extends Controller
      */
     public function edit(PaymentMethod $paymentMethod)
     {
-        //
+        return view('paymentMethod.edit', compact('paymentMethod'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\PaymentMethod  $paymentMethod
+     * @param ManagePaymentMethodRequest $request
+     * @param  \App\Models\PaymentMethod $paymentMethod
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PaymentMethod $paymentMethod)
+    public function update(ManagePaymentMethodRequest $request, PaymentMethod $paymentMethod)
     {
-        //
+        $paymentMethod->update($request->all());
+        return redirect(route('payment-methods.index'))->with('success', 'Item Updated Successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\PaymentMethod  $paymentMethod
+     * @param  \App\Models\PaymentMethod $paymentMethod
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(PaymentMethod $paymentMethod)
     {
-        //
+        $paymentMethod->delete();
+        return redirect(route('payment-methods.index'))->with('success', 'Item Deleted Successfully');
     }
 }

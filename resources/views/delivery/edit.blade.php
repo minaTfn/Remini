@@ -1,5 +1,5 @@
 @extends('adminlte::page')
-@section('title', 'Users Management')
+@section('title', 'Delivery')
 @section('js')
     @trixassets
 @stop

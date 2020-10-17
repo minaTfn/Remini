@@ -34,7 +34,12 @@ Route::prefix('auth')->middleware(['api'])->group(function () {
 
 Route::middleware(['api'])->group(function () {
 
-    Route::get('getCountries', [App\Http\Controllers\CountryController::class, 'index']);
+    Route::get('getCountries', [App\Http\Controllers\CountryController::class, 'index'])->name('api.get.countries');
+    Route::get('getCountry/{id}', [App\Http\Controllers\CountryController::class, 'show'])->name('api.get.country');
+
+    Route::get('getUsers', [App\Http\Controllers\Api\SiteUsersController::class, 'index'])->name('api.get.users');
+    Route::get('getUser/{id}', [App\Http\Controllers\Api\SiteUsersController::class, 'show'])->name('api.get.user');
+
     Route::get('getCities', [App\Http\Controllers\CityController::class, 'index']);
 
     Route::get('/cities/{country}', [App\Http\Controllers\CityController::class, 'index']);

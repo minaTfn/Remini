@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ManageDeliveryMethodRequest;
 use App\Models\DeliveryMethod;
-use Illuminate\Http\Request;
 
 class DeliveryMethodController extends Controller
 {
@@ -14,7 +14,8 @@ class DeliveryMethodController extends Controller
      */
     public function index()
     {
-        //
+        $deliveryMethods = DeliveryMethod::all();
+        return view('deliveryMethod.index', compact('deliveryMethods'));
     }
 
     /**
@@ -24,25 +25,27 @@ class DeliveryMethodController extends Controller
      */
     public function create()
     {
-        //
+        $deliveryMethod = new DeliveryMethod();
+        return view('deliveryMethod.create',compact('deliveryMethod'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param ManageDeliveryMethodRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ManageDeliveryMethodRequest $request)
     {
-        //
+        DeliveryMethod::create($request->all());
+        return redirect(route('delivery-methods.index'))->with('success', 'Item Created Successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\DeliveryMethod  $deliveryMethod
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\DeliveryMethod $deliveryMethod
+     * @return void
      */
     public function show(DeliveryMethod $deliveryMethod)
     {
@@ -57,29 +60,32 @@ class DeliveryMethodController extends Controller
      */
     public function edit(DeliveryMethod $deliveryMethod)
     {
-        //
+        return view('deliveryMethod.edit', compact('deliveryMethod'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\DeliveryMethod  $deliveryMethod
+     * @param ManageDeliveryMethodRequest $request
+     * @param  \App\Models\DeliveryMethod $deliveryMethod
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DeliveryMethod $deliveryMethod)
+    public function update(ManageDeliveryMethodRequest $request, DeliveryMethod $deliveryMethod)
     {
-        //
+        $deliveryMethod->update($request->all());
+        return redirect(route('delivery-methods.index'))->with('success', 'Item Updated Successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\DeliveryMethod  $deliveryMethod
+     * @param  \App\Models\DeliveryMethod $deliveryMethod
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(DeliveryMethod $deliveryMethod)
     {
-        //
+        $deliveryMethod->delete();
+        return redirect(route('delivery-methods.index'))->with('success', 'Item Deleted Successfully');
     }
 }

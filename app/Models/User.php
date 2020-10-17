@@ -4,13 +4,16 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable implements JWTSubject,MustVerifyEmail
-{
+class User extends Authenticatable implements JWTSubject, MustVerifyEmail {
     use HasFactory, Notifiable;
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 
     /**
      * user type Admin
@@ -45,7 +48,7 @@ class User extends Authenticatable implements JWTSubject,MustVerifyEmail
     /**
      * @var array
      */
-    protected $guarded = ['password_confirmation','old_password'];
+    protected $guarded = ['password_confirmation', 'old_password'];
 
     /**
      * The attributes that should be cast to native types.
@@ -61,7 +64,7 @@ class User extends Authenticatable implements JWTSubject,MustVerifyEmail
      * @var array
      */
     protected $visible = [
-        'name','email','role',
+        'name', 'email', 'role',
     ];
 
     /**
@@ -73,19 +76,30 @@ class User extends Authenticatable implements JWTSubject,MustVerifyEmail
         'password', 'remember_token',
     ];
 
+
     /**
-    * Get the title of the role.
-    *
-    * @return string
-    */
-    public function getRoleName(){
+     * Scope a query to only include Site users.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeSite($query) {
+        return $query->where('role', '=', User::SiteUSER);
+    }
+
+    /**
+     * Get the title of the role.
+     *
+     * @return string
+     */
+    public function getRoleName() {
         return $this->role == User::ADMIN ? 'Admin' : ($this->role == User::USER ? 'User' : 'Site User');
     }
 
     /**
-    * change the user status from active to inactive.
-    *
-    */
+     * change the user status from active to inactive.
+     *
+     */
     public function setAsActive() {
         $this->update(['status' => 1]);
     }
@@ -133,4 +147,5 @@ class User extends Authenticatable implements JWTSubject,MustVerifyEmail
     public function getJWTCustomClaims() {
         return [];
     }
+
 }

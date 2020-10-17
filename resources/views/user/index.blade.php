@@ -44,7 +44,7 @@
                                 <form action="{{route('users.destroy',$user)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-link" onclick="return confirm('Are you sure?')"
+                                    <button class="btn btn-link" onclick="return confirm('Are you sure you want to delete this item?')"
                                             type="submit"><i class="fas fa-trash-alt"></i></button>
                                 </form>
                             </div>

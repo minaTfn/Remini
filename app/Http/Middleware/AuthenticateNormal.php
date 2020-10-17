@@ -20,6 +20,6 @@ class AuthenticateNormal
         if(auth()->check() && auth()->user()->role === User::Normal){
             return $next($request);
         }
-        return redirect('login');
+        return redirect('/login');
     }
 }

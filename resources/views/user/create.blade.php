@@ -11,7 +11,7 @@
             @php $user = new App\Models\User; $user->status = 0; @endphp
             {!! Form::model($user, ['route' => ['users.store']]) !!}
             @include('user/_form',[
-                'user'=>new App\Models\User ,
+                'user'=> $user ,
                 'buttonText'=>'Create User',
                 'type'=>'create'
             ])

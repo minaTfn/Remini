@@ -5,20 +5,34 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateDeliveryRequest;
 use App\Http\Requests\ManageDeliveryRequest;
 use App\Models\City;
-use App\Models\Country;
 use App\Models\Delivery;
-use App\Models\DeliveryMethod;
-use App\Models\PaymentMethod;
-use Illuminate\Http\Request;
+use App\Models\DeliveryFilter;
 use Illuminate\Support\Facades\DB;
 
 class DeliveryController extends Controller {
 
     /**
+     * strip.empty.params middleware : for index route (search form get method) remove all the url params which are empty
+     * DeliveryController constructor.
+     */
+    public function __construct() {
+        $this->middleware('strip.empty.params', ['only' => 'index']);
+    }
+
+    /**
+     * @param DeliveryFilter $filters
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index() {
-        $deliveries = Delivery::paginate(10);
+    public function index(DeliveryFilter $filters) {
+
+        $deliveries = Delivery::with([
+            'originCountry:id,title',
+            'originCity:id,title',
+            'destinationCountry:id,title',
+            'destinationCity:id,title',
+            'owner:id,name'
+        ])->filter($filters)->paginate(10);
+
         return view('delivery.index', compact('deliveries'));
     }
 
@@ -39,16 +53,6 @@ class DeliveryController extends Controller {
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Delivery $delivery
-     * @return void
-     */
-    public function show(Delivery $delivery) {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Delivery $delivery
@@ -56,10 +60,10 @@ class DeliveryController extends Controller {
      */
     public function edit(Delivery $delivery) {
 
-        $originCities = City::with('countries')->where('country_id',$delivery->originCountry->id)->pluck('title','id');
-        $destinationCities = City::where('country_id',$delivery->destinationCountry->id)->pluck('title','id');
-        $deliveryMethods = DB::table('delivery_methods')->pluck('title','id');
-        $paymentMethods = DB::table('payment_methods')->pluck('title','id');
+        $originCities = City::where('country_id', $delivery->origin_country_id)->pluck('title', 'id');
+        $destinationCities = City::where('country_id', $delivery->destination_country_id)->pluck('title', 'id');
+        $deliveryMethods = DB::table('delivery_methods')->pluck('title', 'id');
+        $paymentMethods = DB::table('payment_methods')->pluck('title', 'id');
 
         return view('delivery.edit', compact('delivery', 'originCities', 'destinationCities', 'deliveryMethods', 'paymentMethods'));
     }
@@ -74,7 +78,14 @@ class DeliveryController extends Controller {
     public function update(ManageDeliveryRequest $request, Delivery $delivery) {
         $delivery->update($request->all());
 
-        return redirect(route('deliveries.index'));
+        if (request()->wantsJson()) {
+            return response()->json([
+                "message" => "delivery updated successfully.",
+                'data' => $delivery,
+            ], 201);
+        }
+
+        return redirect(route('deliveries.index'))->with('success', 'Item Updated Successfully');
     }
 
     /**
@@ -87,6 +98,13 @@ class DeliveryController extends Controller {
     public function destroy(Delivery $delivery) {
 
         $delivery->delete();
+
+        if (request()->wantsJson()) {
+            return response()->json([
+                "message" => "delivery deleted successfully.",
+            ], 204);
+        }
+
         return redirect(route('deliveries.index'))->with('success', 'Item Deleted Successfully');
 
     }

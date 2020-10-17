@@ -238,14 +238,14 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'Users',
+            'text' => 'Administrator User',
             'url' => 'admin/users',
             'icon' => 'fas fa-w-25 fa-user',
             'can' => 'manage-user'
         ],
         [
-            'text' => 'Accounts',
-            'url' => 'admin/accounts',
+            'text' => 'Site User',
+            'url' => 'admin/site-users',
             'icon' => 'fas fa-w-25 fa-users',
         ],
         ['header' => 'manage'],
@@ -270,11 +270,6 @@ return [
             'text' => 'Contact Method',
             'url' => 'admin/contact-methods',
             'icon' => 'fas fa-w-25 fa-phone-volume',
-        ],
-        [
-            'text' => 'Country',
-            'url' => 'admin/countries',
-            'icon' => 'fas fa-w-25 fa-globe-asia',
         ],
         ['header' => ''],
         [

@@ -20,6 +20,7 @@ class AuthenticateAdmin
         if(auth()->check() && auth()->user()->role === User::ADMIN){
             return $next($request);
         }
-        return redirect(route('login'));
+
+        return redirect('/login');
     }
 }

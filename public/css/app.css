@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);/*!
- * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
@@ -204,9 +204,6 @@ readers do not read off random characters that represent icons */
 
 .fa-adn:before {
   content: "\F170"; }
-
-.fa-adobe:before {
-  content: "\F778"; }
 
 .fa-adversal:before {
   content: "\F36A"; }
@@ -996,6 +993,9 @@ readers do not read off random characters that represent icons */
 
 .fa-cloud-upload-alt:before {
   content: "\F382"; }
+
+.fa-cloudflare:before {
+  content: "\E07D"; }
 
 .fa-cloudscale:before {
   content: "\F383"; }
@@ -1990,6 +1990,9 @@ readers do not read off random characters that represent icons */
 .fa-grunt:before {
   content: "\F3AD"; }
 
+.fa-guilded:before {
+  content: "\E07E"; }
+
 .fa-guitar:before {
   content: "\F7A6"; }
 
@@ -2164,6 +2167,9 @@ readers do not read off random characters that represent icons */
 .fa-history:before {
   content: "\F1DA"; }
 
+.fa-hive:before {
+  content: "\E07F"; }
+
 .fa-hockey-puck:before {
   content: "\F453"; }
 
@@ -2293,11 +2299,17 @@ readers do not read off random characters that represent icons */
 .fa-info-circle:before {
   content: "\F05A"; }
 
+.fa-innosoft:before {
+  content: "\E080"; }
+
 .fa-instagram:before {
   content: "\F16D"; }
 
 .fa-instagram-square:before {
   content: "\E055"; }
+
+.fa-instalod:before {
+  content: "\E081"; }
 
 .fa-intercom:before {
   content: "\F7AF"; }
@@ -2818,6 +2830,9 @@ readers do not read off random characters that represent icons */
 .fa-object-ungroup:before {
   content: "\F248"; }
 
+.fa-octopus-deploy:before {
+  content: "\E082"; }
+
 .fa-odnoklassniki:before {
   content: "\F263"; }
 
@@ -2955,6 +2970,9 @@ readers do not read off random characters that represent icons */
 
 .fa-pepper-hot:before {
   content: "\F816"; }
+
+.fa-perbyte:before {
+  content: "\E083"; }
 
 .fa-percent:before {
   content: "\F295"; }
@@ -4126,6 +4144,9 @@ readers do not read off random characters that represent icons */
 .fa-umbrella-beach:before {
   content: "\F5CA"; }
 
+.fa-uncharted:before {
+  content: "\E084"; }
+
 .fa-underline:before {
   content: "\F0CD"; }
 
@@ -4279,6 +4300,12 @@ readers do not read off random characters that represent icons */
 .fa-venus-mars:before {
   content: "\F228"; }
 
+.fa-vest:before {
+  content: "\E085"; }
+
+.fa-vest-patches:before {
+  content: "\E086"; }
+
 .fa-viacoin:before {
   content: "\F237"; }
 
@@ -4369,6 +4396,9 @@ readers do not read off random characters that represent icons */
 .fa-warehouse:before {
   content: "\F494"; }
 
+.fa-watchman-monitoring:before {
+  content: "\E087"; }
+
 .fa-water:before {
   content: "\F773"; }
 
@@ -4443,6 +4473,9 @@ readers do not read off random characters that represent icons */
 
 .fa-wizards-of-the-coast:before {
   content: "\F730"; }
+
+.fa-wodu:before {
+  content: "\E088"; }
 
 .fa-wolf-pack-battalion:before {
   content: "\F514"; }
@@ -4544,8 +4577,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?0fabb6606be4c45acfeedd115d0caca4);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?0fabb6606be4c45acfeedd115d0caca4?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?cac68c831145804808381a7032fdc7c2) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?dc0bd022735ed218df547742a1b2f172) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?085b1dd8427dbeff10bd55410915a3f6) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?ccfdb9dc442be0c629d331e94497428b#fontawesome) format("svg"); }
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?e2ca6541bff3a3e9f4799ee327b28c58);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?e2ca6541bff3a3e9f4799ee327b28c58?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?f075c50f89795e4cdb4d45b51f1a6800) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?ad527cc5ec23d6da66e8a1d6772ea6d3) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?8300bd7f30e0a313c1d772b49d96cb8e) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?2f12242375edd68e9013ecfb59c672e9#fontawesome) format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
@@ -4555,8 +4588,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?ad3a7c0d77e09602f4ab73db3660ffd8);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?ad3a7c0d77e09602f4ab73db3660ffd8?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?3a3398a6ef60fc64eacf45665958342e) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?05b53beb21e3ef13d28244545977152d) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?1a78af4105d4d56e6c34f76dc70bf1bc) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?e75dfd904d366a2560c63c23cfc98ef8#fontawesome) format("svg"); }
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?b01516c1808be557667befec76cd6318);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?b01516c1808be557667befec76cd6318?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?4a74738e7728e93c4394b8604081da62) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?3c6879c4f342203d099bdd66dce6d396) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?49f00693b0e5d45097832ef5ea1bc541) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?3602b7e8b2cb1462b0bef9738757ef8a#fontawesome) format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -4566,8 +4599,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?89bd2e38475e441a5cd70f663f921d61);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?89bd2e38475e441a5cd70f663f921d61?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?c500da19d776384ba69573ae6fe274e7) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?ee09ad7553b8ad3d81150d609d5341a0) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?781e85bb50c8e8301c30de56b31b1f04) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?03ba7cb710104df27f1c9c46d64bee4e#fontawesome) format("svg"); }
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?8ac3167427b1d5d2967646bd8f7a0587);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?8ac3167427b1d5d2967646bd8f7a0587?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?8e1ed89b6ccb8ce41faf5cb672677105) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?4451e1d86df7491dd874f2c41eee1053) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?205f07b3883c484f27f40d21a92950d4) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?664de3932dd6291b4b8a8c0ddbcb4c61#fontawesome) format("svg"); }
 
 .fa,
 .fas {
@@ -5177,395 +5210,6 @@ THEMES:
     left: -2px;
 }
 /*!
- * icheck-bootstrap v3.0.1 (https://github.com/bantikyan/icheck-bootstrap)
- * Copyright 2018 Hovhannes Bantikyan.
- * Licensed under MIT (https://github.com/bantikyan/icheck-bootstrap/blob/master/LICENSE)
- */
-
- [class*="icheck-"] {
-    min-height: 22px;
-    margin-top: 6px !important;
-    margin-bottom: 6px !important;
-    padding-left: 0px;
-}
-
-.icheck-inline {
-    display: inline-block;
-}
-
-    .icheck-inline + .icheck-inline {
-        margin-left: .75rem;
-        margin-top: 6px;
-    }
-
-[class*="icheck-"] > label {
-    padding-left: 29px !important;
-    min-height: 22px;
-    line-height: 22px;
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    margin-bottom: 0;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-[class*="icheck-"] > input:first-child {
-    position: absolute !important;
-    opacity: 0;
-    margin: 0;
-}
-
-    [class*="icheck-"] > input:first-child:disabled {
-        cursor: default;
-    }
-
-    [class*="icheck-"] > input:first-child + label::before,
-    [class*="icheck-"] > input:first-child + input[type="hidden"] + label::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 22px;
-        height: 22px;
-        border: 1px solid #D3CFC8;
-        border-radius: 0px;
-        margin-left: -29px;
-    }
-
-    [class*="icheck-"] > input:first-child:checked + label::after,
-    [class*="icheck-"] > input:first-child:checked + input[type="hidden"] + label::after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 7px;
-        height: 10px;
-        border: solid 2px #fff;
-        border-left: none;
-        border-top: none;
-        transform: translate(7.75px, 4.5px) rotate(45deg);
-        -ms-transform: translate(7.75px, 4.5px) rotate(45deg);
-    }
-
-[class*="icheck-"] > input[type="radio"]:first-child + label::before,
-[class*="icheck-"] > input[type="radio"]:first-child + input[type="hidden"] + label::before {
-    border-radius: 50%;
-}
-
-[class*="icheck-"] > input:first-child:not(:checked):not(:disabled):hover + label::before,
-[class*="icheck-"] > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-width: 2px;
-}
-
-[class*="icheck-"] > input:first-child:disabled + label,
-[class*="icheck-"] > input:first-child:disabled + input[type="hidden"] + label,
-[class*="icheck-"] > input:first-child:disabled + label::before,
-[class*="icheck-"] > input:first-child:disabled + input[type="hidden"] + label::before {
-    pointer-events: none;
-    cursor: default;
-    filter: alpha(opacity=65);
-    box-shadow: none;
-    opacity: .65;
-}
-
-.icheck-default > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-default > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #adadad;
-}
-
-.icheck-default > input:first-child:checked + label::before,
-.icheck-default > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #e6e6e6;
-    border-color: #adadad;
-}
-
-.icheck-default > input:first-child:checked + label::after,
-.icheck-default > input:first-child:checked + input[type="hidden"] + label::after {
-    border-bottom-color: #333;
-    border-right-color: #333;
-}
-
-.icheck-primary > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-primary > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #2e6da4;
-}
-
-.icheck-primary > input:first-child:checked + label::before,
-.icheck-primary > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #337ab7;
-    border-color: #2e6da4;
-}
-
-.icheck-success > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-success > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #4cae4c;
-}
-
-.icheck-success > input:first-child:checked + label::before,
-.icheck-success > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-}
-
-.icheck-info > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-info > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #46b8da;
-}
-
-.icheck-info > input:first-child:checked + label::before,
-.icheck-info > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #5bc0de;
-    border-color: #46b8da;
-}
-
-.icheck-warning > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-warning > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #eea236;
-}
-
-.icheck-warning > input:first-child:checked + label::before,
-.icheck-warning > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #f0ad4e;
-    border-color: #eea236;
-}
-
-.icheck-danger > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-danger > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #d43f3a;
-}
-
-.icheck-danger > input:first-child:checked + label::before,
-.icheck-danger > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #d9534f;
-    border-color: #d43f3a;
-}
-
-.icheck-turquoise > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-turquoise > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #1abc9c;
-}
-
-.icheck-turquoise > input:first-child:checked + label::before,
-.icheck-turquoise > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #1abc9c;
-    border-color: #1abc9c;
-}
-
-.icheck-emerland > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-emerland > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #2ecc71;
-}
-
-.icheck-emerland > input:first-child:checked + label::before,
-.icheck-emerland > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #2ecc71;
-    border-color: #2ecc71;
-}
-
-.icheck-peterriver > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-peterriver > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #3498db;
-}
-
-.icheck-peterriver > input:first-child:checked + label::before,
-.icheck-peterriver > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #3498db;
-    border-color: #3498db;
-}
-
-.icheck-amethyst > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-amethyst > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #9b59b6;
-}
-
-.icheck-amethyst > input:first-child:checked + label::before,
-.icheck-amethyst > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #9b59b6;
-    border-color: #9b59b6;
-}
-
-.icheck-wetasphalt > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-wetasphalt > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #34495e;
-}
-
-.icheck-wetasphalt > input:first-child:checked + label::before,
-.icheck-wetasphalt > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #34495e;
-    border-color: #34495e;
-}
-
-.icheck-greensea > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-greensea > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #16a085;
-}
-
-.icheck-greensea > input:first-child:checked + label::before,
-.icheck-greensea > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #16a085;
-    border-color: #16a085;
-}
-
-.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #27ae60;
-}
-
-.icheck-nephritis > input:first-child:checked + label::before,
-.icheck-nephritis > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #27ae60;
-    border-color: #27ae60;
-}
-
-.icheck-belizehole > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-belizehole > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #2980b9;
-}
-
-.icheck-belizehole > input:first-child:checked + label::before,
-.icheck-belizehole > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #2980b9;
-    border-color: #2980b9;
-}
-
-.icheck-wisteria > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-wisteria > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #8e44ad;
-}
-
-.icheck-wisteria > input:first-child:checked + label::before,
-.icheck-wisteria > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #8e44ad;
-    border-color: #8e44ad;
-}
-
-.icheck-midnightblue > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-midnightblue > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #2c3e50;
-}
-
-.icheck-midnightblue > input:first-child:checked + label::before,
-.icheck-midnightblue > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #2c3e50;
-    border-color: #2c3e50;
-}
-
-.icheck-sunflower > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-sunflower > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #f1c40f;
-}
-
-.icheck-sunflower > input:first-child:checked + label::before,
-.icheck-sunflower > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #f1c40f;
-    border-color: #f1c40f;
-}
-
-.icheck-carrot > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-carrot > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #e67e22;
-}
-
-.icheck-carrot > input:first-child:checked + label::before,
-.icheck-carrot > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #e67e22;
-    border-color: #e67e22;
-}
-
-.icheck-alizarin > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-alizarin > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #e74c3c;
-}
-
-.icheck-alizarin > input:first-child:checked + label::before,
-.icheck-alizarin > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #e74c3c;
-    border-color: #e74c3c;
-}
-
-.icheck-clouds > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-clouds > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #ecf0f1;
-}
-
-.icheck-clouds > input:first-child:checked + label::before,
-.icheck-clouds > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #ecf0f1;
-    border-color: #ecf0f1;
-}
-
-.icheck-clouds > input:first-child:checked + label::after,
-.icheck-clouds > input:first-child:checked + input[type="hidden"] + label::after {
-    border-bottom-color: #95a5a6;
-    border-right-color: #95a5a6;
-}
-
-.icheck-concrete > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-concrete > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #95a5a6;
-}
-
-.icheck-concrete > input:first-child:checked + label::before,
-.icheck-concrete > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #95a5a6;
-    border-color: #95a5a6;
-}
-
-.icheck-orange > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-orange > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #f39c12;
-}
-
-.icheck-orange > input:first-child:checked + label::before,
-.icheck-orange > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #f39c12;
-    border-color: #f39c12;
-}
-
-.icheck-pumpkin > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-pumpkin > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #d35400;
-}
-
-.icheck-pumpkin > input:first-child:checked + label::before,
-.icheck-pumpkin > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #d35400;
-    border-color: #d35400;
-}
-
-.icheck-pomegranate > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-pomegranate > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #c0392b;
-}
-
-.icheck-pomegranate > input:first-child:checked + label::before,
-.icheck-pomegranate > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #c0392b;
-    border-color: #c0392b;
-}
-
-.icheck-silver > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-silver > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #bdc3c7;
-}
-
-.icheck-silver > input:first-child:checked + label::before,
-.icheck-silver > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #bdc3c7;
-    border-color: #bdc3c7;
-}
-
-.icheck-asbestos > input:first-child:not(:checked):not(:disabled):hover + label::before,
-.icheck-asbestos > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
-    border-color: #7f8c8d;
-}
-
-.icheck-asbestos > input:first-child:checked + label::before,
-.icheck-asbestos > input:first-child:checked + input[type="hidden"] + label::before {
-    background-color: #7f8c8d;
-    border-color: #7f8c8d;
-}/*!
  *   AdminLTE v3.0.5
  *   Author: Colorlib
  *   Website: AdminLTE.io <http://adminlte.io>
@@ -7278,11 +6922,13 @@ pre code {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
+    font-size: 15px;
 }
 
 .table thead th {
     font-weight: 500;
     vertical-align: bottom;
+    font-size: 16px;
     border-bottom: 2px solid #dee2e6;
 }
 
@@ -7620,7 +7266,7 @@ pre code {
     width: 100%;
     height: calc(2.25rem + 2px);
     padding: 0.375rem 0.75rem;
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
@@ -7667,7 +7313,7 @@ pre code {
 }
 
 .form-control::placeholder {
-    color: #939ba2;
+    color: hsla(0,0%,74.9%,.87);
     opacity: 1;
 }
 
@@ -37245,6 +36891,7 @@ a.hover-teal:hover{
 .fa-w-25{
     min-width: 25px;
 }
+
 .font-size-xs *:not([class^="font-size-"]), .font-size-xs{
     font-size: 10px;
 }
@@ -37304,5 +36951,22 @@ a.hover-teal:hover{
     to {bottom: 0; opacity: 0;}
 }
 /* Snack Bar End */
+
+.card-body .table thead{
+    background: rgba(0,0,0,0.1);
+}
+
+.select2-reset{
+    position: absolute;
+    top: 13px;
+    right: 30px;
+    font-size: 10px;
+    cursor: pointer;
+    color: #6c757d;
+    z-index:10;
+}
+.select2-reset.ajax{
+    right: 13px;
+}
 
 

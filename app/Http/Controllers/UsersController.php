@@ -55,7 +55,7 @@ class UsersController extends Controller {
      */
     public function store(UserRequest $request) {
         User::create($request->all());
-        return redirect(route('users.index'));
+        return redirect(route('users.index'))->with('success', 'Item Created Successfully');;
     }
 
     /**
@@ -68,7 +68,7 @@ class UsersController extends Controller {
     public function update(UserRequest $request, User $user) {
         $user->update($request->all());
 
-        return redirect(route('users.index'));
+        return redirect(route('users.index'))->with('success', 'Item Updated Successfully');
     }
 
     /**
@@ -81,7 +81,7 @@ class UsersController extends Controller {
     public function destroy(User $user) {
         $this->authorize('deleteItself', $user);
         $user->delete();
-        return redirect(route('users.index'));
+        return redirect(route('users.index'))->with('success', 'Item Deleted Successfully');
     }
 
 }

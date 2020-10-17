@@ -18,6 +18,20 @@ class UserFactory extends Factory {
 
 
     /**
+     * Indicate that the user is suspended.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function SiteRole()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => User::SiteUSER,
+            ];
+        });
+    }
+
+    /**
      * Define the model's default state.
      *
      * @return array

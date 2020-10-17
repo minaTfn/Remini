@@ -1893,11 +1893,13 @@ pre code {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
+    font-size: 15px;
 }
 
 .table thead th {
     font-weight: 500;
     vertical-align: bottom;
+    font-size: 16px;
     border-bottom: 2px solid #dee2e6;
 }
 
@@ -2235,7 +2237,7 @@ pre code {
     width: 100%;
     height: calc(2.25rem + 2px);
     padding: 0.375rem 0.75rem;
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
@@ -2292,7 +2294,7 @@ pre code {
 }
 
 .form-control::placeholder {
-    color: #939ba2;
+    color: hsla(0,0%,74.9%,.87);
     opacity: 1;
 }
 
