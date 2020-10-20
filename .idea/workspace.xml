@@ -1,89 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c912b77-3445-4176-a142-f0c271a1b55e" name="Default Changelist" comment="purifier installed">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SiteUsersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactMethodController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteUserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/StripEmptyParams.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ManageContactMethodRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ManageDeliveryMethodRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ManagePaymentMethodRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/DeliveryFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/QueryFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_104454_add_soft_delete_column_to_users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/AjaxSelect2.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Select2.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/contactMethod/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/contactMethod/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/contactMethod/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/contactMethod/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/delivery/_search.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/deliveryMethod/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/deliveryMethod/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/deliveryMethod/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/deliveryMethod/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/paymentMethod/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/paymentMethod/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/paymentMethod/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/paymentMethod/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/siteUser/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/siteUser/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/siteUser/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/siteUser/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/purify/CSS/4.13.0,84a9cb681804f68773a2a36419faffda843c1870,1.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/purify/HTML/4.13.0,4c8286167fd1d8f340b9df6a5e52855d2454478a,1.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/SiteUserTest.php" afterDir="false" />
+    <list default="true" id="9c912b77-3445-4176-a142-f0c271a1b55e" name="Default Changelist" comment="added search form to deliveries list&#10;added ajax Select2 and normal Select2 Vuejs components&#10;added queryFilter abstract class">
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/City.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Country.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Delivery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/DeliveryCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/DeliveryMethod.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/PaymentMethod.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ContactMethodFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/ManageContactMethodTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/ManageDeliveryMethodTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/ManagePaymentMethodTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeliveryMethodController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeliveryMethodController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentMethodController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentMethodController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AuthenticateAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/AuthenticateAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AuthenticateNormal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/AuthenticateNormal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/ContactMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ContactMethod.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Delivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Delivery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/DeliveryFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DeliveryFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/FormServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/FormServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/DeliveryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/DeliveryFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/date.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/date.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/textarea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/textarea.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/form/checkboxGroup.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/checkboxGroup.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contactMethod/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contactMethod/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/delivery/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/delivery/_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/delivery/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/delivery/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/delivery/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/delivery/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/deliveryMethod/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/deliveryMethod/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/paymentMethod/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/paymentMethod/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/siteUser/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/siteUser/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/UserManagementTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/UserManagementTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Api/DeliveryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Api/DeliveryTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,21 +59,22 @@
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="555" />
-          <entry key="dummy" value="40" />
+          <entry key="css" value="591" />
+          <entry key="dummy" value="42" />
           <entry key="env" value="38" />
           <entry key="js" value="329" />
           <entry key="json" value="29" />
-          <entry key="php" value="27477" />
+          <entry key="php" value="29980" />
           <entry key="scss" value="55" />
-          <entry key="txt" value="477" />
+          <entry key="txt" value="618" />
           <entry key="vue" value="2017" />
           <entry key="xml" value="8" />
         </counts>
@@ -128,12 +82,12 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="38" />
-          <entry key="Blade" value="6120" />
-          <entry key="CSS" value="555" />
+          <entry key="Blade" value="6349" />
+          <entry key="CSS" value="591" />
           <entry key="JSON" value="29" />
           <entry key="JavaScript" value="329" />
-          <entry key="PHP" value="21357" />
-          <entry key="PLAIN_TEXT" value="517" />
+          <entry key="PHP" value="23631" />
+          <entry key="PLAIN_TEXT" value="660" />
           <entry key="SCSS" value="55" />
           <entry key="Vue.js" value="2017" />
           <entry key="XML" value="8" />
@@ -142,11 +96,11 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="config" value="1" />
-          <entry key="css" value="19" />
+          <entry key="css" value="20" />
           <entry key="env" value="9" />
-          <entry key="js" value="25" />
+          <entry key="js" value="26" />
           <entry key="json" value="16" />
-          <entry key="php" value="637" />
+          <entry key="php" value="690" />
           <entry key="scss" value="6" />
           <entry key="vue" value="12" />
           <entry key="xml" value="6" />
@@ -155,11 +109,11 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="9" />
-          <entry key="Blade" value="169" />
-          <entry key="CSS" value="19" />
+          <entry key="Blade" value="182" />
+          <entry key="CSS" value="20" />
           <entry key="JSON" value="16" />
-          <entry key="JavaScript" value="25" />
-          <entry key="PHP" value="468" />
+          <entry key="JavaScript" value="26" />
+          <entry key="PHP" value="508" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="6" />
           <entry key="Vue.js" value="12" />
@@ -170,7 +124,7 @@
         <counts>
           <entry key="git.branch.checkout.local" value="4" />
           <entry key="git.branch.create.new" value="4" />
-          <entry key="git.branch.create.new.nocheckout" value="3" />
+          <entry key="git.branch.create.new.nocheckout" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -186,79 +140,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/DeliveryFilter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/delivery/_search.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/QueryFilter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-              <folding>
-                <element signature="e#117#158#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="1901" column="17" selection-start-line="1901" selection-start-column="17" selection-end-line="1901" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/delivery/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/StripEmptyParams.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-              <folding>
-                <element signature="e#39#51#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="14" column="80" lean-forward="true" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="121" />
+            <state relative-caret-position="759">
+              <caret line="39" column="41" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="41" />
               <folding>
                 <element signature="e#40#84#0#PHP" expanded="true" />
               </folding>
@@ -267,19 +152,82 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/DeliveryFilter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+            <state relative-caret-position="529">
+              <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/css/app.css">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+            <state relative-caret-position="897">
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Resources/Delivery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Delivery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+              <folding>
+                <element signature="e#30#48#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Resources/DeliveryMethod.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="19" column="42" selection-start-line="17" selection-start-column="12" selection-end-line="19" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Resources/PaymentMethod.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Resources/City.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+              <folding>
+                <element signature="e#38#86#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CountryController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <element signature="e#40#63#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -288,36 +236,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>status code</find>
-      <find>Status Codes</find>
-      <find>jquery</find>
-      <find>vue from</find>
-      <find>updateStatus</find>
-      <find>option</find>
-      <find>import</find>
-      <find>searchText</find>
-      <find>originCountry</find>
-      <find>no-options</find>
-      <find>,'like'</find>
-      <find>selectFromParentComponent1</find>
-      <find>reset</find>
-      <find>searchCountry</find>
-      <find>selectedCountry</find>
-      <find>site(</find>
-      <find>countriesList</find>
-      <find>import 'vue-search-select/dist/VueSearchSelect.css'</find>
-      <find>getCities</find>
-      <find>item</find>
-      <find>push</find>
-      <find>options</find>
-      <find>animation</find>
       <find>selectedItem</find>
       <find>.form-control</find>
       <find>.form-control::placeholder</find>
       <find>.table th,.table td</find>
       <find>.table td</find>
-      <find>.table th, .table td</find>
       <find>middleware</find>
+      <find>.table th, .table td</find>
+      <find>assertSee</find>
+      <find>guests</find>
+      <find>getRouteKeyName</find>
+      <find>contact</find>
+      <find>with</find>
+      <find>$value</find>
+      <find>fa-user-edit</find>
+      <find>search</find>
+      <find>sidebar-</find>
+      <find>sidebar-dar</find>
+      <find>sidebar-dark-&quot;</find>
+      <find>sidebar-dark-p</find>
+      <find>.sidebar-dark-primary .nav-sidebar &gt; .nav-item &gt; .nav-link.active, .sidebar-light-primary .nav-sidebar &gt; .nav-item &gt; .nav-link.active</find>
+      <find>.sidebar-dark-primary</find>
+      <find>007bff</find>
+      <find>sidebar-dark-</find>
+      <find>dark-green</find>
+      <find>expect</find>
+      <find>belongsToM</find>
+      <find>Resources/User</find>
+      <find>UserResource</find>
+      <find>route('login</find>
+      <find>-&gt;diff</find>
     </findStrings>
     <replaceStrings>
       <replace>Poppins</replace>
@@ -333,6 +281,7 @@
       <replace>Delivery</replace>
       <replace>Are you sure you want to delete this item?</replace>
       <replace>Site Users Management</replace>
+      <replace>fa-edit</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\newWamp\www\remini\app\Http\Controllers\Auth</dir>
@@ -351,64 +300,64 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="changes_Oct_1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/delivery/_form.blade.php" />
-        <option value="$PROJECT_DIR$/routes/breadcrumbs.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ContactMethodController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PaymentMethodController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/ManagePaymentMethodRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/ManageDeliveryMethodRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/ManageContactMethodRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/deliveryMethod/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/deliveryMethod/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/deliveryMethod/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/contactMethod/_form.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/ContactMethod.php" />
-        <option value="$PROJECT_DIR$/resources/views/contactMethod/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/account/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" />
-        <option value="$PROJECT_DIR$/config/adminlte.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_10_12_104454_add_soft_delete_column_to_users.php" />
-        <option value="$PROJECT_DIR$/app/Models/User.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
-        <option value="$PROJECT_DIR$/resources/views/siteUser/index.blade.php" />
-        <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/AuthenticateNormal.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/AuthenticateAdmin.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/UserManagementTest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SiteUserController.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/SiteUserTest.php" />
-        <option value="$PROJECT_DIR$/resources/views/delivery/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Delivery.php" />
         <option value="$PROJECT_DIR$/resources/js/components/v-select2.vue" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/resources/js/components/Select22.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/CountrySelect2.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UsersController.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/resources/sass/app.scss" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/SiteUsersController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" />
         <option value="$PROJECT_DIR$/resources/css/app.css" />
         <option value="$PROJECT_DIR$/resources/js/components/Select2.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/AjaxSelect2.vue" />
-        <option value="$PROJECT_DIR$/app/Models/DeliveryFilter.php" />
-        <option value="$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css" />
         <option value="$PROJECT_DIR$/app/Models/QueryFilter.php" />
         <option value="$PROJECT_DIR$/resources/views/delivery/_search.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/delivery/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/StripEmptyParams.php" />
+        <option value="$PROJECT_DIR$/database/factories/DeliveryFactory.php" />
+        <option value="$PROJECT_DIR$/tests/TestCase.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/Api/DeliveryTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ManageDeliveryMethodTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ManagePaymentMethodTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ManageContactMethodTest.php" />
+        <option value="$PROJECT_DIR$/database/factories/ContactMethodFactory.php" />
+        <option value="$PROJECT_DIR$/app/Providers/FormServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/views/components/form/checkboxGroup.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/delivery/_form.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/paymentMethod/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/contactMethod/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/deliveryMethod/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/delivery/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/siteUser/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/user/index.blade.php" />
+        <option value="$PROJECT_DIR$/config/adminlte.php" />
+        <option value="$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/DeliveryCollection.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/Country.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/City.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/DeliveryMethod.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/PaymentMethod.php" />
+        <option value="$PROJECT_DIR$/app/Models/Delivery.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/ContactMethods.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/ContactMethod.php" />
+        <option value="$PROJECT_DIR$/app/Models/ContactMethod.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/Delivery.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" />
+        <option value="$PROJECT_DIR$/app/Models/DeliveryFilter.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" />
       </list>
     </option>
   </component>
@@ -631,18 +580,48 @@
               <item name="remini" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remini" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remini" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remini" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remini" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remini" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remini" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remini" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remini" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remini" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remini" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remini" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remini" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="remini" type="b2602c69:ProjectViewProjectNode" />
               <item name="remini" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="remini" type="b2602c69:ProjectViewProjectNode" />
-              <item name="remini" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Feature" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="remini" type="b2602c69:ProjectViewProjectNode" />
@@ -674,17 +653,17 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\newWamp\www\remini\app\Http\Resources" />
+      <recent name="C:\newWamp\www\remini\database\factories" />
+      <recent name="C:\newWamp\www\remini\tests\Feature" />
+      <recent name="C:\newWamp\www\remini\app\Http\Controllers\Api" />
+      <recent name="C:\newWamp\www\remini\resources\js\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\newWamp\www\remini\resources\plugins\select2" />
       <recent name="C:\newWamp\www\remini\tests\Unit\Api" />
       <recent name="C:\newWamp\www\remini\app\Http\Controllers\Api" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\newWamp\www\remini\app\Http\Controllers\Api" />
-      <recent name="C:\newWamp\www\remini\resources\js\components" />
-      <recent name="C:\newWamp\www\remini\resources\views\delivery" />
-      <recent name="C:\newWamp\www\remini\resources\views" />
-      <recent name="C:\newWamp\www\remini\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -699,41 +678,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.SiteUserTest.an_admin_user_can_change_status_of_site_users">
-    <configuration name="SiteUserTest.an_admin_user_can_change_status_of_site_users" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\SiteUserTest" file="$PROJECT_DIR$/tests/Feature/SiteUserTest.php" method="an_admin_user_can_change_status_of_site_users" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.ManageContactMethodTest">
+    <configuration name="ManageContactMethodTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ManageContactMethodTest" file="$PROJECT_DIR$/tests/Feature/ManageContactMethodTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="SiteUserTest.an_admin_user_can_delete_site_users" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\SiteUserTest" file="$PROJECT_DIR$/tests/Feature/SiteUserTest.php" method="an_admin_user_can_delete_site_users" scope="Method" />
+    <configuration name="ManageDeliveryMethodTest.an_authorized_user_can_see_delivery_methods" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ManageDeliveryMethodTest" file="$PROJECT_DIR$/tests/Feature/ManageDeliveryMethodTest.php" method="an_authorized_user_can_see_delivery_methods" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="SiteUserTest.an_admin_user_can_update_site_users" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\SiteUserTest" file="$PROJECT_DIR$/tests/Feature/SiteUserTest.php" method="an_admin_user_can_update_site_users" scope="Method" />
+    <configuration name="ManageDeliveryMethodTest.guests_cannot_manage_delivery_methods" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ManageDeliveryMethodTest" file="$PROJECT_DIR$/tests/Feature/ManageDeliveryMethodTest.php" method="guests_cannot_manage_delivery_methods" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="SiteUserTest.unauthenticated_users_cannot_change_the_status_of_site_users" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\SiteUserTest" file="$PROJECT_DIR$/tests/Feature/SiteUserTest.php" method="unauthenticated_users_cannot_change_the_status_of_site_users" scope="Method" />
+    <configuration name="ManageDeliveryTest.users_can_search_deliveries_by_their_title" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ManageDeliveryTest" file="$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php" method="users_can_search_deliveries_by_their_title" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="SiteUserTest.unauthenticated_users_cannot_see_list_of_site_users" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\SiteUserTest" file="$PROJECT_DIR$/tests/Feature/SiteUserTest.php" method="unauthenticated_users_cannot_see_list_of_site_users" scope="Method" />
+    <configuration name="ManagePaymentMethodTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ManagePaymentMethodTest" file="$PROJECT_DIR$/tests/Feature/ManagePaymentMethodTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.SiteUserTest.unauthenticated_users_cannot_see_list_of_site_users" />
-      <item itemvalue="PHPUnit.SiteUserTest.an_admin_user_can_update_site_users" />
-      <item itemvalue="PHPUnit.SiteUserTest.an_admin_user_can_delete_site_users" />
-      <item itemvalue="PHPUnit.SiteUserTest.unauthenticated_users_cannot_change_the_status_of_site_users" />
-      <item itemvalue="PHPUnit.SiteUserTest.an_admin_user_can_change_status_of_site_users" />
+      <item itemvalue="PHPUnit.ManageDeliveryMethodTest.guests_cannot_manage_delivery_methods" />
+      <item itemvalue="PHPUnit.ManageDeliveryTest.users_can_search_deliveries_by_their_title" />
+      <item itemvalue="PHPUnit.ManageDeliveryMethodTest.an_authorized_user_can_see_delivery_methods" />
+      <item itemvalue="PHPUnit.ManagePaymentMethodTest" />
+      <item itemvalue="PHPUnit.ManageContactMethodTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.SiteUserTest.an_admin_user_can_change_status_of_site_users" />
-        <item itemvalue="PHPUnit.SiteUserTest.unauthenticated_users_cannot_change_the_status_of_site_users" />
-        <item itemvalue="PHPUnit.SiteUserTest.an_admin_user_can_delete_site_users" />
-        <item itemvalue="PHPUnit.SiteUserTest.an_admin_user_can_update_site_users" />
-        <item itemvalue="PHPUnit.SiteUserTest.unauthenticated_users_cannot_see_list_of_site_users" />
+        <item itemvalue="PHPUnit.ManageContactMethodTest" />
+        <item itemvalue="PHPUnit.ManagePaymentMethodTest" />
+        <item itemvalue="PHPUnit.ManageDeliveryMethodTest.an_authorized_user_can_see_delivery_methods" />
+        <item itemvalue="PHPUnit.ManageDeliveryMethodTest.guests_cannot_manage_delivery_methods" />
+        <item itemvalue="PHPUnit.ManageDeliveryTest.users_can_search_deliveries_by_their_title" />
       </list>
     </recent_temporary>
   </component>
@@ -760,7 +739,8 @@
       <workItem from="1602160504333" duration="22569000" />
       <workItem from="1602403122477" duration="1077000" />
       <workItem from="1602404350572" duration="2103000" />
-      <workItem from="1602911900043" duration="6008000" />
+      <workItem from="1602911900043" duration="40930000" />
+      <workItem from="1603199770806" duration="1283000" />
     </task>
     <task id="LOCAL-00001" summary="install npm and ui scaffolding vue">
       <created>1599889051819</created>
@@ -825,43 +805,50 @@
       <option name="project" value="LOCAL" />
       <updated>1602428935763</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added search form to deliveries list&#10;added ajax Select2 and normal Select2 Vuejs components&#10;added queryFilter abstract class">
+      <created>1602918190096</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602918190096</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SiteUserTest_an_admin_user_can_update_site_users - 2020.10.12 at 12h 25m 57s.xml">
-      <configuration name="SiteUserTest.an_admin_user_can_update_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageDeliveryTest_users_can_search_deliveries_by_their_title - 2020.10.17 at 11h 39m 18s.xml">
+      <configuration name="ManageDeliveryTest.users_can_search_deliveries_by_their_title" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SiteUserTest_an_admin_user_can_delete_site_users - 2020.10.12 at 12h 27m 31s.xml">
-      <configuration name="SiteUserTest.an_admin_user_can_delete_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageDeliveryTest_users_can_search_deliveries_by_their_title - 2020.10.17 at 11h 41m 15s.xml">
+      <configuration name="ManageDeliveryTest.users_can_search_deliveries_by_their_title" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SiteUserTest_an_admin_user_can_delete_site_users - 2020.10.12 at 12h 27m 54s.xml">
-      <configuration name="SiteUserTest.an_admin_user_can_delete_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageDeliveryMethodTest_guests_cannot_manage_delivery_methods - 2020.10.17 at 11h 41m 54s.xml">
+      <configuration name="ManageDeliveryMethodTest.guests_cannot_manage_delivery_methods" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SiteUserTest_an_admin_user_can_delete_site_users - 2020.10.12 at 12h 28m 16s.xml">
-      <configuration name="SiteUserTest.an_admin_user_can_delete_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageDeliveryMethodTest_guests_cannot_manage_delivery_methods - 2020.10.17 at 11h 42m 09s.xml">
+      <configuration name="ManageDeliveryMethodTest.guests_cannot_manage_delivery_methods" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SiteUserTest_an_admin_user_can_delete_site_users - 2020.10.12 at 12h 35m 44s.xml">
-      <configuration name="SiteUserTest.an_admin_user_can_delete_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageDeliveryMethodTest_an_authorized_user_can_see_delivery_methods - 2020.10.17 at 11h 45m 52s.xml">
+      <configuration name="ManageDeliveryMethodTest.an_authorized_user_can_see_delivery_methods" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SiteUserTest_unauthenticated_users_cannot_change_the_status_of_site_users - 2020.10.14 at 06h 46m 25s.xml">
-      <configuration name="SiteUserTest.unauthenticated_users_cannot_change_the_status_of_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageDeliveryMethodTest_an_authorized_user_can_see_delivery_methods - 2020.10.17 at 11h 46m 17s.xml">
+      <configuration name="ManageDeliveryMethodTest.an_authorized_user_can_see_delivery_methods" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SiteUserTest_unauthenticated_users_cannot_change_the_status_of_site_users - 2020.10.14 at 06h 47m 14s.xml">
-      <configuration name="SiteUserTest.unauthenticated_users_cannot_change_the_status_of_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageDeliveryMethodTest_an_authorized_user_can_see_delivery_methods - 2020.10.17 at 11h 47m 06s.xml">
+      <configuration name="ManageDeliveryMethodTest.an_authorized_user_can_see_delivery_methods" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SiteUserTest_unauthenticated_users_cannot_change_the_status_of_site_users - 2020.10.14 at 06h 49m 09s.xml">
-      <configuration name="SiteUserTest.unauthenticated_users_cannot_change_the_status_of_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManagePaymentMethodTest - 2020.10.17 at 11h 48m 56s.xml">
+      <configuration name="ManagePaymentMethodTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SiteUserTest_an_admin_user_can_change_status_of_site_users - 2020.10.14 at 06h 56m 36s.xml">
-      <configuration name="SiteUserTest.an_admin_user_can_change_status_of_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageContactMethodTest - 2020.10.17 at 11h 50m 03s.xml">
+      <configuration name="ManageContactMethodTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SiteUserTest_an_admin_user_can_change_status_of_site_users - 2020.10.14 at 06h 56m 52s.xml">
-      <configuration name="SiteUserTest.an_admin_user_can_change_status_of_site_users" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageContactMethodTest - 2020.10.17 at 11h 51m 12s.xml">
+      <configuration name="ManageContactMethodTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358560000" />
+    <option name="totallyTimeSpent" value="394765000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,7 +863,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991708" visible="true" weight="0.16720258" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991708" visible="true" weight="0.1693462" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.50082916" side_tool="true" weight="0.24973205" />
@@ -891,7 +878,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005359" side_tool="true" weight="0.269188" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4994641" visible="true" weight="0.26028922" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4994641" visible="true" weight="0.26028922" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -915,297 +902,10 @@
     <MESSAGE value="complete auth Api and forget password email&#10;verification email" />
     <MESSAGE value="added delivery migrations and form of edit delivery in admin" />
     <MESSAGE value="purifier installed" />
-    <option name="LAST_COMMIT_MESSAGE" value="purifier installed" />
+    <MESSAGE value="added search form to deliveries list&#10;added ajax Select2 and normal Select2 Vuejs components&#10;added queryFilter abstract class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added search form to deliveries list&#10;added ajax Select2 and normal Select2 Vuejs components&#10;added queryFilter abstract class" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/contactMethod/_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/contactMethod/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ContactMethod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/deliveryMethod/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/siteUser/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/adminlte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="247" column="38" selection-start-line="247" selection-start-column="38" selection-end-line="247" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_10_12_104454_add_soft_delete_column_to_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContactMethodController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1863">
-          <caret line="81" column="55" selection-start-line="81" selection-start-column="55" selection-end-line="81" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="82" column="24" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/siteUser/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/AuthenticateNormal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/AuthenticateAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/Api/DeliveryTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/SiteUserTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SiteUserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/UserManagementTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
-          <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
-          <caret line="30" column="78" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-514">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4028">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Delivery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/delivery/_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="37" column="113" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/delivery/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.mix.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1518">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryMethodController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1012">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding>
-            <element signature="e#7#35#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/LocationComponent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/FormServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#33#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-          <folding>
-            <element signature="e#795#862#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/SiteUsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="e#44#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CountryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Select2.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="3" column="67" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/AjaxSelect2.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -1220,48 +920,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="1901" column="17" selection-start-line="1901" selection-start-column="17" selection-end-line="1901" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/DeliveryFilter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/QueryFilter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding>
-            <element signature="e#117#158#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/delivery/_search.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/delivery/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1272,22 +934,319 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/StripEmptyParams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/QueryFilter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="397" column="20" selection-start-line="397" selection-start-column="20" selection-end-line="397" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/DeliveryFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1559">
+          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/DeliveryMethodFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ManagePaymentMethodTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/ContactMethodFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ManageContactMethodTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="67" column="61" lean-forward="true" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ManageDeliveryMethodTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ManageDeliveryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/Api/DeliveryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryMethodController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/delivery/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/FormServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="29" column="100" selection-start-line="29" selection-start-column="94" selection-end-line="29" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/components/form/checkboxGroup.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/paymentMethod/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/deliveryMethod/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/siteUser/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/delivery/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/contactMethod/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/adminlte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="128" column="44" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/delivery/_form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="32284" selection-start-line="32284" selection-end-line="32284" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/taftian/react-python/src/components/delivery/DeliveriesList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="119" column="31" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/AuthenticateAdmin.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/User.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Country.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/ContactMethods.php" />
+    <entry file="file://$PROJECT_DIR$/app/Models/ContactMethod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/ContactMethod.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/DeliveryCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="14" column="80" lean-forward="true" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="121" />
+        <state relative-caret-position="759">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="41" />
           <folding>
             <element signature="e#40#84#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/StripEmptyParams.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/DeliveryFilter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        <state relative-caret-position="529">
+          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Delivery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Delivery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
           <folding>
-            <element signature="e#39#51#0#PHP" expanded="true" />
+            <element signature="e#30#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/DeliveryMethod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="19" column="42" selection-start-line="17" selection-start-column="12" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/PaymentMethod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/City.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+          <folding>
+            <element signature="e#38#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CountryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

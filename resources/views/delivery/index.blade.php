@@ -42,7 +42,7 @@
                             <td>
                                 <div class="d-flex">
                                     <a class="btn btn-link" href="{{route('deliveries.edit',$delivery)}}">
-                                        <i class="fas fa-user-edit"></i>
+                                        <i class="fas fa-edit"></i>
                                     </a>
                                     <form action="{{route('deliveries.destroy',$delivery)}}" method="POST">
                                         @csrf
@@ -66,9 +66,6 @@
             <div class="row">{{ $deliveries->withQueryString()->links() }}</div>
         </div>
     </div>
-@stop
-
-@section('css')
 @stop
 
 @section('js')

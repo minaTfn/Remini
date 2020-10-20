@@ -59,10 +59,3 @@
         </div>
     </div>
 @stop
-
-@section('css')
-@stop
-
-@section('js')
-
-@stop

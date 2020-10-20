@@ -11,5 +11,6 @@ class ContactMethod extends Model
     protected $guarded = [];
 
     public $timestamps = false;
+    protected $hidden = ['pivot','description'];
 
 }

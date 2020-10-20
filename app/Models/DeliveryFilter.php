@@ -16,6 +16,24 @@ class DeliveryFilter extends QueryFilter {
     }
 
     /**
+     * filter title & description based on q item in query string
+     * @param $value
+     * @return mixed
+     */
+    public function q($value) {
+        return $this->builder->where('title', 'like', "%{$value}%");
+    }
+
+    /**
+     * filter title & description based on q item in query string
+     * @param $value
+     * @return mixed
+     */
+    public function page_size($value) {
+        return $this->builder->paginate($value);
+    }
+
+    /**
      * filter created_at based on requestDate item in query string
      * @param $value date format
      * @return mixed

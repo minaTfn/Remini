@@ -9,10 +9,16 @@ abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
 
+    protected function setUp(): void {
+        parent::setUp();
+    }
+
+
     protected function signIn($user = null) {
         $user = $user ?: User::factory()->create();
         $this->actingAs($user);
         return $user;
-
     }
+
+
 }

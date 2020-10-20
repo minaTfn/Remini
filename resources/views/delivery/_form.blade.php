@@ -26,7 +26,11 @@
     ></location-component>
 
     {{ Form::bsRadioGroup('delivery_method_id',$deliveryMethods,$delivery->delivery_method_id,'','Delivery Method') }}
+
     {{ Form::bsRadioGroup('payment_method_id',$paymentMethods,$delivery->payment_method_id,'','Payment Method') }}
+
+    {{ Form::bsCheckboxGroup('contact_methods[]',$contactMethods,$delivery->contactMethods->pluck('id')->toArray(),'','Contact Methods') }}
+
     {{ Form::bsDate('maximum_deadline') }}
     <div class="form-group">
         {{ Form::label('description', null, ['class' => 'label']) }}

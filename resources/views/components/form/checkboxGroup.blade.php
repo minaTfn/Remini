@@ -6,7 +6,7 @@
             $elementId = snake_case($item.$id);
         @endphp
         <div class="form-check form-check-inline">
-            {{ Form::checkbox($name, $id,($id == $value), array_merge(['class' => $classes,'id'=>$elementId], $attributes ?: [])) }}
+            {{ Form::checkbox($name, $id,(array_keys($values,$id)), array_merge(['class' => $classes,'id'=>$elementId], $attributes ?: [])) }}
             {{ Form::label($elementId, $item, ['class' => 'form-check-label','for'=>"inlineCheckbox{$id}"]) }}
         </div>
     @endforeach

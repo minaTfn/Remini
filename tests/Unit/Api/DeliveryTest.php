@@ -23,7 +23,7 @@ class DeliveryTest extends ApiTestCase {
     }
 
     /** @test */
-    public function just_users_with_role_3_can_add_deliveries() {
+    public function just_users_with_role_admin_can_add_deliveries() {
         $adminUser = User::factory()->create(['role' => User::ADMIN]);
         $this->signIn($adminUser);
         $delivery = Delivery::factory()->create(['user_id' => $adminUser->id]);

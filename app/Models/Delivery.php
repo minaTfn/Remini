@@ -15,13 +15,18 @@ class Delivery extends Model {
     /**
      * @var array
      */
-    protected $guarded = [];
+    protected $guarded = ['contact_methods'];
 
     /**
      * by default with all the relations data
      * @var array
      */
-    protected $with = ['owner:id,name'];
+    protected $with = [
+        'owner:users.id,name',
+        'contactMethods',
+    ];
+
+    protected $dates = ['maximum_deadline'];
 
     /**
      * @return array

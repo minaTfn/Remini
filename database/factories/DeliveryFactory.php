@@ -8,6 +8,7 @@ use App\Models\DeliveryMethod;
 use App\Models\PaymentMethod;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Str;
 
 class DeliveryFactory extends Factory {
@@ -29,7 +30,6 @@ class DeliveryFactory extends Factory {
 
         $title = $this->faker->sentence;
         return [
-//            'slug' => Str::slug($title),
             'title' => $title,
             'description' => $this->faker->sentence,
             'user_id' => $this->getUser()->id,
@@ -47,9 +47,10 @@ class DeliveryFactory extends Factory {
      * @return array
      */
     private function getCity() {
-        $cities = City::all();
-        if (!$cities->isEmpty()) {
+        if (!App::runningUnitTests()) {
+            $cities = City::all();
             return $cities->random();
+
         }
         return City::factory()->create();
     }
@@ -59,10 +60,12 @@ class DeliveryFactory extends Factory {
      * @return array
      */
     private function getDeliveryMethod() {
-        $deliveryMethods = DeliveryMethod::all();
-        if (!$deliveryMethods->isEmpty()) {
+
+        if (!App::runningUnitTests()) {
+            $deliveryMethods = DeliveryMethod::all();
             return $deliveryMethods->random();
         }
+
         return DeliveryMethod::factory()->create();
     }
 
@@ -71,10 +74,12 @@ class DeliveryFactory extends Factory {
      * @return array
      */
     private function getPaymentMethod() {
-        $paymentMethods = PaymentMethod::all();
-        if (!$paymentMethods->isEmpty()) {
+
+        if (!App::runningUnitTests()) {
+            $paymentMethods = PaymentMethod::all();
             return $paymentMethods->random();
         }
+
         return PaymentMethod::factory()->create();
     }
 
@@ -83,9 +88,11 @@ class DeliveryFactory extends Factory {
      * @return array
      */
     private function getUser() {
-        $users = User::where('role','=',User::SiteUSER)->get();
-        if (!$users->isEmpty()) {
+        
+        if (!App::runningUnitTests()) {
+            $users = User::where('role', '=', User::SiteUSER)->get();
             return $users->random();
+
         }
         return User::factory(['role' => User::SiteUSER])->create();
     }

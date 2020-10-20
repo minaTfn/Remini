@@ -29,7 +29,7 @@
                         <td>
                             <div class="d-flex">
                                 <a class="btn btn-link" href="{{route('payment-methods.edit',$paymentMethod)}}">
-                                    <i class="fas fa-user-edit"></i>
+                                    <i class="fas fa-edit"></i>
                                 </a>
                                 <form action="{{route('payment-methods.destroy',$paymentMethod)}}" method="POST">
                                     @csrf
@@ -49,11 +49,4 @@
 
         </div>
     </div>
-@stop
-
-@section('css')
-@stop
-
-@section('js')
-
 @stop

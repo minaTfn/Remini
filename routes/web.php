@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes(['verify' => true]);
+
 Route::prefix('admin')->middleware(['auth.admin', 'verified'])->group(function () {
     Route::get('change-password', [App\Http\Controllers\ChangePasswordController::class, 'index'])->name('changePassword.index');
     Route::post('change-password', [App\Http\Controllers\ChangePasswordController::class, 'store'])->name('changePassword.store');

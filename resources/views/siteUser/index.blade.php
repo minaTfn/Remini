@@ -23,7 +23,7 @@
                     <tr>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td><a href="{{ route('deliveries.index', ['users' => $user->id]) }}">{{$user->deliveries_count}}</a></td>
+                        <td><a href="{{ route('deliveries.index', ['owner' => $user->id]) }}">{{$user->deliveries_count}}</a></td>
                         <td>
                             <a class="p-2 badge @if($user->status  == 1) bg-teal @else badge-danger @endif"
                                href="{{route('site-users.updateStatus',$user->id)}}">
@@ -52,11 +52,4 @@
             <div class="row">{{$users->links()}}</div>
         </div>
     </div>
-@stop
-
-@section('css')
-@stop
-
-@section('js')
-
 @stop

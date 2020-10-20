@@ -29,7 +29,7 @@
                         <td>
                             <div class="d-flex">
                                 <a class="btn btn-link" href="{{route('delivery-methods.edit',$deliveryMethod)}}">
-                                    <i class="fas fa-user-edit"></i>
+                                    <i class="fas fa-edit"></i>
                                 </a>
                                 <form action="{{route('delivery-methods.destroy',$deliveryMethod)}}" method="POST">
                                     @csrf
@@ -49,11 +49,4 @@
 
         </div>
     </div>
-@stop
-
-@section('css')
-@stop
-
-@section('js')
-
 @stop

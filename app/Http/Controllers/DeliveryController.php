@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateDeliveryRequest;
+use App\Http\Resources\DeliveryCollection;
 use App\Http\Requests\ManageDeliveryRequest;
 use App\Models\City;
 use App\Models\Delivery;
@@ -25,13 +26,19 @@ class DeliveryController extends Controller {
      */
     public function index(DeliveryFilter $filters) {
 
+        $perPage = request()->filled('page_size') ? request()->get('page_size') : 10;
+
         $deliveries = Delivery::with([
-            'originCountry:id,title',
-            'originCity:id,title',
-            'destinationCountry:id,title',
-            'destinationCity:id,title',
+            'originCountry:id,title,title_fa',
+            'originCity:id,title,country_id',
+            'destinationCountry:id,title,title_fa',
+            'destinationCity:id,title,country_id',
             'owner:id,name'
-        ])->filter($filters)->paginate(10);
+        ])->filter($filters)->paginate($perPage);
+
+        if (request()->expectsJson()) {
+            return new DeliveryCollection($deliveries);
+        }
 
         return view('delivery.index', compact('deliveries'));
     }
@@ -64,8 +71,10 @@ class DeliveryController extends Controller {
         $destinationCities = City::where('country_id', $delivery->destination_country_id)->pluck('title', 'id');
         $deliveryMethods = DB::table('delivery_methods')->pluck('title', 'id');
         $paymentMethods = DB::table('payment_methods')->pluck('title', 'id');
+        $contactMethods = DB::table('contact_methods')->pluck('title', 'id');
 
-        return view('delivery.edit', compact('delivery', 'originCities', 'destinationCities', 'deliveryMethods', 'paymentMethods'));
+        return view('delivery.edit',
+            compact('delivery', 'originCities', 'destinationCities', 'deliveryMethods', 'paymentMethods', 'contactMethods'));
     }
 
     /**
@@ -77,6 +86,7 @@ class DeliveryController extends Controller {
      */
     public function update(ManageDeliveryRequest $request, Delivery $delivery) {
         $delivery->update($request->all());
+        $delivery->contactMethods()->sync($request->contact_methods);
 
         if (request()->wantsJson()) {
             return response()->json([

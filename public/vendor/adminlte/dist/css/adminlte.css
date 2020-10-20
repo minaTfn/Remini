@@ -13344,7 +13344,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 
 .sidebar-dark-green .nav-sidebar > .nav-item > .nav-link.active,
 .sidebar-light-green .nav-sidebar > .nav-item > .nav-link.active {
-    background-color: #28a745;
+    background-color: #4D8F55;
     color: #ffffff;
 }
 
@@ -32278,4 +32278,7 @@ a.hover-teal:hover{
     min-width: 25px;
 }
 
-/*# sourceMappingURL=adminlte.css.map */
+.sidebar-remini{
+    background:#0b2e13 !important;
+    /*background:#0067d6 !important;*/
+}

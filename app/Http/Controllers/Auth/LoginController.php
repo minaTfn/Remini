@@ -40,7 +40,7 @@ class LoginController extends Controller {
      * changing the redirect url
      */
     protected function loggedOut() {
-        return redirect()->route('login');
+        return redirect()->to('login');
     }
 
     /**

@@ -1,8 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,12 +28,16 @@ Route::prefix('auth')->middleware(['api'])->group(function () {
         Route::post('change-password', [App\Http\Controllers\Api\AuthController::class, 'changePassword'])->name('change.password');
         Route::get('email/resend', [App\Http\Controllers\Api\VerificationController::class, 'resend'])->name('verification.resend');
     });
+
 });
 
 Route::middleware(['api'])->group(function () {
+    Route::resource('/deliveries', App\Http\Controllers\DeliveryController::class,['names'=>'api.deliveries']);
+
 
     Route::get('getCountries', [App\Http\Controllers\CountryController::class, 'index'])->name('api.get.countries');
     Route::get('getCountry/{id}', [App\Http\Controllers\CountryController::class, 'show'])->name('api.get.country');
+    Route::get('countries', [App\Http\Controllers\CountryController::class, 'list'])->name('api.countries');
 
     Route::get('getUsers', [App\Http\Controllers\Api\SiteUsersController::class, 'index'])->name('api.get.users');
     Route::get('getUser/{id}', [App\Http\Controllers\Api\SiteUsersController::class, 'show'])->name('api.get.user');
@@ -45,3 +47,5 @@ Route::middleware(['api'])->group(function () {
     Route::get('/cities/{country}', [App\Http\Controllers\CityController::class, 'index']);
 
 });
+
+//php artisan route:list --columns=method --columns=uri --columns=name --columns=action

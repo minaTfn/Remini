@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Country;
 use Illuminate\Http\Request;
 
+
 class CountryController extends Controller {
     public function index(Request $request) {
         if (strlen($request->name) < 3) {
@@ -20,6 +21,14 @@ class CountryController extends Controller {
 
         return response()->json([
             'data' => $countries
+        ]);
+    }
+
+    public function list() {
+        $countries = Country::all();
+
+        return response()->json([
+            'data' => \App\Http\Resources\Country::collection($countries)
         ]);
     }
 
