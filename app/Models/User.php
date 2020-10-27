@@ -64,7 +64,7 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail {
      * @var array
      */
     protected $visible = [
-        'name', 'email', 'role',
+        'name', 'email', 'role','phone',
     ];
 
     /**

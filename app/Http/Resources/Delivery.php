@@ -20,11 +20,12 @@ class Delivery extends JsonResource {
             'description'=>$this->description,
             'origin' => new City($this->originCity),
             'destination' => new City($this->destinationCity),
-            'owner' => $this->owner->name,
+            'owner' => new User($this->owner),
             'delivery_method' => new DeliveryMethod($this->deliveryMethod),
             'payment_method' => new PaymentMethod($this->paymentMethod),
             'contact_methods' => $this->contactMethods,
             'request_date' => $this->request_date,
+            'fa_request_date' => $this->fa_request_date,
             'deadline_date' => optional($this->maximum_deadline)->format('Y-m-d'),
         ];
     }

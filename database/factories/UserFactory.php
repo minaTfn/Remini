@@ -40,6 +40,7 @@ class UserFactory extends Factory {
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
+            'phone' => $this->faker->numerify($string = '############'),
             'email_verified_at' => now(),
             'role' => User::ADMIN,
             'status' => User::ACTIVE,

@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateDeliveryRequest;
 use App\Http\Resources\DeliveryCollection;
+use App\Http\Resources\Delivery as DeliveryResource;
 use App\Http\Requests\ManageDeliveryRequest;
 use App\Models\City;
 use App\Models\Delivery;
 use App\Models\DeliveryFilter;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
 class DeliveryController extends Controller {
@@ -22,19 +24,38 @@ class DeliveryController extends Controller {
 
     /**
      * @param DeliveryFilter $filters
+     * @param User $user
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(DeliveryFilter $filters) {
+        return $this->getDeliveriesList($filters);
+    }
+
+    public function myDeliveries(DeliveryFilter $filters) {
+        $user = auth()->user();
+        return $this->getDeliveriesList($filters, $user);
+    }
+
+    private function getDeliveriesList($filters, $user = null) {
 
         $perPage = request()->filled('page_size') ? request()->get('page_size') : 10;
+        if ($user) {
+            $deliveries = Delivery::with([
+                'originCountry:id,title,title_fa',
+                'originCity:id,title,country_id',
+                'destinationCountry:id,title,title_fa',
+                'destinationCity:id,title,country_id',
+            ])->where('user_id', $user->id)->latest()->filter($filters)->paginate($perPage);
+        } else {
+            $deliveries = Delivery::with([
+                'originCountry:id,title,title_fa',
+                'originCity:id,title,country_id',
+                'destinationCountry:id,title,title_fa',
+                'destinationCity:id,title,country_id',
+                'owner:id,name'
+            ])->latest()->filter($filters)->paginate($perPage);
+        }
 
-        $deliveries = Delivery::with([
-            'originCountry:id,title,title_fa',
-            'originCity:id,title,country_id',
-            'destinationCountry:id,title,title_fa',
-            'destinationCity:id,title,country_id',
-            'owner:id,name'
-        ])->filter($filters)->paginate($perPage);
 
         if (request()->expectsJson()) {
             return new DeliveryCollection($deliveries);
@@ -42,6 +63,7 @@ class DeliveryController extends Controller {
 
         return view('delivery.index', compact('deliveries'));
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -51,13 +73,43 @@ class DeliveryController extends Controller {
      */
     public function store(CreateDeliveryRequest $request) {
         $delivery = auth()->user()->deliveries()->create($request->validated());
+
+        $delivery->contactMethods()->sync($request->contact_method_ids);
+
         if (request()->wantsJson()) {
             return response()->json([
                 "message" => "delivery added successfully.",
-                'data' => $delivery,
+                'data' => new DeliveryResource($delivery),
             ], 201);
         }
     }
+
+
+    public function show(Delivery $delivery) {
+        return response()->json([
+            'data' => new DeliveryResource($delivery),
+        ], 200);
+    }
+
+    public function getContactInfo(Delivery $delivery) {
+        $delivery->load('owner');
+        $contactMethods = $delivery->contactMethods;
+        $result = [];
+        foreach ($contactMethods as $contactMethod) {
+            $result[] = [
+                'title' => $contactMethod->title,
+                'title_fa' => $contactMethod->title_fa,
+                'value' => $delivery->owner[$contactMethod->name]
+            ];
+        }
+
+        if (request()->wantsJson()) {
+            return response()->json([
+                'data' => $result,
+            ], 200);
+        }
+    }
+
 
     /**
      * Show the form for editing the specified resource.

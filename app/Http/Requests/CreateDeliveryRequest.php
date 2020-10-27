@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\MatchAuthUser;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Gate;
 
 class CreateDeliveryRequest extends FormRequest {
 
@@ -35,11 +37,12 @@ class CreateDeliveryRequest extends FormRequest {
             'destination_city_id' => 'required',
             'delivery_method_id' => 'required',
             'payment_method_id' => 'required',
+            'contact_method_ids' => 'required',
             'description' => 'nullable',
-            'user_id' => [
-                'required',
-                new MatchAuthUser,
-            ],
+//            'user_id' => [
+//                'required',
+//                new MatchAuthUser(),
+//            ],
         ];
     }
 }

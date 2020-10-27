@@ -15,6 +15,11 @@ class PaymentMethodController extends Controller
     public function index()
     {
         $paymentMethods = PaymentMethod::all();
+        if (request()->wantsJson()) {
+            return response()->json([
+                'data' => \App\Http\Resources\PaymentMethod::collection($paymentMethods),
+            ], 200);
+        }
         return view('paymentMethod.index', compact('paymentMethods'));
     }
 

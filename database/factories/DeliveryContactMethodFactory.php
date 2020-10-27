@@ -3,15 +3,18 @@
 namespace Database\Factories;
 
 use App\Models\ContactMethod;
+use App\Models\Delivery;
+use App\Models\DeliveryContactMethod;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
-class ContactMethodFactory extends Factory {
+class DeliveryContactMethodFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = ContactMethod::class;
+    protected $model = DeliveryContactMethod::class;
 
     /**
      * Define the model's default state.
@@ -20,10 +23,8 @@ class ContactMethodFactory extends Factory {
      */
     public function definition() {
         return [
-            'name' => 'email',
-            'title' => 'Email',
-            'title_fa' => 'ایمیل',
-            'description' => '',
+            'delivery_id' => Delivery::factory(),
+            'contact_method_id' => ContactMethod::factory(),
         ];
     }
 }

@@ -3,9 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Support\Facades\Auth;
 
-class User extends JsonResource {
+class ContactMethod extends JsonResource {
 
     /**
      * Transform the resource into an array.
@@ -14,11 +13,11 @@ class User extends JsonResource {
      * @return array
      */
     public function toArray($request) {
-        $email = Auth::user() ? Auth::user()->email : '';
         return [
+            'id' => $this->id,
             'name' => $this->name,
-            'email' => $this->when(Auth::id() === $this->id, $email),
-            'email_verified' => !!$this->email_verified_at,
+            'title' => $this->title,
+            'title_fa' => $this->title_fa,
         ];
     }
 }

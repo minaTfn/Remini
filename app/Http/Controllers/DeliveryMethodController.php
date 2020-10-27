@@ -15,6 +15,11 @@ class DeliveryMethodController extends Controller
     public function index()
     {
         $deliveryMethods = DeliveryMethod::all();
+        if (request()->wantsJson()) {
+            return response()->json([
+                'data' => \App\Http\Resources\DeliveryMethod::collection($deliveryMethods),
+            ], 200);
+        }
         return view('deliveryMethod.index', compact('deliveryMethods'));
     }
 

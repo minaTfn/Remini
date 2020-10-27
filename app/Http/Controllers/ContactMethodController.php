@@ -15,6 +15,11 @@ class ContactMethodController extends Controller
     public function index()
     {
         $contactMethods = ContactMethod::all();
+        if (request()->wantsJson()) {
+            return response()->json([
+                'data' => \App\Http\Resources\ContactMethod::collection($contactMethods),
+            ], 200);
+        }
         return view('contactMethod.index', compact('contactMethods'));
     }
 

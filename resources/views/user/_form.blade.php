@@ -4,6 +4,7 @@
     {{ Form::token() }}
     {{ Form::bsText('name',null,['autofocus'=>'']) }}
     {{ Form::bsText('email') }}
+    {{ Form::bsText('phone') }}
     @if(isset($type) && $type == 'create')
         {{ Form::bsPassword('password') }}
         {{ Form::bsPassword('password_confirmation') }}

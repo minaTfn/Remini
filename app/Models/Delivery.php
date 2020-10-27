@@ -12,10 +12,15 @@ use Te7aHoudini\LaravelTrix\Traits\HasTrixRichText;
 class Delivery extends Model {
     use HasFactory, Sluggable, HasTrixRichText;
     use FormAccessible;
+
     /**
      * @var array
      */
     protected $guarded = ['contact_methods'];
+
+    public function getRouteKeyName() {
+        return 'slug';
+    }
 
     /**
      * by default with all the relations data
@@ -40,7 +45,6 @@ class Delivery extends Model {
     }
 
 
-
     /**
      * get the all query strings and apply them to the eloquent model
      * @param $query
@@ -50,6 +54,15 @@ class Delivery extends Model {
     public function scopeFilter($query, QueryFilter $filters) {
         return $filters->apply($query);
     }
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'email', 'cellphone',
+    ];
 
     /**
      * delivery_contact_method pivot table
@@ -118,6 +131,12 @@ class Delivery extends Model {
     }
 
     public function getRequestDateAttribute() {
+        Carbon::setLocale('en');
+        return Carbon::parse($this->created_at)->diffForHumans();
+    }
+
+    public function getFaRequestDateAttribute() {
+        Carbon::setLocale('fa');
         return Carbon::parse($this->created_at)->diffForHumans();
     }
 

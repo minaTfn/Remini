@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Rules\MatchAuthUser;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Gate;
 

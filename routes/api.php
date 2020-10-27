@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -32,19 +33,31 @@ Route::prefix('auth')->middleware(['api'])->group(function () {
 });
 
 Route::middleware(['api'])->group(function () {
-    Route::resource('/deliveries', App\Http\Controllers\DeliveryController::class,['names'=>'api.deliveries']);
+    Route::middleware(['auth:api'])->group(function () {
+        Route::resource('/deliveries', App\Http\Controllers\DeliveryController::class, ['names' => 'api.deliveries']);
+        Route::get('my-deliveries/',  [App\Http\Controllers\DeliveryController::class, 'myDeliveries'])->name('api.my.deliveries');
+        Route::get('my-deliveries/{delivery}', [App\Http\Controllers\DeliveryController::class, 'show'])->name('api.get.delivery');
+    });
 
+
+    Route::get('deliveries/', [App\Http\Controllers\DeliveryController::class, 'index'])->name('api.list.deliveries');
+    Route::get('deliveries/', [App\Http\Controllers\DeliveryController::class, 'index'])->name('api.list.deliveries');
+    Route::get('deliveries/{delivery}', [App\Http\Controllers\DeliveryController::class, 'show'])->name('api.deliveries.show');
+    Route::get('deliveries/{delivery}/contact-info', [App\Http\Controllers\DeliveryController::class, 'getContactInfo'])->name('api.get.contact.info');
 
     Route::get('getCountries', [App\Http\Controllers\CountryController::class, 'index'])->name('api.get.countries');
     Route::get('getCountry/{id}', [App\Http\Controllers\CountryController::class, 'show'])->name('api.get.country');
     Route::get('countries', [App\Http\Controllers\CountryController::class, 'list'])->name('api.countries');
+    Route::get('getPaymentMethods', [App\Http\Controllers\PaymentMethodController::class, 'index'])->name('api.get.payment.methods');
+    Route::get('getDeliveryMethods', [App\Http\Controllers\DeliveryMethodController::class, 'index'])->name('api.get.delivery.methods');
+    Route::get('getContactMethods', [App\Http\Controllers\ContactMethodController::class, 'index'])->name('api.get.contact.methods');
 
     Route::get('getUsers', [App\Http\Controllers\Api\SiteUsersController::class, 'index'])->name('api.get.users');
     Route::get('getUser/{id}', [App\Http\Controllers\Api\SiteUsersController::class, 'show'])->name('api.get.user');
 
-    Route::get('getCities', [App\Http\Controllers\CityController::class, 'index']);
+    Route::get('getCities/', [App\Http\Controllers\CityController::class, 'index']);
 
-    Route::get('/cities/{country}', [App\Http\Controllers\CityController::class, 'index']);
+    Route::get('/cities/{country}', [App\Http\Controllers\CityController::class, 'list']);
 
 });
 

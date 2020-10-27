@@ -41,6 +41,7 @@ class UserRequest extends FormRequest {
                 'max:250',
                 $this->user ? Rule::unique('users', 'email')->ignore($this->user->id) : Rule::unique('users', 'email')
             ],
+            'phone' => 'sometimes|required|string|min:10|max:16',
             'old_password' => ['sometimes','required',new MatchOldPassword],
             'password' => [
                 'sometimes',
