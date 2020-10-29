@@ -16,8 +16,8 @@
             <table class="table table-hover">
                 <thead>
                 <tr>
-                    <th>title</th>
-                    <th>title_fa</th>
+                    <th>Title</th>
+                    <th>Title (fa)</th>
                     <th>Manage</th>
                 </tr>
                 </thead>

@@ -17,8 +17,8 @@
                 <thead>
                 <tr>
                     <th>Name</th>
-                    <th>title</th>
-                    <th>title_fa</th>
+                    <th>Title</th>
+                    <th>Title (fa)</th>
                     <th>Manage</th>
                 </tr>
                 </thead>

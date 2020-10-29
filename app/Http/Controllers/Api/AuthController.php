@@ -35,11 +35,15 @@ class AuthController extends Controller {
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['error' => $validator->errors()], 422);
+            return response()->json([
+                'data' => ['error' => $validator->errors()],
+            ], 422);
         }
 
         if (!$token = auth($this->guard)->attempt($validator->validated())) {
-            return response()->json(['error' => ' These credentials do not match our records.'], 401);
+            return response()->json([
+                'data' => ['non_field_errors' => 'These credentials do not match our records.'],
+            ], 401);
         }
 
         return $this->createNewToken($token);
