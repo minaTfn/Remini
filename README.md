@@ -4,7 +4,7 @@ This project is made with [Laravel 8.2.0](https://laravel.com/)
 
 This is my project's backend based on test-driven development.
 
-In order to use Ajax, the project has several Vue Component.
+In order to use Ajax, the project has several Vue Components.
 
 It has user interface for site management and also Restful Web Services to feed the frontend.
 
