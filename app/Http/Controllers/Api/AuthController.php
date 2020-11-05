@@ -12,14 +12,16 @@ use App\Models\User;
 
 class AuthController extends Controller {
 
+    private $faLanguage = false;
+
     /**
      * Create a new AuthController instance.
      *
      * @return void
      */
     public function __construct() {
-//        $this->middleware(['auth:api','auth.site'], ['except' => ['login', 'register']]);
         $this->guard = "api";
+        $this->faLanguage = request()->header('Accept-Language') === 'fa' ? true : false;
     }
 
     /**
@@ -29,6 +31,7 @@ class AuthController extends Controller {
      * @return \Illuminate\Http\JsonResponse
      */
     public function login(Request $request) {
+
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
             'password' => 'required|string|min:6',
@@ -42,7 +45,11 @@ class AuthController extends Controller {
 
         if (!$token = auth($this->guard)->attempt($validator->validated())) {
             return response()->json([
-                'data' => ['non_field_errors' => 'These credentials do not match our records.'],
+                'data' => [
+                    'non_field_errors' => $this->faLanguage
+                        ? 'ایمیل یا رمز شما صحیح نمی باشد'
+                        : 'These credentials do not match our records'
+                ],
             ], 401);
         }
 
@@ -57,7 +64,9 @@ class AuthController extends Controller {
 
         User::find(auth()->user()->id)->update(['password' => Hash::make($request->password)]);
 
-        return response()->json(['message' => 'Password changed successfully'], 200);
+        return response()->json(
+            ['message' => $this->faLanguage ? 'رمز شما با موفقیت تغییر یافت' : 'Password changed successfully']
+            , 200);
 
     }
 
@@ -75,7 +84,9 @@ class AuthController extends Controller {
         ))->sendEmailVerificationNotification();
 
         return response()->json([
-            'message' => 'User successfully registered and verify email sent',
+            'message' => $this->faLanguage
+                ? 'ثبت نام شما با موفقیت انجام شد و ایمیل تاییدیه برای شما ارسال گردید'
+                : 'User successfully registered and verify email sent',
             'data' => ['user' => $user]
         ], 201);
     }
@@ -98,7 +109,7 @@ class AuthController extends Controller {
 
         User::find(auth()->user()->id)->update(['name' => $request->name]);
 
-        return response()->json(['message' => 'Your profile updated successfully'], 200);
+        return response()->json(['message' => $this->faLanguage ? 'پروفایل شما با موفقیت ویرایش شد' : 'Your profile updated successfully'], 200);
     }
 
 
@@ -111,7 +122,7 @@ class AuthController extends Controller {
 
         auth($this->guard)->logout();
 
-        return response()->json(['message' => 'User successfully signed out']);
+        return response()->json(['message' => $this->faLanguage ? 'شما از حساب خود خارج شدید' : 'User successfully signed out']);
     }
 
     /**

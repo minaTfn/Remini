@@ -14,12 +14,15 @@ use Illuminate\Support\Facades\DB;
 
 class DeliveryController extends Controller {
 
+    private $faLanguage = false;
+
     /**
      * strip.empty.params middleware : for index route (search form get method) remove all the url params which are empty
      * DeliveryController constructor.
      */
     public function __construct() {
         $this->middleware('strip.empty.params', ['only' => 'index']);
+        $this->faLanguage = request()->header('Accept-Language') === 'fa' ? true : false;
     }
 
     /**
@@ -78,7 +81,7 @@ class DeliveryController extends Controller {
 
         if (request()->wantsJson()) {
             return response()->json([
-                "message" => "delivery added successfully.",
+                "message" => $this->faLanguage ? 'مرسوله با موفقیت ثبت شد' : "delivery added successfully.",
                 'data' => new DeliveryResource($delivery),
             ], 201);
         }
@@ -118,7 +121,6 @@ class DeliveryController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit(Delivery $delivery) {
-
         $originCities = City::where('country_id', $delivery->origin_country_id)->pluck('title', 'id');
         $destinationCities = City::where('country_id', $delivery->destination_country_id)->pluck('title', 'id');
         $deliveryMethods = DB::table('delivery_methods')->pluck('title', 'id');
@@ -138,12 +140,13 @@ class DeliveryController extends Controller {
      */
     public function update(ManageDeliveryRequest $request, Delivery $delivery) {
         $delivery->update($request->all());
-        $delivery->contactMethods()->sync($request->contact_methods);
-
+        $delivery->contactMethods()->sync($request->contact_method_ids);
+        $delivery->load('originCity:id,title,country_id');
+        $delivery->load('destinationCity:id,title,country_id');
         if (request()->wantsJson()) {
             return response()->json([
-                "message" => "delivery updated successfully.",
-                'data' => $delivery,
+                "message" => $this->faLanguage ? 'مرسوله با موفقیت ویرایش شد' : "delivery updated successfully.",
+                'data' => new DeliveryResource($delivery),
             ], 201);
         }
 
@@ -163,8 +166,8 @@ class DeliveryController extends Controller {
 
         if (request()->wantsJson()) {
             return response()->json([
-                "message" => "delivery deleted successfully.",
-            ], 204);
+                "message" => $this->faLanguage ? 'مرسوله با موفقیت حذف گردید' : "delivery deleted successfully",
+            ], 200);
         }
 
         return redirect(route('deliveries.index'))->with('success', 'Item Deleted Successfully');

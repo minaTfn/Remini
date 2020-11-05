@@ -29,7 +29,12 @@ class CityController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function list(Country $country) {
+
         $cities = $country->cities;
+        if(request()->has('q')){
+            $q = request()->input('q');
+            $cities = $country->cities()->where('title','like',$q."%")->get();
+        }
         return response()->json([
             'data' => \App\Http\Resources\City::collection($cities)
         ]);

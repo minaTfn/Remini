@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 class VerificationController extends Controller
 {
 
+    private $faLanguage = false;
+
+    public function __construct() {
+        $this->faLanguage = request()->header('Accept-Language') === 'fa' ? true : false;
+    }
+
     protected $guard = 'api';
 
 //    public function verify($user_id, Request $request) {
@@ -39,12 +45,12 @@ class VerificationController extends Controller
 
     public function resend() {
         if (auth($this->guard)->user()->hasVerifiedEmail()) {
-            return response()->json(["message" => "Email has already been verified."], 400);
+            return response()->json(["message" => $this->faLanguage ? 'ایمیل شما قبلا تایید شده است' : "Email has already been verified"], 400);
         }
 
         auth($this->guard)->user()->sendEmailVerificationNotification();
 
-        return response()->json(["message" => "Verification email sent to your email."], 200);
+        return response()->json(["message" => $this->faLanguage ? 'ایمیل تاییدیه برای شما ارسال گردید' : "Verification email sent to your email"], 200);
     }
 
 
