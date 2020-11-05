@@ -4,11 +4,6 @@
     <list default="true" id="9c912b77-3445-4176-a142-f0c271a1b55e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/VerificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,10 +41,10 @@
           <entry key="env" value="38" />
           <entry key="js" value="329" />
           <entry key="json" value="35" />
-          <entry key="md" value="343" />
+          <entry key="md" value="352" />
           <entry key="php" value="33422" />
           <entry key="scss" value="55" />
-          <entry key="txt" value="770" />
+          <entry key="txt" value="793" />
           <entry key="vue" value="2017" />
           <entry key="xml" value="8" />
         </counts>
@@ -61,9 +56,9 @@
           <entry key="CSS" value="591" />
           <entry key="JSON" value="35" />
           <entry key="JavaScript" value="329" />
-          <entry key="Markdown" value="343" />
+          <entry key="Markdown" value="352" />
           <entry key="PHP" value="27058" />
-          <entry key="PLAIN_TEXT" value="812" />
+          <entry key="PLAIN_TEXT" value="835" />
           <entry key="SCSS" value="55" />
           <entry key="Vue.js" value="2017" />
           <entry key="XML" value="8" />
@@ -102,7 +97,7 @@
         <counts>
           <entry key="git.branch.checkout.local" value="5" />
           <entry key="git.branch.create.new" value="5" />
-          <entry key="git.branch.create.new.nocheckout" value="6" />
+          <entry key="git.branch.create.new.nocheckout" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -133,8 +128,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="391">
-                <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+              <first_editor relative-caret-position="276">
+                <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               </first_editor>
               <second_editor />
             </state>
@@ -685,7 +680,7 @@
       <workItem from="1603208533406" duration="2116000" />
       <workItem from="1603340407455" duration="11547000" />
       <workItem from="1603524398253" duration="35885000" />
-      <workItem from="1604150353396" duration="15708000" />
+      <workItem from="1604150353396" duration="16718000" />
     </task>
     <task id="LOCAL-00001" summary="install npm and ui scaffolding vue">
       <created>1599889051819</created>
@@ -778,7 +773,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603992759681</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="updated readme">
+      <created>1604562689996</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1604562689996</updated>
+    </task>
+    <task id="LOCAL-00015" summary="updated readme">
+      <created>1604562956442</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1604562956443</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -814,7 +823,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="460269000" />
+    <option name="totallyTimeSpent" value="461279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -872,7 +881,8 @@
     <MESSAGE value="added country list api and query param search for DeliveryFilter" />
     <MESSAGE value="added api tests and all of them are passed" />
     <MESSAGE value="changed response body of login and register api" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed response body of login and register api" />
+    <MESSAGE value="updated readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated readme" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Http/Resources/PaymentMethod.php">
@@ -1223,8 +1233,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="391">
-            <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <first_editor relative-caret-position="276">
+            <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           </first_editor>
           <second_editor />
         </state>
