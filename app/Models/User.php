@@ -96,6 +96,16 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail {
         return $this->role == User::ADMIN ? 'Admin' : ($this->role == User::USER ? 'User' : 'Site User');
     }
 
+
+    /**
+     * isAdmin
+     * @return bool
+     */
+    public function getIsAdminAttribute()
+    {
+        return $this->role == User::ADMIN;
+    }
+
     /**
      * change the user status from active to inactive.
      *

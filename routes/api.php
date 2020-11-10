@@ -37,6 +37,7 @@ Route::middleware(['api'])->group(function () {
         Route::resource('/deliveries', App\Http\Controllers\DeliveryController::class, ['names' => 'api.deliveries']);
         Route::get('my-deliveries/',  [App\Http\Controllers\DeliveryController::class, 'myDeliveries'])->name('api.my.deliveries');
         Route::get('my-deliveries/{delivery}', [App\Http\Controllers\DeliveryController::class, 'show'])->name('api.get.delivery');
+        Route::post('deliveries/{delivery}/favorites', [App\Http\Controllers\UserFavoriteDeliveryController::class, 'store'])->name('api.favorite');
     });
 
 
@@ -51,6 +52,8 @@ Route::middleware(['api'])->group(function () {
     Route::get('getPaymentMethods', [App\Http\Controllers\PaymentMethodController::class, 'index'])->name('api.get.payment.methods');
     Route::get('getDeliveryMethods', [App\Http\Controllers\DeliveryMethodController::class, 'index'])->name('api.get.delivery.methods');
     Route::get('getContactMethods', [App\Http\Controllers\ContactMethodController::class, 'index'])->name('api.get.contact.methods');
+
+    Route::post('contactUs', [App\Http\Controllers\ContactUsController::class, 'store'])->name('api.contact.us');
 
     Route::get('getUsers', [App\Http\Controllers\Api\SiteUsersController::class, 'index'])->name('api.get.users');
     Route::get('getUser/{id}', [App\Http\Controllers\Api\SiteUsersController::class, 'show'])->name('api.get.user');

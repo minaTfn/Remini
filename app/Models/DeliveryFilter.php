@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class DeliveryFilter extends QueryFilter {
 
@@ -94,6 +95,13 @@ class DeliveryFilter extends QueryFilter {
      */
     public function toCity($value) {
         return $this->builder->where('destination_city_id', $value);
+    }
+
+    public function isFavorited($value) {
+        if($value == 1){
+//            return $this->builder->with('favorites')->where('user_favorite_deliveries.user_id',Auth::guard('api')->id());
+        }
+//        return $this->builder;
     }
 
 }

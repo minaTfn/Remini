@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Remini Travel',
+    'title' => 'Remini',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -48,7 +48,7 @@ return [
     'logo' => '<img src="/images/brand.png" />',
     'logo_img' => '/images/logo.png',
     'logo_img_class' => '',
-    'logo_img_xl' => null,
+    'logo_img_xl' => '',
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'Remini',
 

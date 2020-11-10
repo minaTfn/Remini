@@ -90,7 +90,7 @@ class DeliveryFactory extends Factory {
     private function getUser() {
         
         if (!App::runningUnitTests()) {
-            $users = User::where('role', '=', User::SiteUSER)->get();
+            $users = User::where('role', User::SiteUSER)->get();
             return $users->random();
 
         }

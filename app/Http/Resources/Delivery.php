@@ -15,9 +15,9 @@ class Delivery extends JsonResource {
 
     public function toArray($request) {
         return [
-            'slug'=>$this->slug,
-            'title'=>$this->title,
-            'description'=>$this->description,
+            'slug' => $this->slug,
+            'title' => $this->title,
+            'description' => $this->description,
             'origin' => new City($this->originCity),
             'destination' => new City($this->destinationCity),
             'owner' => new User($this->owner),
@@ -26,6 +26,8 @@ class Delivery extends JsonResource {
             'contact_methods' => $this->contactMethods,
             'request_date' => $this->request_date,
             'fa_request_date' => $this->fa_request_date,
+            'hit' => $this->hit,
+            'is_favorited' => $this->is_favorited,
             'deadline_date' => optional($this->maximum_deadline)->format('Y-m-d'),
         ];
     }

@@ -1,5 +1,5 @@
 {
-    "name": "Remini",
+    "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
@@ -11,8 +11,10 @@
         "php": "^7.3",
         "ext-json": "*",
         "cviebrock/eloquent-sluggable": "^8.0",
+        "cyrildewit/eloquent-viewable": "^5.2",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
+        "geoip/geoip": "~1.14",
         "guzzlehttp/guzzle": "^7.0.1",
         "jeroennoten/laravel-adminlte": "^3.4",
         "laravel/framework": "^8.0",

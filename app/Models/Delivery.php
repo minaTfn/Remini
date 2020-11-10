@@ -7,9 +7,14 @@ use Collective\Html\Eloquent\FormAccessible;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Support\Facades\Auth;
 use Te7aHoudini\LaravelTrix\Traits\HasTrixRichText;
+use CyrildeWit\EloquentViewable\InteractsWithViews;
+use CyrildeWit\EloquentViewable\Contracts\Viewable;
 
-class Delivery extends Model {
+class Delivery extends Model implements Viewable {
+
+    use InteractsWithViews;
     use HasFactory, Sluggable, HasTrixRichText;
     use FormAccessible;
 
@@ -42,6 +47,28 @@ class Delivery extends Model {
                 'source' => 'title'
             ]
         ];
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function favorites() {
+        return $this->hasMany(UserFavoriteDelivery::class)->latest();
+    }
+
+    /**
+     * @return Model|mixed
+     */
+    public function favoriteToggle() {
+        $attributes = ['user_id' => auth()->id()];
+        if ($this->favorites()->where($attributes)->exists()) {
+            $favoritedDelivery = $this->favorites()->where($attributes);
+            $favoritedDelivery->delete();
+            return true;
+        } else {
+            return $this->favorites()->create($attributes);
+        }
+
     }
 
 
@@ -130,9 +157,17 @@ class Delivery extends Model {
         return $this->maximum_deadline ? Carbon::parse($this->maximum_deadline)->diffForHumans() : '-';
     }
 
+    public function getIsFavoritedAttribute() {
+        return (Auth::guard("api")->check() && $this->favorites()->where(['user_id' => Auth::guard("api")->id()])->exists()) ? 1 : 0;
+    }
+
     public function getRequestDateAttribute() {
         Carbon::setLocale('en');
         return Carbon::parse($this->created_at)->diffForHumans();
+    }
+
+    public function getHitAttribute() {
+        return views($this)->count();
     }
 
     public function getFaRequestDateAttribute() {

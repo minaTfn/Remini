@@ -89,6 +89,9 @@ class DeliveryController extends Controller {
 
 
     public function show(Delivery $delivery) {
+
+        views($delivery)->record();
+
         return response()->json([
             'data' => new DeliveryResource($delivery),
         ], 200);

@@ -15,6 +15,7 @@ It has user interface for site management and also Restful Web Services to feed 
 * Bootstrap 4
 * Restful Web Services
 * PHP Unit - *feature and unit test*
+*Laravel Mix
 * MySQL
 
 
