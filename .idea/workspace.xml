@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c912b77-3445-4176-a142-f0c271a1b55e" name="Default Changelist" comment="updated readme">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactUsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserFavoriteDeliveryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ContactUs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/UserFavoriteDelivery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/eloquent-viewable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_06_114918_create_contact_us_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_043723_create_views_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_092035_create_user_favorite_deliveries_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/adminlte/dist/img/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Api/FavoritesTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/DeliveryFavoritesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/remini.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/remini.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Delivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Delivery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Delivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Delivery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/DeliveryFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DeliveryFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/DeliveryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/DeliveryFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/adminlte/dist/img/AdminLTELogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/adminlte/en/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/adminlte/en/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/adminlte/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/common/brand-logo-xl.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/common/brand-logo-xl.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/common/brand-logo-xs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/common/brand-logo-xs.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="9c912b77-3445-4176-a142-f0c271a1b55e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +43,7 @@
           <entry key="md" value="371" />
           <entry key="php" value="35252" />
           <entry key="scss" value="55" />
-          <entry key="txt" value="793" />
+          <entry key="txt" value="858" />
           <entry key="vue" value="2017" />
           <entry key="xml" value="8" />
         </counts>
@@ -101,7 +58,7 @@
           <entry key="Log" value="2" />
           <entry key="Markdown" value="371" />
           <entry key="PHP" value="28844" />
-          <entry key="PLAIN_TEXT" value="843" />
+          <entry key="PLAIN_TEXT" value="908" />
           <entry key="SCSS" value="55" />
           <entry key="Vue.js" value="2017" />
           <entry key="XML" value="8" />
@@ -117,7 +74,7 @@
           <entry key="lock" value="1" />
           <entry key="log" value="2" />
           <entry key="md" value="1" />
-          <entry key="php" value="825" />
+          <entry key="php" value="831" />
           <entry key="scss" value="6" />
           <entry key="vue" value="12" />
           <entry key="xml" value="6" />
@@ -132,7 +89,7 @@
           <entry key="JavaScript" value="32" />
           <entry key="Log" value="2" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="633" />
+          <entry key="PHP" value="639" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="6" />
           <entry key="Vue.js" value="12" />
@@ -141,8 +98,8 @@
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.checkout.local" value="5" />
-          <entry key="git.branch.create.new" value="5" />
+          <entry key="git.branch.checkout.local" value="6" />
+          <entry key="git.branch.create.new" value="6" />
           <entry key="git.branch.create.new.nocheckout" value="7" />
         </counts>
       </usages-collector>
@@ -161,7 +118,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
+            <state relative-caret-position="736">
               <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding>
                 <element signature="e#40#84#0#PHP" expanded="true" />
@@ -173,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/DeliveryFilter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="2346">
               <caret line="102" column="9" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
               <folding>
                 <element signature="e#30#48#0#PHP" expanded="true" />
@@ -185,7 +142,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="897">
               <caret line="39" column="133" selection-start-line="39" selection-start-column="133" selection-end-line="39" selection-end-column="145" />
             </state>
           </provider>
@@ -194,7 +151,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Models/Delivery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1502">
+            <state relative-caret-position="826">
               <caret line="160" selection-start-line="160" selection-end-line="160" />
               <folding>
                 <element signature="e#30#48#0#PHP" expanded="true" />
@@ -206,7 +163,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Resources/Delivery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="667">
               <caret line="29" column="49" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="49" />
             </state>
           </provider>
@@ -291,7 +248,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="changes_Nov-9" />
       </map>
     </option>
   </component>
@@ -682,7 +639,7 @@
       <workItem from="1603208533406" duration="2116000" />
       <workItem from="1603340407455" duration="11547000" />
       <workItem from="1603524398253" duration="35885000" />
-      <workItem from="1604150353396" duration="56287000" />
+      <workItem from="1604150353396" duration="56767000" />
     </task>
     <task id="LOCAL-00001" summary="install npm and ui scaffolding vue">
       <created>1599889051819</created>
@@ -803,7 +760,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604563814352</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added favorite model and controller and tests&#10;updated login UI">
+      <created>1604977938459</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1604977938459</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -839,7 +803,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="500848000" />
+    <option name="totallyTimeSpent" value="501328000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -853,7 +817,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991708" visible="true" weight="0.17792068" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991708" visible="true" weight="0.17792068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.50082916" side_tool="true" weight="0.24973205" />
@@ -868,7 +832,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005359" side_tool="true" weight="0.269188" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4994641" visible="true" weight="0.45717463" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4994641" weight="0.45717463" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -897,7 +861,8 @@
     <MESSAGE value="added api tests and all of them are passed" />
     <MESSAGE value="changed response body of login and register api" />
     <MESSAGE value="updated readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated readme" />
+    <MESSAGE value="added favorite model and controller and tests&#10;updated login UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="added favorite model and controller and tests&#10;updated login UI" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.min.css">
@@ -1217,13 +1182,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="39" column="133" selection-start-line="39" selection-start-column="133" selection-end-line="39" selection-end-column="145" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserFavoriteDeliveryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -1256,9 +1214,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding>
+            <element signature="e#40#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/DeliveryFilter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="102" column="9" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+          <folding>
+            <element signature="e#30#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="39" column="133" selection-start-line="39" selection-start-column="133" selection-end-line="39" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Resources/Delivery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
+        <state relative-caret-position="667">
           <caret line="29" column="49" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="49" />
         </state>
       </provider>
@@ -1270,29 +1255,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeliveryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="e#40#84#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/DeliveryFilter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="102" column="9" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
-          <folding>
-            <element signature="e#30#48#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Delivery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1502">
+        <state relative-caret-position="826">
           <caret line="160" selection-start-line="160" selection-end-line="160" />
           <folding>
             <element signature="e#30#48#0#PHP" expanded="true" />
