@@ -42,7 +42,6 @@ Route::middleware(['api'])->group(function () {
 
 
     Route::get('deliveries/', [App\Http\Controllers\DeliveryController::class, 'index'])->name('api.list.deliveries');
-    Route::get('deliveries/', [App\Http\Controllers\DeliveryController::class, 'index'])->name('api.list.deliveries');
     Route::get('deliveries/{delivery}', [App\Http\Controllers\DeliveryController::class, 'show'])->name('api.deliveries.show');
     Route::get('deliveries/{delivery}/contact-info', [App\Http\Controllers\DeliveryController::class, 'getContactInfo'])->name('api.get.contact.info');
 

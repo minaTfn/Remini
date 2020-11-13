@@ -8,9 +8,9 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            {!! Form::model($user, ['route' => ['users.update', $user], 'method'=>'PATCH']) !!}
-            @include('user/_form',[
-                'user'=> $user ,
+            {!! Form::model($site_user, ['route' => ['site-users.update', $site_user], 'method'=>'PATCH']) !!}
+            @include('siteUser/_form',[
+                'user'=> $site_user ,
                 'buttonText'=>'Submit'
             ])
             {!! Form::close() !!}

@@ -15,6 +15,17 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+
+header('Access-Control-Allow-Methods: *');
+header('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Credentials: true');
+if (env("APP_ENV") !== 'local') {
+    header('Access-Control-Allow-Origin: https://reminitravel.ir');
+} else {
+    header('Access-Control-Allow-Origin: *');
+}
+
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces

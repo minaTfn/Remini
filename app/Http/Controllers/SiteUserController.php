@@ -19,21 +19,21 @@ class SiteUserController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User $user
+     * @param  \App\Models\User $site_user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user) {
-        return view('siteUser.edit', compact('user'));
+    public function edit(User $site_user) {
+        return view('siteUser.edit', compact('site_user'));
     }
 
     /**
      * update the status of user from Active to Passive and visa versa.
      *
-     * @param User $user
+     * @param User $site_user
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function updateStatus(User $user) {
-        $user->status == 0 ? $user->setAsActive() : $user->setAsInactive();
+    public function updateStatus(User $site_user) {
+        $site_user->status == 0 ? $site_user->setAsActive() : $site_user->setAsInactive();
         $message = "User status changed successfully";
         return redirect(route('site-users.index'))->with('success', $message);
     }

@@ -29,7 +29,7 @@ class VerificationController extends Controller
 
     public function verify($user_id, Request $request){
         if (!$request->hasValidSignature()) {
-            return redirect("http://localhost:3000/confirmation");
+            return redirect("https://reminitravel.ir/confirmation");
 //            return response()->json(["message" => "Invalid/Expired url provided."], 401);
         }
 
@@ -39,7 +39,7 @@ class VerificationController extends Controller
             $user->markEmailAsVerified();
         }
 
-        return redirect("http://localhost:3000/confirmation");
+        return redirect("https://reminitravel.ir/confirmation");
 //        return response()->json(["message" => "email verified."], 200);
     }
 

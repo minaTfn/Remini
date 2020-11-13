@@ -253,7 +253,7 @@ return [
             'text' => 'Delivery',
             'url' => 'admin/deliveries',
             'icon' => 'fas fa-w-25 fa-mail-bulk',
-            'label' => 20,
+//            'label' => 20,
             'label_color' => 'success',
         ],
         [
@@ -271,18 +271,18 @@ return [
             'url' => 'admin/contact-methods',
             'icon' => 'fas fa-w-25 fa-phone-volume',
         ],
-        ['header' => ''],
-        [
-            'text'    => 'Reports',
-            'icon'    => 'fas fa-w-25 fa-chart-line',
-            'submenu' => [
-                [
-                    'text' => 'Deliveries',
-                    'url' => 'admin/report/deliveries',
-                    'icon' => 'false',
-                ],
-            ],
-        ],
+//        ['header' => ''],
+//        [
+//            'text'    => 'Reports',
+//            'icon'    => 'fas fa-w-25 fa-chart-line',
+//            'submenu' => [
+//                [
+//                    'text' => 'Deliveries',
+//                    'url' => 'admin/report/deliveries',
+//                    'icon' => 'false',
+//                ],
+//            ],
+//        ],
     ],
 
     /*

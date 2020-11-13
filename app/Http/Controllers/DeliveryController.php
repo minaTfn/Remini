@@ -9,7 +9,6 @@ use App\Http\Requests\ManageDeliveryRequest;
 use App\Models\City;
 use App\Models\Delivery;
 use App\Models\DeliveryFilter;
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
 class DeliveryController extends Controller {
@@ -19,6 +18,7 @@ class DeliveryController extends Controller {
     /**
      * strip.empty.params middleware : for index route (search form get method) remove all the url params which are empty
      * DeliveryController constructor.
+     * hey
      */
     public function __construct() {
         $this->middleware('strip.empty.params', ['only' => 'index']);
@@ -27,7 +27,6 @@ class DeliveryController extends Controller {
 
     /**
      * @param DeliveryFilter $filters
-     * @param User $user
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(DeliveryFilter $filters) {
@@ -101,13 +100,22 @@ class DeliveryController extends Controller {
         $delivery->load('owner');
         $contactMethods = $delivery->contactMethods;
         $result = [];
-        foreach ($contactMethods as $contactMethod) {
+        if (is_array($contactMethods)) { // if there was a contact method
+            foreach ($contactMethods as $contactMethod) {
+                $result[] = [
+                    'title' => $contactMethod->title,
+                    'title_fa' => $contactMethod->title_fa,
+                    'value' => $delivery->owner[$contactMethod->name]
+                ];
+            }
+        } else { // if not; send the email by default
             $result[] = [
-                'title' => $contactMethod->title,
-                'title_fa' => $contactMethod->title_fa,
-                'value' => $delivery->owner[$contactMethod->name]
+                'title' => 'Email',
+                'title_fa' => 'ایمیل',
+                'value' => $delivery->owner['email']
             ];
         }
+
 
         if (request()->wantsJson()) {
             return response()->json([

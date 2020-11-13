@@ -1,21 +1,50 @@
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
+      Options -MultiViews
+    </IfModule>
+
+    <IfModule mod_headers.c>
+        SetEnvIf Origin "http(s)?://([^.]+\.)?(reminitravel.ir|admin.reminitravel.ir|localhost:8000)$" AccessControlAllowOrigin=$0$1
+        Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+        Header set Access-Control-Allow-Credentials true
     </IfModule>
 
     RewriteEngine On
 
-    # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^ %1 [L,R=301]
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
 
-    # Send Requests To Front Controller...
+    # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
+
+
+#<IfModule mod_rewrite.c>
+#    <IfModule mod_negotiation.c>
+#        Options -MultiViews -Indexes
+#    </IfModule>
+#
+#    RewriteEngine On
+#
+#    # Handle Authorization Header
+#    RewriteCond %{HTTP:Authorization} .
+#    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#
+#    # Redirect Trailing Slashes If Not A Folder...
+#    RewriteCond %{REQUEST_FILENAME} !-d
+#    RewriteCond %{REQUEST_URI} (.+)/$
+#    RewriteRule ^ %1 [L,R=301]
+#
+#    # Send Requests To Front Controller...
+#    RewriteCond %{REQUEST_FILENAME} !-d
+#    RewriteCond %{REQUEST_FILENAME} !-f
+#    RewriteRule ^ index.php [L]
+#
+#</IfModule>

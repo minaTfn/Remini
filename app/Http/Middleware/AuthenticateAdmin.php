@@ -17,7 +17,7 @@ class AuthenticateAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check() && auth()->user()->role === User::ADMIN){
+        if(auth()->check() && (auth()->user()->role === User::ADMIN || auth()->user()->role === User::USER)){
             return $next($request);
         }
 

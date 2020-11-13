@@ -12,7 +12,7 @@ class UsersController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $users = User::where('id','<>',auth()->id())->orderBy('id')->paginate(10);
+        $users = User::admin()->where('id','<>',auth()->id())->orderBy('id')->paginate(10);
         return view('user.index', compact('users'));
     }
 

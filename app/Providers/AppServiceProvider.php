@@ -30,6 +30,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
+
+//        $this->app->bind('path.public', function() {
+//            return base_path().'/../admin.reminitravel.ir';
+//        });
+
         Paginator::useBootstrap();
         date_default_timezone_set('Asia/Tehran');
 

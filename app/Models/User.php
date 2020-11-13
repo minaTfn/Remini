@@ -88,6 +88,16 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail {
     }
 
     /**
+     * Scope a query to only include Admin users.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeAdmin($query) {
+        return $query->where('role', '<>', User::SiteUSER);
+    }
+
+    /**
      * Get the title of the role.
      *
      * @return string

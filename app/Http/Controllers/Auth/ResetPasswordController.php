@@ -25,7 +25,7 @@ class ResetPasswordController extends Controller
     public function showResetForm(Request $request) {
         $token = $request->route()->parameter('token');
         $email = $request->input('email');
-        return redirect("http://localhost:3000/passwordReset/$token/$email");
+        return redirect("https://reminitravel.ir/passwordReset/$token/$email");
     }
 
 
