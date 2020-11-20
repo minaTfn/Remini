@@ -38,17 +38,22 @@ class DeliveryController extends Controller {
         return $this->getDeliveriesList($filters, $user);
     }
 
+    /**
+     * @param $filters
+     * @param null $user if user is provided it expects to return my deliveries
+     * @return DeliveryCollection|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     private function getDeliveriesList($filters, $user = null) {
 
         $perPage = request()->filled('page_size') ? request()->get('page_size') : 10;
-        if ($user) {
+        if ($user) { // My Deliveries
             $deliveries = Delivery::with([
                 'originCountry:id,title,title_fa',
                 'originCity:id,title,country_id',
                 'destinationCountry:id,title,title_fa',
                 'destinationCity:id,title,country_id',
             ])->where('user_id', $user->id)->latest()->filter($filters)->paginate($perPage);
-        } else {
+        } else { // All the deliveries
             $deliveries = Delivery::with([
                 'originCountry:id,title,title_fa',
                 'originCity:id,title,country_id',

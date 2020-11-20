@@ -43,7 +43,8 @@ class AuthController extends Controller {
             ], 422);
         }
 
-        if (!$token = auth($this->guard)->attempt($validator->validated())) {
+        $attributes = array_merge($validator->validated(), ['status' => 1, 'role' => User::SiteUSER]);
+        if (!$token = auth($this->guard)->attempt($attributes)) {
             return response()->json([
                 'data' => [
                     'non_field_errors' => $this->faLanguage
@@ -80,7 +81,7 @@ class AuthController extends Controller {
 
         $user = User::create(array_merge(
             $request->all(),
-            ['password' => bcrypt($request->password)]
+            ['password' => bcrypt($request->password), 'role' => User::SiteUSER]
         ))->sendEmailVerificationNotification();
 
         return response()->json([

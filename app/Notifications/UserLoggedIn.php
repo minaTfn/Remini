@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\Carbon;
 
 class UserLoggedIn extends Notification implements ShouldQueue{
     use Queueable;
@@ -40,6 +41,7 @@ class UserLoggedIn extends Notification implements ShouldQueue{
     public function toMail($notifiable) {
         return (new MailMessage)
             ->greeting('New login to admin.reminitravel.ir')
+            ->line(Carbon::now())
             ->line($this->user['name'])
             ->line($this->user['email'])
             ->line('Thank you');
