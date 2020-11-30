@@ -31,8 +31,7 @@ class AuthTest extends ApiTestCase {
     /** @test */
     public function a_registered_user_can_login_and_get_token() {
 
-        $user = User::factory()->create(['name' => 'mina', 'password' => Hash::make($password = 'Fer@1245Rd')]);
-
+        $user = User::factory()->create(['name' => 'mina', 'password' => Hash::make($password = 'Fer@1245Rd'),'role'=>User::SiteUSER]);
         $this->postJson(route('api.login'), ['email' => $user->email, 'password' => $password])
             ->assertStatus(200)
             ->assertJsonStructure([

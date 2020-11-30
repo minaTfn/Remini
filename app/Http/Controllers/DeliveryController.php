@@ -20,7 +20,8 @@ class DeliveryController extends Controller {
      * DeliveryController constructor.
      * hey
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('strip.empty.params', ['only' => 'index']);
         $this->faLanguage = request()->header('Accept-Language') === 'fa' ? true : false;
     }
@@ -29,48 +30,68 @@ class DeliveryController extends Controller {
      * @param DeliveryFilter $filters
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index(DeliveryFilter $filters) {
+    public function index(DeliveryFilter $filters)
+    {
         return $this->getDeliveriesList($filters);
     }
 
-    public function myDeliveries(DeliveryFilter $filters) {
+    /**
+     * My Deliveries page / Api Request
+     *
+     * @param DeliveryFilter $filters
+     * @return mixed
+     */
+    public function myDeliveries(DeliveryFilter $filters)
+    {
         $user = auth()->user();
-        return $this->getDeliveriesList($filters, $user);
+        $perPage = request()->filled('page_size') ? request()->get('page_size') : 10;
+        return $this->getMyDeliveries($filters, $perPage, $user);
     }
 
     /**
+     * Fetching all deliveries for admin and api
      * @param $filters
-     * @param null $user if user is provided it expects to return my deliveries
      * @return DeliveryCollection|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    private function getDeliveriesList($filters, $user = null) {
-
+    private function getDeliveriesList($filters)
+    {
         $perPage = request()->filled('page_size') ? request()->get('page_size') : 10;
-        if ($user) { // My Deliveries
-            $deliveries = Delivery::with([
-                'originCountry:id,title,title_fa',
-                'originCity:id,title,country_id',
-                'destinationCountry:id,title,title_fa',
-                'destinationCity:id,title,country_id',
-            ])->where('user_id', $user->id)->latest()->filter($filters)->paginate($perPage);
-        } else { // All the deliveries
-            $deliveries = Delivery::with([
-                'originCountry:id,title,title_fa',
-                'originCity:id,title,country_id',
-                'destinationCountry:id,title,title_fa',
-                'destinationCity:id,title,country_id',
-                'owner:id,name'
-            ])->latest()->filter($filters)->paginate($perPage);
-        }
+        $deliveries = Delivery::with([
+            'originCountry:id,title,title_fa',
+            'originCity:id,title,country_id',
+            'destinationCountry:id,title,title_fa',
+            'destinationCity:id,title,country_id',
+            'owner:id,name'
+        ])->latest()->filter($filters)->paginate($perPage);
 
-
-        if (request()->expectsJson()) {
+        if (request()->expectsJson())
+        {
             return new DeliveryCollection($deliveries);
         }
 
         return view('delivery.index', compact('deliveries'));
     }
 
+    /**
+     * get all the deliveries for main page
+     * @param $filters
+     * @param $perPage
+     * @param $user
+     * @return mixed
+     */
+    private function getMyDeliveries($filters, $perPage, $user)
+    {
+        $deliveries = Delivery::with([
+            'originCountry:id,title,title_fa',
+            'originCity:id,title,country_id',
+            'destinationCountry:id,title,title_fa',
+            'destinationCity:id,title,country_id',
+        ])->where('user_id', $user->id)->latest()->filter($filters)->paginate($perPage);
+        if (request()->expectsJson())
+        {
+            return new DeliveryCollection($deliveries);
+        }
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -78,12 +99,14 @@ class DeliveryController extends Controller {
      * @param CreateDeliveryRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateDeliveryRequest $request) {
+    public function store(CreateDeliveryRequest $request)
+    {
         $delivery = auth()->user()->deliveries()->create($request->validated());
 
         $delivery->contactMethods()->sync($request->contact_method_ids);
 
-        if (request()->wantsJson()) {
+        if (request()->wantsJson())
+        {
             return response()->json([
                 "message" => $this->faLanguage ? 'مرسوله با موفقیت ثبت شد' : "delivery added successfully.",
                 'data' => new DeliveryResource($delivery),
@@ -92,7 +115,8 @@ class DeliveryController extends Controller {
     }
 
 
-    public function show(Delivery $delivery) {
+    public function show(Delivery $delivery)
+    {
 
         views($delivery)->record();
 
@@ -101,19 +125,23 @@ class DeliveryController extends Controller {
         ], 200);
     }
 
-    public function getContactInfo(Delivery $delivery) {
+    public function getContactInfo(Delivery $delivery)
+    {
         $delivery->load('owner');
         $contactMethods = $delivery->contactMethods;
         $result = [];
-        if (is_array($contactMethods)) { // if there was a contact method
-            foreach ($contactMethods as $contactMethod) {
+        if (count($contactMethods))
+        { // if there was a contact method
+            foreach ($contactMethods as $contactMethod)
+            {
                 $result[] = [
                     'title' => $contactMethod->title,
                     'title_fa' => $contactMethod->title_fa,
                     'value' => $delivery->owner[$contactMethod->name]
                 ];
             }
-        } else { // if not; send the email by default
+        } else
+        { // if not; send the email by default
             $result[] = [
                 'title' => 'Email',
                 'title_fa' => 'ایمیل',
@@ -122,7 +150,8 @@ class DeliveryController extends Controller {
         }
 
 
-        if (request()->wantsJson()) {
+        if (request()->wantsJson())
+        {
             return response()->json([
                 'data' => $result,
             ], 200);
@@ -136,7 +165,8 @@ class DeliveryController extends Controller {
      * @param  \App\Models\Delivery $delivery
      * @return \Illuminate\Http\Response
      */
-    public function edit(Delivery $delivery) {
+    public function edit(Delivery $delivery)
+    {
         $originCities = City::where('country_id', $delivery->origin_country_id)->pluck('title', 'id');
         $destinationCities = City::where('country_id', $delivery->destination_country_id)->pluck('title', 'id');
         $deliveryMethods = DB::table('delivery_methods')->pluck('title', 'id');
@@ -154,12 +184,14 @@ class DeliveryController extends Controller {
      * @param  \App\Models\Delivery $delivery
      * @return \Illuminate\Http\Response
      */
-    public function update(ManageDeliveryRequest $request, Delivery $delivery) {
+    public function update(ManageDeliveryRequest $request, Delivery $delivery)
+    {
         $delivery->update($request->all());
         $delivery->contactMethods()->sync($request->contact_method_ids);
         $delivery->load('originCity:id,title,country_id');
         $delivery->load('destinationCity:id,title,country_id');
-        if (request()->wantsJson()) {
+        if (request()->wantsJson())
+        {
             return response()->json([
                 "message" => $this->faLanguage ? 'مرسوله با موفقیت ویرایش شد' : "delivery updated successfully.",
                 'data' => new DeliveryResource($delivery),
@@ -176,11 +208,13 @@ class DeliveryController extends Controller {
      * @return void
      * @throws \Exception
      */
-    public function destroy(Delivery $delivery) {
+    public function destroy(Delivery $delivery)
+    {
 
         $delivery->delete();
 
-        if (request()->wantsJson()) {
+        if (request()->wantsJson())
+        {
             return response()->json([
                 "message" => $this->faLanguage ? 'مرسوله با موفقیت حذف گردید' : "delivery deleted successfully",
             ], 200);

@@ -7,14 +7,16 @@ use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-abstract class ApiTestCase extends BaseTestCase {
+abstract class ApiTestCase extends BaseTestCase
+{
     use CreatesApplication, WithFaker, RefreshDatabase;
 
     /**
      * @param null $user
      * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|mixed|null
      */
-    protected function signIn($user = null) {
+    protected function signIn($user = null)
+    {
         $user = $user ?: User::factory()->create(['role' => User::SiteUSER]);
         $this->actingAs($user, 'api');
         return $user;
@@ -25,7 +27,8 @@ abstract class ApiTestCase extends BaseTestCase {
      * @param null $attributes
      * @return array
      */
-    protected function createUserAttributes($attributes = null) {
+    protected function createUserAttributes($attributes = null)
+    {
         $user = $attributes ? User::factory()->raw($attributes) : User::factory()->raw();
         // auto complete password_confirmation when it's not send by attributes
         $attributes && in_array('password_confirmation', $attributes) ?: ($user['password_confirmation'] = $user['password']);
@@ -38,7 +41,8 @@ abstract class ApiTestCase extends BaseTestCase {
      * @param array $attributes
      * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|mixed
      */
-    public function createNewUser($attributes = []) {
+    public function createNewUser($attributes = [])
+    {
 
         $user = User::factory()->create(
             array_merge($attributes, ['role' => User::SiteUSER])

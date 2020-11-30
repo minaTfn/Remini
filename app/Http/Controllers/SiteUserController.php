@@ -34,8 +34,8 @@ class SiteUserController extends Controller {
      */
     public function updateStatus(User $site_user) {
         $site_user->status == 0 ? $site_user->setAsActive() : $site_user->setAsInactive();
-        $message = "User status changed successfully";
-        return redirect(route('site-users.index'))->with('success', $message);
+        return redirect(route('site-users.index'))
+            ->with('success', "User status changed successfully");
     }
 
     /**

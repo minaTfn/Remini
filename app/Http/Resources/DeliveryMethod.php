@@ -6,7 +6,6 @@ use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Country as CountryResource;
 
 class DeliveryMethod extends JsonResource {
-
     /**
      * Transform the resource into an array.
      *

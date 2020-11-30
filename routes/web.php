@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => true]);
 
 Route::prefix('admin')->middleware(['auth.admin', 'verified'])->group(function () {
+    Route::get('/cc', function () {
+        Artisan::call('config:clear');
+        Artisan::call('cache:clear');
+        Artisan::call('route:clear');
+        Artisan::call('view:clear');
+        echo '<script>alert("cache clear Success")</script>';
+    });
+
     Route::get('change-password', [App\Http\Controllers\ChangePasswordController::class, 'index'])->name('changePassword.index');
     Route::post('change-password', [App\Http\Controllers\ChangePasswordController::class, 'store'])->name('changePassword.store');
 
@@ -30,7 +38,7 @@ Route::prefix('admin')->middleware(['auth.admin', 'verified'])->group(function (
     Route::resource('/payment-methods', App\Http\Controllers\PaymentMethodController::class);
     Route::resource('/contact-methods', App\Http\Controllers\ContactMethodController::class);
     Route::resource('/site-users', App\Http\Controllers\SiteUserController::class);
-    Route::get('/site-users/status/{user}', [App\Http\Controllers\SiteUserController::class, 'updateStatus'])
+    Route::get('/site-users/status/{site_user}', [App\Http\Controllers\SiteUserController::class, 'updateStatus'])
         ->name('site-users.updateStatus')
         ->middleware('can:manage,App\Models\User');
 

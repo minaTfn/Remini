@@ -14,6 +14,8 @@ use CyrildeWit\EloquentViewable\Contracts\Viewable;
 
 class Delivery extends Model implements Viewable {
 
+
+
     use InteractsWithViews;
     use HasFactory, Sluggable, HasTrixRichText;
     use FormAccessible;

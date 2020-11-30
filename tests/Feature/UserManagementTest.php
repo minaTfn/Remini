@@ -25,10 +25,10 @@ class UserManagementTest extends TestCase {
 
         $newUser = User::factory()->create();
 
-        $this->get(route('users.index'))->assertRedirect('/login');
-        $this->delete(route('users.destroy', $newUser))->assertRedirect('/login');
-        $this->patch(route('users.update', $newUser))->assertRedirect('/login');
-        $this->post(route('users.store', $newUser))->assertRedirect('/login');
+        $this->get(route('users.index'))->assertStatus(403);
+        $this->delete(route('users.destroy', $newUser))->assertStatus(403);
+        $this->patch(route('users.update', $newUser))->assertStatus(403);
+        $this->post(route('users.store', $newUser))->assertStatus(403);
     }
 
     /** @test */
